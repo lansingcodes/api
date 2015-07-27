@@ -46,7 +46,7 @@ end
 class Event
   class << self
 
-    def upcoming query
+    def upcoming query=nil
       query ? upcoming_search(query) : all_upcoming
     end
 
