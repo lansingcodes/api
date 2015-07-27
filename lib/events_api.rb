@@ -55,7 +55,9 @@ class Event
     def all_upcoming
       Group.all.map do |group|
         Endpoint.get "https://api.meetup.com/2/events?group_id=#{group['id']}&status=upcoming&page=1&key=#{KEY}"
-      end.flatten
+      end.flatten.sort_by do |event|
+        event['time']
+      end
     end
 
     def upcoming_search query
