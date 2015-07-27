@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'sinatra', '~> 1.4.6'
 gem 'grape', '~> 0.12.0'
+gem 'rack-cors'
 gem 'rest-client', '~> 1.8.0'
 
 # group :test do
