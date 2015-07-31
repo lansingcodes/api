@@ -63,20 +63,25 @@ class Event
             venues: events.uniq { |event| event['venue']['id'] }.map do |event|
               {
                 event['venue']['id'] => {
-                  name: event['venue']['name'],
-                  address: "#{event['venue']['address_1']}, #{event['venue']['city']}, #{event['venue']['state']}",
-                  latitude: event['venue']['lat'],
-                  longitude: event['venue']['lon'],
-                  directions: event['how_to_find_us']
+                  attributes: {
+                    name: event['venue']['name'],
+                    address: "#{event['venue']['address_1']}, #{event['venue']['city']}, #{event['venue']['state']}",
+                    latitude: event['venue']['lat'],
+                    longitude: event['venue']['lon'],
+                    directions: event['how_to_find_us']
+                  }
                 }
               }
             end.inject(&:merge),
             groups: events.uniq { |event| event['group']['id'] }.map do |event|
               {
                 event['group']['id'] => {
-                  name: event['group']['name'],
-                  slug: event['group']['urlname'],
-                  members: event['group']['who']
+                  attributes: {
+                    name: event['group']['name'],
+                    focus: focus_of(event['group']['urlname']),
+                    slug: event['group']['urlname'],
+                    members: event['group']['who']
+                  }
                 }
               }
             end.inject(&:merge)
@@ -89,6 +94,19 @@ class Event
 
     def relative_time_of time
       distance_of_time_in_words Time.now, Time.at(time / 1000.0)
+    end
+
+    def focus_of slug
+      {
+        'Mid-Michigan-Agile-Group'                 => 'Agile',
+        'Lansing-DevOps-Meetup'                    => 'DevOps',
+        'Lansing-Ruby-Meetup-Group'                => 'Ruby',
+        'Lansing-Javascript-Meetup'                => 'JavaScript',
+        'lansingweb'                               => 'Web',
+        'GLUGnet'                                  => '.NET',
+        'PMI-Capital-Area-Chapter-Lunch-and-Learn' => 'Project Management',
+        'MoMoLansing'                              => 'Mobile'
+      }[slug]
     end
 
   end
