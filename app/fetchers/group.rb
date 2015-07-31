@@ -1,13 +1,10 @@
-require_relative 'endpoint'
-
-class Group
-
+class LansingCodes::Fetchers::Group
   class << self
 
     LANSING_CODES_ID = 189827394
 
     def all
-      Endpoint.new("groups?member_id=#{LANSING_CODES_ID}").get
+      LansingCodes::ExternalEndpoints::Meetup.new("groups?member_id=#{LANSING_CODES_ID}").get
     end
 
     def search query
@@ -29,5 +26,4 @@ class Group
     end
 
   end
-
 end

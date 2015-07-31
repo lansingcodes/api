@@ -1,4 +1,4 @@
-require File.join File.dirname(__FILE__), 'lib/events_api'
+require File.join File.dirname(__FILE__), 'application'
 require 'rack/cors'
 
 use Rack::Cors do
@@ -11,6 +11,4 @@ end
 use Rack::ConditionalGet
 use Rack::ETag
 
-run Rack::Cascade.new [
-  EventsAPI
-]
+run ApplicationServer

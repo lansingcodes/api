@@ -1,14 +1,6 @@
-require 'grape'
-require 'garner/mixins/rack'
+require_relative 'base'
 
-require_relative 'event'
-
-class EventsAPI < Grape::API
-  helpers Garner::Mixins::Rack
-
-  version 'v1', using: :header, vendor: 'meetup'
-  prefix 'v1'
-  format :json
+class LansingCodes::API::V1::Events < LansingCodes::API::V1::Base
 
   # /v1/events
   resource :events do
@@ -20,7 +12,7 @@ class EventsAPI < Grape::API
       desc "Return a list of upcoming Lansing coding events."
       get :list do
         garner.options(expires_in: 1.hour) do
-          Event.upcoming
+          LansingCodes::Fetchers::Event.upcoming
         end
       end
 
@@ -28,14 +20,14 @@ class EventsAPI < Grape::API
       desc "Returns a list of upcoming events for a specific query."
       resource :search do
         params do
-          requires :query, type: String, desc: "Event query."
+          requires :query, type: String, desc: "Group focus query."
         end
 
         # /v1/events/upcoming/search/:query
         route_param :query do
           get do
             garner.options(expires_in: 1.hour) do
-              Event.upcoming params[:query]
+              LansingCodes::Fetchers::Event.upcoming params[:query]
             end
           end
         end

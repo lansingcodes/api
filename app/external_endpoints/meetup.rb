@@ -1,7 +1,4 @@
-require 'rest-client'
-require 'json'
-
-class Endpoint
+class LansingCodes::ExternalEndpoints::Meetup < LansingCodes::ExternalEndpoints::Base
 
   KEY = ENV['MEETUP_API_KEY']
 
@@ -10,7 +7,7 @@ class Endpoint
   end
 
   def get
-    JSON.parse( RestClient.get(@url) )['results']
+    get_json['results']
   end
 
 end
