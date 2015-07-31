@@ -1,89 +1,46 @@
 require 'grape'
-require 'rest-client'
-require 'json'
+require 'garner/mixins/rack'
 
-KEY = ENV['MEETUP_API_KEY']
-LANSING_CODES_ID = 189827394
+require_relative 'event'
 
-module Events
-  class API < Grape::API
-    version 'v1', using: :header, vendor: 'meetup'
-    prefix 'api/v1'
-    format :json
+class EventsAPI < Grape::API
+  helpers Garner::Mixins::Rack
 
-    resource :events do
+  version 'v1', using: :header, vendor: 'meetup'
+  prefix 'v1'
+  format :json
 
-      resource :upcoming do
-        desc "Return a list of upcoming Lansing coding events."
-        get :list do
+  # /v1/events
+  resource :events do
+
+    # /v1/events/upcoming
+    resource :upcoming do
+
+      # /v1/events/upcoming/list
+      desc "Return a list of upcoming Lansing coding events."
+      get :list do
+        garner.options(expires_in: 1.hour) do
           Event.upcoming
         end
+      end
 
-        desc "Returns a list of upcoming events for a specific query."
-        resource :search do
-          params do
-            requires :query, type: String, desc: "Event query."
-          end
-          route_param :query do
-            get do
+      # /v1/events/upcoming/search
+      desc "Returns a list of upcoming events for a specific query."
+      resource :search do
+        params do
+          requires :query, type: String, desc: "Event query."
+        end
+
+        # /v1/events/upcoming/search/:query
+        route_param :query do
+          get do
+            garner.options(expires_in: 1.hour) do
               Event.upcoming params[:query]
             end
           end
         end
+
       end
-    end
-  end
-end
-
-class Group
-  class << self
-    def all
-      Endpoint.get "https://api.meetup.com/2/groups?member_id=#{LANSING_CODES_ID}&key=#{KEY}"
-    end
-  end
-end
-
-class Event
-  class << self
-
-    def upcoming query=nil
-      query ? upcoming_search(query) : all_upcoming
-    end
-
-  private
-
-    def all_upcoming
-      Group.all.map do |group|
-        Endpoint.get "https://api.meetup.com/2/events?group_id=#{group['id']}&status=upcoming&page=1&key=#{KEY}"
-      end.flatten.sort_by do |event|
-        event['time']
-      end
-    end
-
-    def upcoming_search query
-      query = case query
-      when 'js' then 'javascript'
-      when 'rb' then 'ruby'
-      else query
-      end
-
-      matching_group = Group.all.find do |group|
-        %w( name description ).any? do |field|
-          group[field].scan(/#{query}/i).any?
-        end
-      end
-      return [] if matching_group.nil?
-
-      Endpoint.get "https://api.meetup.com/2/events?group_id=#{matching_group['id']}&status=upcoming&page=1&key=#{KEY}"
-    end
-
-  end
-end
-
-class Endpoint
-  class << self
-    def get url
-      JSON.parse(RestClient.get(url))['results']
     end
   end
 end

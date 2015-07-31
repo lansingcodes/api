@@ -8,6 +8,9 @@ use Rack::Cors do
   end
 end
 
+use Rack::ConditionalGet
+use Rack::ETag
+
 run Rack::Cascade.new [
-  Events::API
+  EventsAPI
 ]

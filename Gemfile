@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 gem 'sinatra', '~> 1.4.6'
 gem 'grape', '~> 0.12.0'
-gem 'rack-cors'
+gem 'rack-cors', '~> 0.4.0'
+gem 'actionview', '~> 4.2.3'
+gem 'garner', '~> 0.5.1'
 gem 'rest-client', '~> 1.8.0'
 
 # group :test do
@@ -13,6 +15,7 @@ gem 'rest-client', '~> 1.8.0'
 #   gem 'codeclimate-test-reporter', require: false
 # end
 #
-# group :development do
-#   gem 'guard-rspec', '~> 4.6.3'
-# end
+group :development do
+  gem 'pry'
+  # gem 'guard-rspec', '~> 4.6.3'
+end
