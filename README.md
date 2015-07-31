@@ -2,23 +2,27 @@
 
 A public API to retrieve information about code-related events in Lansing, MI.
 
-## Base URL
+## Usage
+
+### Base URL
 
 ```
 http://api.lansing.codes/v1
 ```
 
-## Events
+### Events
 
-### `/events/upcoming/list`
+#### `/events/upcoming/list`
 
 Returns the next upcoming event for each meetup group.
 
-### `/events/upcoming/search/:query`
+#### `/events/upcoming/search/:query`
 
 Returns the next upcoming event for the first group matching the query.
 
-### Response format
+#### Response format
+
+This API *sort of* conforms to the [JSON API spec](http://jsonapi.org/). Where it doesn't conform, it's because I either didn't read that part, because I [disagree with it](http://discuss.jsonapi.org/t/why-is-included-an-array/76/2).
 
 ``` json
 {
@@ -67,4 +71,16 @@ Returns the next upcoming event for the first group matching the query.
     }
   }
 }
+```
+
+## Contributing
+
+To run the API and its specs locally, you'll need to [register for a meetup.com API key](https://secure.meetup.com/meetup_api/key/), which actually only takes a minute,
+
+```
+MEETUP_API_KEY=<MY_API_KEY> bundle exec rackup
+```
+
+```
+MEETUP_API_KEY=<MY_API_KEY> bundle exec rspec
 ```
