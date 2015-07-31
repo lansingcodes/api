@@ -75,11 +75,15 @@ This API *sort of* conforms to the [JSON API spec](http://jsonapi.org/). Where i
 
 ## Contributing
 
-To run the API and its specs locally, you'll need to [register for a meetup.com API key](https://secure.meetup.com/meetup_api/key/), which actually only takes a minute,
+To run the API and its specs locally, you'll need to [register for a meetup.com API key](https://secure.meetup.com/meetup_api/key/), which actually only takes a few seconds.
+
+Then to run the API server:
 
 ```
 MEETUP_API_KEY=<MY_API_KEY> bundle exec rackup
 ```
+
+And to run the tests:
 
 ```
 MEETUP_API_KEY=<MY_API_KEY> bundle exec rspec
