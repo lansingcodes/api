@@ -38,7 +38,7 @@ class LansingCodes::Representers::Events
     }
     if @data.any?
       json.merge({
-        includes: {
+        included: {
           venues: @data.uniq { |event| event['venue']['id'] }.map do |event|
             {
               event['venue']['id'] => {

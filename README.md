@@ -48,7 +48,7 @@ Returns the next upcoming event for the first group matching the query.
       }
     }
   ],
-  "includes": {
+  "included": {
     "venues": {
       "19922032": {
         "name": "The Technology Innovation Center",
