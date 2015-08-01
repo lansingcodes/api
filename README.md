@@ -24,7 +24,7 @@ Returns the next upcoming event for the first group matching the query.
 
 #### Response format
 
-This API *sort of* conforms to the [JSON API spec](http://jsonapi.org/). Where it doesn't conform, it's because I either didn't read that part, because I [disagree with it](http://discuss.jsonapi.org/t/why-is-included-an-array/76/2).
+This API *sort of* conforms to the [JSON API spec](http://jsonapi.org/). Where it doesn't conform, it's because I either didn't read that part or I [disagree with it](http://discuss.jsonapi.org/t/why-is-included-an-array/76/2).
 
 ``` json
 {
