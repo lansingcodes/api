@@ -14,15 +14,7 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 # Require app
 require_relative '../application'
 
-# Configure webmock
-WebMock.disable_net_connect!(
-  allow_localhost: true,
-  allow: [
-    /codeclimate.com/
-  ]
-)
-
 # Configure rspec
 RSpec.configure do |config|
-  config.order = 'random'
+  config.order = :random
 end
