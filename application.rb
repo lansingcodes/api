@@ -25,5 +25,7 @@ require_relative 'app/api/v1/base'
 Dir["#{File.dirname(__FILE__)}/app/api/**/*.rb"].each { |f| require f }
 
 ApplicationServer = Rack::Cascade.new [
+  LansingCodes::API::Root,
+  LansingCodes::API::V1::Docs,
   LansingCodes::API::V1::Events
 ]
