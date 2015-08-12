@@ -49,8 +49,14 @@ This API *sort of* conforms to the [JSON API spec](http://jsonapi.org/). Where i
         "status": "upcoming"
       },
       "relationships": {
-        "venue": 19922032,
-        "group": 11398352
+        "venue": {
+          "type": "venues",
+          "id": 19922032
+        },
+        "group": {
+          "type": "groups",
+          "id": 11398352
+        }
       }
     }
   ],

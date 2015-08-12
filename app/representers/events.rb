@@ -40,8 +40,14 @@ private
           status: event['status']
         },
         relationships: {
-          venue: event['venue']['id'],
-          group: event['group']['id']
+          venue: {
+            type: 'venues',
+            id: event['venue']['id']
+          },
+          group: {
+            type: 'groups',
+            id: event['group']['id']
+          }
         }
       }
     end
