@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lansingcodes/api.svg?branch=master)](https://travis-ci.org/lansingcodes/api) [![Dependency Status](https://gemnasium.com/lansingcodes/api.svg)](https://gemnasium.com/lansingcodes/api) [![Test Coverage](https://codeclimate.com/github/lansingcodes/api/badges/coverage.svg)](https://codeclimate.com/github/lansingcodes/api/coverage)  [![Code Climate](https://codeclimate.com/github/lansingcodes/api/badges/gpa.svg)](https://codeclimate.com/github/lansingcodes/api)
+[![Circle CI](https://circleci.com/gh/lansingcodes/api.svg?style=svg)](https://circleci.com/gh/lansingcodes/api) [![Dependency Status](https://gemnasium.com/lansingcodes/api.svg)](https://gemnasium.com/lansingcodes/api) [![Test Coverage](https://codeclimate.com/github/lansingcodes/api/badges/coverage.svg)](https://codeclimate.com/github/lansingcodes/api/coverage) [![Code Climate](https://codeclimate.com/github/lansingcodes/api/badges/gpa.svg)](https://codeclimate.com/github/lansingcodes/api)
 
 # Lansing Codes API
 
