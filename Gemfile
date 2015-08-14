@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'sinatra', '~> 1.4.6'
-gem 'grape', '~> 0.12.0'
+gem 'grape', '~> 0.13.0'
 gem 'rack-cors', '~> 0.4.0'
 gem 'actionview', '~> 4.2.3'
 gem 'garner', '~> 0.5.1'

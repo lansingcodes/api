@@ -41,7 +41,7 @@ GEM
       json
       multi_json (>= 1.3.0)
       rack
-    grape (0.12.0)
+    grape (0.13.0)
       activesupport
       builder
       hashie (>= 2.1.0)
@@ -169,7 +169,7 @@ DEPENDENCIES
   actionview (~> 4.2.3)
   codeclimate-test-reporter
   garner (~> 0.5.1)
-  grape (~> 0.12.0)
+  grape (~> 0.13.0)
   guard-rspec (~> 4.6.3)
   rack-cors (~> 0.4.0)
   rack-test (~> 0.6.3)
@@ -179,3 +179,6 @@ DEPENDENCIES
   sinatra (~> 1.4.6)
   vcr (~> 2.9.3)
   webmock (~> 1.21.0)
+
+BUNDLED WITH
+   1.10.6
