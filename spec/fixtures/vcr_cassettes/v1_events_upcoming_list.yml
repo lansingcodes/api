@@ -1366,4 +1366,57 @@ http_interactions:
         +Py/3t8//QP3Z9tYggIAAA==
     http_version: 
   recorded_at: Wed, 02 Dec 2015 19:05:19 GMT
-recorded_with: VCR 2.9.3
+- request:
+    method: get
+    uri: https://api.meetup.com/2/groups?key=&member_id=189827394
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 02 Dec 2015 19:10:52 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '181'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=de54fcad16ba243fec888ee8d91b80c641449083452; expires=Thu, 01-Dec-16
+        19:10:52 GMT; path=/; domain=.meetup.com; HttpOnly
+      X-Meetup-Server:
+      - api15
+      X-Meetup-Request-Id:
+      - 7f8b3886-ffb8-4f45-b600-4e426b0eb551
+      Www-Authenticate:
+      - OAuth realm="https://api.meetup.com/"
+      Vary:
+      - Accept-Encoding,User-Agent
+      Content-Encoding:
+      - gzip
+      Cf-Ray:
+      - 24e955999407020c-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA0WPwQrCMAyG7z5FqNdp77t59OZVKEjWBldmm9qmjCm+ux0i
+        u+XP9xHyv5UjQf8oqlenyxkyPSsVKRBqERgIJloOxd8juQ4Yq4xbyoDWckgY
+        PTkYFsDV7mEUSb3RRs/zfAxEUtOxeUb/5hsmb7RjW4zerxcpirconqPqlGVH
+        7ZfIclsZZ/8i1/Yp8/Cg0NCVK2AmaApsCghDwIlARpR/DfXZfQE//1Wd4QAA
+        AA==
+    http_version: 
+  recorded_at: Wed, 02 Dec 2015 19:10:52 GMT
+recorded_with: VCR 3.0.0
