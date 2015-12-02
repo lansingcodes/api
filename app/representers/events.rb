@@ -103,8 +103,9 @@ private
       'GLUGnet'                                   => '.NET',
       'PMI-Capital-Area-Chapter-Lunch-and-Learn'  => 'Project Management',
       'MoMoLansing'                               => 'Mobile',
-      'GLASS-Greater-Lansing-Area-for-SQL-Server' => 'SQL Server'
-    }[slug]
+      'GLASS-Greater-Lansing-Area-for-SQL-Server' => 'SQL Server',
+      'LansingAreaSoftwareTesters'                => 'QA'
+    }[slug] || 'Tech'
   end
 
 end
