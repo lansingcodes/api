@@ -95,16 +95,17 @@ private
 
   def focus_of slug
     {
-      'Mid-Michigan-Agile-Group'                  => 'Agile',
-      'Lansing-DevOps-Meetup'                     => 'DevOps',
-      'Lansing-Ruby-Meetup-Group'                 => 'Ruby',
-      'Lansing-Javascript-Meetup'                 => 'JavaScript',
-      'lansingweb'                                => 'Web',
-      'GLUGnet'                                   => '.NET',
-      'PMI-Capital-Area-Chapter-Lunch-and-Learn'  => 'Project Management',
-      'MoMoLansing'                               => 'Mobile',
-      'GLASS-Greater-Lansing-Area-for-SQL-Server' => 'SQL Server',
-      'LansingAreaSoftwareTesters'                => 'QA'
+      'Mid-Michigan-Agile-Group'                       => 'Agile',
+      'Lansing-DevOps-Meetup'                          => 'DevOps',
+      'Lansing-Ruby-Meetup-Group'                      => 'Ruby',
+      'Lansing-Javascript-Meetup'                      => 'JavaScript',
+      'lansingweb'                                     => 'Web',
+      'GLUGnet'                                        => '.NET',
+      'PMI-Capital-Area-Chapter-Lunch-and-Learn'       => 'Project Management',
+      'MoMoLansing'                                    => 'Mobile',
+      'GLASS-Greater-Lansing-Area-for-SQL-Server'      => 'SQL Server',
+      'LansingAreaSoftwareTesters'                     => 'QA',
+      'Labor-of-Love-a-technology-side-project-meetup' => 'Side Projects'
     }[slug] || 'Tech'
   end
 
