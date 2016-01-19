@@ -21,6 +21,7 @@ class LansingCodes::Fetchers::Group
       case query
       when 'js' then 'javascript'
       when 'rb' then 'ruby'
+      when 'qa' then 'testers'
       else query
       end
     end
