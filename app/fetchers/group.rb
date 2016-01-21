@@ -1,3 +1,5 @@
+require 'garner'
+
 class LansingCodes::Fetchers::Group
   class << self
     include Garner::Cache::Context

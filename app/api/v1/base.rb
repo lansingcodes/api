@@ -1,5 +1,4 @@
 require 'grape'
-require 'garner/mixins/rack'
 
 class LansingCodes::API::V1::Base < Grape::API
   def self.inherited subclass
