@@ -6,6 +6,7 @@ gem 'rack-cors', '~> 0.4.0'
 gem 'actionview', '~> 4.2.5'
 gem 'garner', '~> 0.5.2'
 gem 'rest-client', '~> 1.8.0'
+gem 'thin'
 
 group :test do
   gem 'rspec', '~> 3.4.0'

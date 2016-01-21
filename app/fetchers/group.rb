@@ -7,7 +7,7 @@ class LansingCodes::Fetchers::Group
     LANSING_CODES_ID = 189827394
 
     def all
-      garner.options(expires_in: 10.seconds) do
+      garner.options(expires_in: 1.minute) do
         LansingCodes::ExternalEndpoints::Meetup.new("groups?member_id=#{LANSING_CODES_ID}").get
       end
     end
