@@ -40,10 +40,14 @@ private
           status: event['status']
         },
         relationships: {
-          venue: {
-            type: 'venues',
-            id: event['venue']['id']
-          },
+          venue: if event['venue']
+            {
+              type: 'venues',
+              id: event['venue']['id']
+            }
+          else
+            nil
+          end,
           group: {
             type: 'groups',
             id: event['group']['id']
@@ -63,7 +67,11 @@ private
   end
 
   def venues_hash
-    @data.uniq { |event| event['venue']['id'] }.map do |event|
+    @data.reject do |event|
+      event['venue'].nil?
+    end.uniq do |event|
+      event['venue']['id']
+    end.map do |event|
       {
         event['venue']['id'] => {
           attributes: {
