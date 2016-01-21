@@ -20,7 +20,7 @@ private
 
   def data_array
     @data.map do |event|
-      {
+      event_hash = {
         links: {
           self: event['event_url']
         },
@@ -40,20 +40,19 @@ private
           status: event['status']
         },
         relationships: {
-          venue: if event['venue']
-            {
-              type: 'venues',
-              id: event['venue']['id']
-            }
-          else
-            nil
-          end,
           group: {
             type: 'groups',
             id: event['group']['id']
           }
         }
       }
+      if event['venue']
+        event_hash[:relationships][:venue] = {
+          type: 'venues',
+          id: event['venue']['id']
+        }
+      end
+      event_hash
     end
   end
 
