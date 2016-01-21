@@ -1,10 +1,13 @@
 class LansingCodes::Fetchers::Group
   class << self
+    include Garner::Cache::Context
 
     LANSING_CODES_ID = 189827394
 
     def all
-      LansingCodes::ExternalEndpoints::Meetup.new("groups?member_id=#{LANSING_CODES_ID}").get
+      garner.options(expires_in: 10.seconds) do
+        LansingCodes::ExternalEndpoints::Meetup.new("groups?member_id=#{LANSING_CODES_ID}").get
+      end
     end
 
     def search query

@@ -11,9 +11,7 @@ class LansingCodes::API::V1::Events < LansingCodes::API::V1::Base
       # /v1/events/upcoming/list
       desc "Return a list of upcoming Lansing coding events."
       get :list do
-        garner.options(expires_in: 1.hour) do
-          LansingCodes::Fetchers::Event.upcoming
-        end
+        LansingCodes::Fetchers::Event.upcoming
       end
 
       # /v1/events/upcoming/search
@@ -26,9 +24,7 @@ class LansingCodes::API::V1::Events < LansingCodes::API::V1::Base
         # /v1/events/upcoming/search/:query
         route_param :query do
           get do
-            garner.options(expires_in: 1.hour) do
-              LansingCodes::Fetchers::Event.upcoming params[:query]
-            end
+            LansingCodes::Fetchers::Event.upcoming params[:query]
           end
         end
 

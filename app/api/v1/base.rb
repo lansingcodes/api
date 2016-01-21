@@ -5,8 +5,6 @@ class LansingCodes::API::V1::Base < Grape::API
   def self.inherited subclass
     super
     subclass.instance_eval do
-      helpers Garner::Mixins::Rack
-
       version 'v1', using: :header, vendor: 'Lansing.Codes'
       prefix 'v1'
       format :json
