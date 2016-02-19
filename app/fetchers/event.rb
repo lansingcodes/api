@@ -6,7 +6,8 @@ class LansingCodes::Fetchers::Event
   class << self
     include Garner::Cache::Context
 
-    def upcoming query=nil
+    def upcoming query=nil, per_group_limit=nil
+      @per_group_limit = per_group_limit
       data = query ? search_upcoming(query) : all_upcoming
       LansingCodes::Representers::Events.new data
     end
@@ -38,8 +39,11 @@ class LansingCodes::Fetchers::Event
     end
 
     def fetch_group_events group_id
-      garner.options(expires_in: 1.hour).key({group_id: group_id}) do
-        LansingCodes::ExternalEndpoints::Meetup.new("events?group_id=#{group_id}&status=upcoming").get
+      garner.options(expires_in: 1.hour).key({
+        group_id: group_id,
+        per_group_limit: @per_group_limit
+      }) do
+        LansingCodes::ExternalEndpoints::Meetup.new("events?group_id=#{group_id}&status=upcoming#{'&page=' + @per_group_limit.to_s}").get
       end
     end
 

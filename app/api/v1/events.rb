@@ -7,11 +7,14 @@ class LansingCodes::API::V1::Events < LansingCodes::API::V1::Base
 
     # /v1/events/upcoming
     resource :upcoming do
+      params do
+        optional :per_group_limit, type: Integer, desc: "Maximum number of events per group.", default: 1
+      end
 
       # /v1/events/upcoming/list
       desc "Return a list of upcoming Lansing coding events."
       get :list do
-        LansingCodes::Fetchers::Event.upcoming
+        LansingCodes::Fetchers::Event.upcoming nil, params[:per_group_limit]
       end
 
       # /v1/events/upcoming/search
@@ -24,7 +27,7 @@ class LansingCodes::API::V1::Events < LansingCodes::API::V1::Base
         # /v1/events/upcoming/search/:query
         route_param :query do
           get do
-            LansingCodes::Fetchers::Event.upcoming params[:query]
+            LansingCodes::Fetchers::Event.upcoming params[:query], params[:per_group_limit]
           end
         end
 
