@@ -19,37 +19,37 @@ class LansingCodes::Representers::Events
 private
 
   def data_array
-    @data.map do |event|
+    @data.map do |datum|
       event_hash = {
         links: {
-          self: event['event_url']
+          self: datum['event']['event_url']
         },
         attributes: {
-          id: event['id'],
-          name: event['name'],
-          description: event['description'],
+          id: datum['event']['id'],
+          name: datum['event']['name'],
+          description: datum['event']['description'],
           time: {
-            absolute: event['time'],
-            relative: relative_time_of(event['time'])
+            absolute: datum['event']['time'],
+            relative: relative_time_of(datum['event']['time'])
           },
-          capacity: event['rsvp_limit'],
+          capacity: datum['event']['rsvp_limit'],
           rsvps: {
-            yes: event['yes_rsvp_count'],
-            maybe: event['maybe_rsvp_count'],
+            yes: datum['event']['yes_rsvp_count'],
+            maybe: datum['event']['maybe_rsvp_count'],
           },
-          status: event['status']
+          status: datum['event']['status']
         },
         relationships: {
           group: {
             type: 'groups',
-            id: event['group']['id']
+            id: datum['event']['group']['id']
           }
         }
       }
-      if event['venue']
+      if datum['event']['venue']
         event_hash[:relationships][:venue] = {
           type: 'venues',
-          id: event['venue']['id']
+          id: datum['event']['venue']['id']
         }
       end
       event_hash
@@ -66,19 +66,19 @@ private
   end
 
   def venues_hash
-    @data.reject do |event|
-      event['venue'].nil?
-    end.uniq do |event|
-      event['venue']['id']
-    end.map do |event|
+    @data.reject do |datum|
+      datum['event']['venue'].nil?
+    end.uniq do |datum|
+      datum['event']['venue']['id']
+    end.map do |datum|
       {
-        event['venue']['id'] => {
+        datum['event']['venue']['id'] => {
           attributes: {
-            name: event['venue']['name'],
-            address: "#{event['venue']['address_1']}, #{event['venue']['city']}, #{event['venue']['state']}",
-            latitude: event['venue']['lat'],
-            longitude: event['venue']['lon'],
-            directions: event['how_to_find_us']
+            name: datum['event']['venue']['name'],
+            address: "#{datum['event']['venue']['address_1']}, #{datum['event']['venue']['city']}, #{datum['event']['venue']['state']}",
+            latitude: datum['event']['venue']['lat'],
+            longitude: datum['event']['venue']['lon'],
+            directions: datum['event']['how_to_find_us']
           }
         }
       }
@@ -86,17 +86,23 @@ private
   end
 
   def groups_hash
-    @data.uniq { |event| event['group']['id'] }.map do |event|
-      {
-        event['group']['id'] => {
+    @data.uniq { |datum| datum['event']['group']['id'] }.map do |datum|
+      group_hash = {
+        datum['event']['group']['id'] => {
           attributes: {
-            name: event['group']['name'],
-            focus: focus_of(event['group']['urlname']),
-            slug: event['group']['urlname'],
-            members: event['group']['who']
+            name: datum['event']['group']['name'],
+            focus: focus_of(datum['event']['group']['urlname']),
+            slug: datum['event']['group']['urlname'],
+            members: datum['event']['group']['who']
           }
         }
       }
+      if datum['group']['group_photo']
+        group_hash[
+          datum['event']['group']['id']
+        ][:attributes][:logo] = datum['group']['group_photo']['photo_link']
+      end
+      group_hash
     end.inject(&:merge)
   end
 
