@@ -39,7 +39,7 @@ class LansingCodes::Fetchers::Event
 
     def fetch_group_events group_id
       garner.options(expires_in: 1.hour).key({group_id: group_id}) do
-        LansingCodes::ExternalEndpoints::Meetup.new("events?group_id=#{group_id}&status=upcoming&page=1").get
+        LansingCodes::ExternalEndpoints::Meetup.new("events?group_id=#{group_id}&status=upcoming").get
       end
     end
 
