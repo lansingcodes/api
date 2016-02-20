@@ -43,7 +43,7 @@ class LansingCodes::Fetchers::Event
         group_id: group_id,
         per_group_limit: @per_group_limit
       }) do
-        LansingCodes::ExternalEndpoints::Meetup.new("events?group_id=#{group_id}&status=upcoming#{'&page=' + @per_group_limit.to_s}").get
+        LansingCodes::ExternalEndpoints::Meetup.new("events?group_id=#{group_id}&status=upcoming&page=#{@per_group_limit}").get
       end
     end
 
