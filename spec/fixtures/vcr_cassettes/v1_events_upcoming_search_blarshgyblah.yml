@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Fri, 19 Feb 2016 17:11:06 GMT
+      - Wed, 16 Mar 2016 05:14:58 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -29,12 +29,12 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d77e112107cca7c67a9e4d2367b88b24e1455901866; expires=Sat, 18-Feb-17
-        17:11:06 GMT; path=/; domain=.meetup.com; HttpOnly
+      - __cfduid=d2819907bd949b110525ba5b018c1dfc41458105298; expires=Thu, 16-Mar-17
+        05:14:58 GMT; path=/; domain=.meetup.com; HttpOnly
       X-Meetup-Server:
-      - api0
+      - api12
       X-Meetup-Request-Id:
-      - 48e5adbd-8744-430f-9a35-4c1bd913129a
+      - 8ea3b604-3cc2-45b8-95d3-f4a69422a011
       Www-Authenticate:
       - OAuth realm="https://api.meetup.com/"
       Vary:
@@ -42,7 +42,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Cf-Ray:
-      - 277396c79fac2513-ORD
+      - 2845b980d5a92432-IAD
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -52,7 +52,7 @@ http_interactions:
         7ZfIclsZZ/8i1/Yp8/Cg0NCVK2AmaApsCghDwIlARpR/DfXZfQE//1Wd4QAA
         AA==
     http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:11:06 GMT
+  recorded_at: Wed, 16 Mar 2016 05:14:58 GMT
 - request:
     method: get
     uri: https://api.meetup.com/2/groups?key=<MEETUP_API_KEY>&member_id=189827394
@@ -74,7 +74,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Fri, 19 Feb 2016 17:11:23 GMT
+      - Wed, 16 Mar 2016 05:15:27 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -82,12 +82,12 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d114d2fde31bcb2b9036068917cb0933f1455901882; expires=Sat, 18-Feb-17
-        17:11:22 GMT; path=/; domain=.meetup.com; HttpOnly
+      - __cfduid=d14712da3cfa86fbc638c558456ca1bd11458105327; expires=Thu, 16-Mar-17
+        05:15:27 GMT; path=/; domain=.meetup.com; HttpOnly
       X-Meetup-Server:
-      - api11
+      - api1
       X-Meetup-Request-Id:
-      - e6a0951d-36a2-4a50-8e1a-acbd22df4c17
+      - 6cff4e46-2536-49ba-b01e-6632da7e9532
       Www-Authenticate:
       - OAuth realm="https://api.meetup.com/"
       Vary:
@@ -95,7 +95,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Cf-Ray:
-      - 277397300fae0436-ORD
+      - 2845ba3aa36502b7-IAD
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -103,5 +103,5 @@ http_interactions:
         lCRYi9OFrlkdWpHZMYnsWAqvqyQs1uDdq85q/ecyv9QanWm2JOPcLe7cI1vT
         t6TBa7OpyDbUzTq4CUaCf4IwbPwQROZAk2cXD/qeDhxzU/ePAAAA
     http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:11:23 GMT
-recorded_with: VCR 3.0.0
+  recorded_at: Wed, 16 Mar 2016 05:15:28 GMT
+recorded_with: VCR 3.0.1

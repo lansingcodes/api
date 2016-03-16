@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'sinatra', '~> 1.4.6'
-gem 'grape', '~> 0.13.0'
+gem 'grape', '~> 0.15.0'
 gem 'rack-cors', '~> 0.4.0'
-gem 'actionview', '~> 4.2.5'
+gem 'actionview', '~> 4.2.6'
 gem 'garner', '~> 0.5.2'
 gem 'rest-client', '~> 1.8.0'
 gem 'thin'

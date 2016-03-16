@@ -2,59 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.meetup.com/2/groups?key=&member_id=189827394
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*; q=0.5, application/xml"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 401
-      message: Unauthorized
-    headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Fri, 19 Feb 2016 17:11:08 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '181'
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=d1e0c21ee6388b368e2a1ef2c5ce68c1b1455901867; expires=Sat, 18-Feb-17
-        17:11:07 GMT; path=/; domain=.meetup.com; HttpOnly
-      X-Meetup-Server:
-      - api16
-      X-Meetup-Request-Id:
-      - 3ea66321-3b3a-4bda-9bd4-5576123a9add
-      Www-Authenticate:
-      - OAuth realm="https://api.meetup.com/"
-      Vary:
-      - Accept-Encoding,User-Agent
-      Content-Encoding:
-      - gzip
-      Cf-Ray:
-      - 277396d1abeb2567-ORD
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA0WPwQrCMAyG7z5FqNdp77t59OZVKEjWBldmm9qmjCm+ux0i
-        u+XP9xHyv5UjQf8oqlenyxkyPSsVKRBqERgIJloOxd8juQ4Yq4xbyoDWckgY
-        PTkYFsDV7mEUSb3RRs/zfAxEUtOxeUb/5hsmb7RjW4zerxcpirconqPqlGVH
-        7ZfIclsZZ/8i1/Yp8/Cg0NCVK2AmaApsCghDwIlARpR/DfXZfQE//1Wd4QAA
-        AA==
-    http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:11:08 GMT
-- request:
-    method: get
     uri: https://api.meetup.com/2/groups?key=<MEETUP_API_KEY>&member_id=189827394
     body:
       encoding: US-ASCII
@@ -314,487 +261,6 @@ http_interactions:
   recorded_at: Fri, 19 Feb 2016 17:15:07 GMT
 - request:
     method: get
-    uri: https://api.meetup.com/2/events?group_id=752053&key=<MEETUP_API_KEY>&page=1&status=upcoming
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*; q=0.5, application/xml"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Fri, 19 Feb 2016 17:15:07 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '1017'
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=db21f8986e5ff36d59a42e0cfaf40fbf71455902107; expires=Sat, 18-Feb-17
-        17:15:07 GMT; path=/; domain=.meetup.com; HttpOnly
-      X-Meetup-Server:
-      - api13
-      X-Meetup-Request-Id:
-      - 7a72fad7-86d7-4452-8dad-4be8b40b4bfe
-      X-Ratelimit-Limit:
-      - '30'
-      X-Ratelimit-Remaining:
-      - '28'
-      X-Ratelimit-Reset:
-      - '10'
-      X-Oauth-Scopes:
-      - basic
-      X-Accepted-Oauth-Scopes:
-      - basic
-      Etag:
-      - '"6a59636ec3ac556e030bfcb5560e8433"'
-      Vary:
-      - Accept-Encoding,User-Agent
-      Content-Encoding:
-      - gzip
-      Cf-Ray:
-      - 27739ca98b2f0424-ORD
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA81U244jNRB95ysKP0Qg9STpW9KJNosQsCskZldCK83DZtVy
-        t51pz7jtxnYnhNFI/Aa/x5dQttPMDAgJ3piHUeyuOj5VdU49EMPtKJ0l248P
-        ZHRtrQ8Hyx3ZXqXVMvwl5MjVyMn2gfwiBrIlRbVZrkhCWj0qZ854M1p/FM7/
-        /oEqK9QtXlDGENzWKd6maZ7BuzncUNvhV6cVBijaIyx5a+gRc+FGm3sL33Ir
-        bhXM8MeRSz30XDmMlZixvaqKeVlmy6xMiGBkm+KhyqqEWEedh7r+3odSpF9k
-        83WxTnOMNHwQSnGMP1Bp+WNCOk5ZYE+2vjxhRSNkpD+MjRQtopyocFJYVz8F
-        tobjM/7doiiqfFVVq9Cfnp4bXht7HJ4FM25bIwYnPHHyanj9je45dFTdgh4d
-        nITrQLuOG5C6pRJOvAEWS+bGAlUMj74VePr81X4xvAYE+dAJC8J/BnrLFaNX
-        B8M5YJ5CTETjcNYjtPjddjSe8AWkbR0MRt/x1iXgqLwH2ngeTmtpfdTvv/6G
-        4aOfXQKKuxNOAyMNZRzh8BEDlB1FyxPQBu5GxGs76iaYjvsK5n8SfeNpHbRm
-        /tWjYJxBc4YXo45VYas7faqdrg9CsRqltCXvODUBstUG6wd9eCac0BoEwv8/
-        iiN+FQreSwYf9Ekl8CS/0JN6NBIBO+eG7X6xX5xOp3nPuRuHeav7/ULGcKS+
-        X4QEu19kWbUusrLc7BcIc+b2xWgzHO1oaJxrWVwscpHytVauk2e4Dk+QqFKi
-        fpK9lOfjoekbvHPCx6ZFuS5XxQQwDmzSVpmnaLHNJtzfGo1A6L07LVTda+af
-        QYl4/zzpMd1k+bparsvnZC6tgBtUViSEbdOBVkCtn3kK8/Jlma7LdZVG1mv0
-        WZkjMSMveE+9ekKYrJYh301ZZFm+yjHp1Om/EegbVDJ5jGYNYx4HnIEf1uMn
-        NBF31Nep+M/uMjEbRkYH8WJk2TSpr+Kq2qWzgzY9dbs7q9VMil5gU+oYs3vj
-        LT+LbAXbxapmA5rH5wkumd3N7vkZv7B1wVZNmud5eqAYyMo8b/K8aGfaMG52
-        fm6zSH43UZ95m+/CXiGhhk77iX8XHvez1ui1STopakcKdf/vyps2LOb9dZt8
-        3ba4WKehxvBoXaAQak2gDw0PZo3bQbA5RF7eMYMRRxRPjMZ9gt6nRyokbSQH
-        rVDDTgMd0YTKidbL7IJovRuxTDvlztF5YNGxbTdRaXz2IFr/uN9unnaCMRw+
-        vkfpXmh8+mK/iJXX2IT9gunWhvq9vC/z+3I+7X4SnONksFks/FLNMSNBpv9N
-        Ncv/jWrCjiD/vAKCyQh5fPzsD4L7FjiuBwAA
-    http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:07 GMT
-- request:
-    method: get
-    uri: https://api.meetup.com/2/events?group_id=1584515&key=<MEETUP_API_KEY>&page=1&status=upcoming
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*; q=0.5, application/xml"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Fri, 19 Feb 2016 17:15:07 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '1618'
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=d2e86a6b1571ed816d13caa1c2eef69871455902107; expires=Sat, 18-Feb-17
-        17:15:07 GMT; path=/; domain=.meetup.com; HttpOnly
-      X-Meetup-Server:
-      - api11
-      X-Meetup-Request-Id:
-      - 32fa071e-2541-45d0-91b8-1d86f57774db
-      X-Ratelimit-Limit:
-      - '30'
-      X-Ratelimit-Remaining:
-      - '27'
-      X-Ratelimit-Reset:
-      - '9'
-      X-Oauth-Scopes:
-      - basic
-      X-Accepted-Oauth-Scopes:
-      - basic
-      Etag:
-      - '"2e90e26a84af4e88579da3b418d8b8c1"'
-      Vary:
-      - Accept-Encoding,User-Agent
-      Content-Encoding:
-      - gzip
-      Cf-Ray:
-      - 27739cab3ad50168-ORD
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-    http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:07 GMT
-- request:
-    method: get
-    uri: https://api.meetup.com/2/events?group_id=1708426&key=<MEETUP_API_KEY>&page=1&status=upcoming
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*; q=0.5, application/xml"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Fri, 19 Feb 2016 17:15:07 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '977'
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=d8d34f9faa42811bd5b468834d54dca281455902107; expires=Sat, 18-Feb-17
-        17:15:07 GMT; path=/; domain=.meetup.com; HttpOnly
-      X-Meetup-Server:
-      - api2
-      X-Meetup-Request-Id:
-      - a4b86824-76c4-4d16-b1aa-73ac368da59b
-      X-Ratelimit-Limit:
-      - '30'
-      X-Ratelimit-Remaining:
-      - '26'
-      X-Ratelimit-Reset:
-      - '9'
-      X-Oauth-Scopes:
-      - basic
-      X-Accepted-Oauth-Scopes:
-      - basic
-      Etag:
-      - '"110a5fd3996c4ebd58482d0f73d06e92"'
-      Vary:
-      - Accept-Encoding,User-Agent
-      Content-Encoding:
-      - gzip
-      Cf-Ray:
-      - 27739cacb3562531-ORD
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA81Uy47bNhTd9ytYLowE8EvUc4w4RdC0RRfTLDrALOLAoMRr
-        i7FECiRl1x3Mv/Rb+mW9pKyxp+ii3dWADYs69/LcxzlP1IDtG2fp6vMT7V21
-        1budBUdXs6hYhs+UHkH1QFdP9HfZ0RVNiiJL6JRWulfOnPGkt/5ROv//0wFa
-        7Z+5EJjbbiM8ZMkyJY9ai4YfgHw08giIULzFtPQBqvrXVrqafK9Npw13Uit8
-        3eDvalYk8yTO71g+pVLQVZYlcczYlFrHnY++/9lDOTJO2DwrlkVeTLGoTioF
-        iN/xxsLzlNbARSBMV74iaWUpm4Fx15eNrDDLiUvXSOu2V2BlAK/BPFGSpGkS
-        ZWkaWtLycwlbY4/dDViArYzsAv0Vfde9/0U7wpuGOOCtJdwAqfSs0ZVPOScP
-        NeBJK/e1IyUEEGmhLcFYIhURcrdDgHKk48ZZonfE1UDKXjZCqv3UYzixgG8x
-        H1HADSnPN++1GSDXRH5E/jj0jrwJRRDA8RLdOysFjJdcRvt2Th6BnKQvgTcH
-        wkvEBcBNzhorBLUHi0Cc4eu3J20OBNRRGq1aPMAuKEFqfSJOk9Yvw4C3zsiy
-        x7ZceuXj5n/+8W6z6N7jZDxHt+1Ng32tnetWm8VmcTqd5i2A67t5pdvN4l6K
-        2b2sarnnavZhLxuY/WR0320WIdxuFoxlLL67Y8VmgUnPYF9NkMUvK3nPD9hC
-        8vGG10Pg9Yi8vqXDKtKXdHjgpA+MkjRjORuF03di3J40ztIiW2bhfO9peUF9
-        1VJtWy38nboDv/XXjWNFkscZi4ZcI7ObIkkokoQi6SXr9qqaHOMixpb5Mo7Y
-        QDnKl0XCMmRmmn9IeNu1a8KLtvIUFVJrHzIsKX0eVIjqRwvocAbYM/r8BdUB
-        jvvyFPzmLhOzYWS8k69GxsbZfDfYzjqa7LRpuVt/tVpNGom2AGI7YNY/ei1P
-        BlZSrC/FTDq+Bx8ooRF2PTnAeZ2nIk9EVkZxHEc7nqdMpHFcxnFSTbQRYNZ+
-        XpOB/XrkPvECXgfHoKGIWvsx/xBu9zPWqIJxWyI0pEaqw7+rb7RLjPu7T3yo
-        KrRJch/CyAAnvfX7x0kodnqxhSDpACAS/WPg5TXeoaF6RQf0YDT8yGXDS1wP
-        rZqzVxvvUWrKyeA+L0YTBK/tGIuupNFTuKnqkUrpoztZ+cuDdyHtKWKAfP6E
-        K3uh8eXNZjFUvsUmbBZCVzbU79f6MsC389HVaVCMa8ICDoVfqjkyGrbzv63N
-        8v+zNsEZ6Gvtp0v83hVBx0FOlD4/f/MXQsn26HwHAAA=
-    http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:07 GMT
-- request:
-    method: get
-    uri: https://api.meetup.com/2/events?group_id=3136712&key=<MEETUP_API_KEY>&page=1&status=upcoming
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*; q=0.5, application/xml"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Fri, 19 Feb 2016 17:15:08 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '1434'
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=d21f2c1d01fb3f1661787de9c1880f2bb1455902107; expires=Sat, 18-Feb-17
-        17:15:07 GMT; path=/; domain=.meetup.com; HttpOnly
-      X-Meetup-Server:
-      - api14
-      X-Meetup-Request-Id:
-      - 0bc6409e-9985-4f61-af9c-29131dbfd0cf
-      X-Ratelimit-Limit:
-      - '30'
-      X-Ratelimit-Remaining:
-      - '25'
-      X-Ratelimit-Reset:
-      - '9'
-      X-Oauth-Scopes:
-      - basic
-      X-Accepted-Oauth-Scopes:
-      - basic
-      Etag:
-      - '"3b2a63fab31d1189b7c4b424cb003922"'
-      Vary:
-      - Accept-Encoding,User-Agent
-      Content-Encoding:
-      - gzip
-      Cf-Ray:
-      - 27739cae4ed10436-ORD
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-    http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:08 GMT
-- request:
-    method: get
-    uri: https://api.meetup.com/2/events?group_id=3159142&key=<MEETUP_API_KEY>&page=1&status=upcoming
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*; q=0.5, application/xml"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Fri, 19 Feb 2016 17:15:08 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '420'
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=dbc40c4348d9629c2f2082738196cdd801455902108; expires=Sat, 18-Feb-17
-        17:15:08 GMT; path=/; domain=.meetup.com; HttpOnly
-      X-Meetup-Server:
-      - api2
-      X-Meetup-Request-Id:
-      - a1fb018d-8b98-4b22-af88-e901f487a4ae
-      X-Ratelimit-Limit:
-      - '30'
-      X-Ratelimit-Remaining:
-      - '24'
-      X-Ratelimit-Reset:
-      - '9'
-      X-Oauth-Scopes:
-      - basic
-      X-Accepted-Oauth-Scopes:
-      - basic
-      Etag:
-      - '"0dd0f79677b17a7be4a39bfb32acf786"'
-      Vary:
-      - Accept-Encoding,User-Agent
-      Content-Encoding:
-      - gzip
-      Cf-Ray:
-      - 27739cb0084009a6-ORD
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA42SS4vcMBCE7/kVjQ4mAeOXxpmswYQcklvIJbf1MshWe0ZZ
-        WRJ6DFmW/e9p2zPsNTchVanrK+mVeQxJx8C6x6ecLRgF616Zwb+RdYxtOxcr
-        af39ioZkOYs2Cn2abDIkqXKmlXmm80uMLnRDOZTCqWJBjMkVk12GshlKvJvf
-        bRLD5JWLyhpyf5smDAF+bjbY5ZCCMmcQcPY2uRwWXEb0OVi/C0DJAvZYoAw4
-        r64i4q4OIDyCuAqlxagRrNEvEC2IFC9kUBMp5e3GAHYGogx3bwG/LQQUfrrc
-        o4yr26lpHa4tuSl2ThqEx18OzS3G08eh3MlPVMJQSjuFjd+S5rRf9amgGvQG
-        vZapokZa3sBvNNeGjpLX/1frVzvPAWNfZbP1i4j9n2BNptWiiPE2tf8hdMBs
-        4zsp2fO6fagPTebEGfs6mxVqGfrsGV/6YyuPB/l5rDnn9SyObSNbzkfOD1Nm
-        vUTfR7VgFqKIKfTJURh6pmx9z35ep1B2JXe85ORaNOvqQ9s+VE1dfeEVJ36x
-        fa+3tw//AF8OGB6BAgAA
-    http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:08 GMT
-- request:
-    method: get
-    uri: https://api.meetup.com/2/events?group_id=11334952&key=<MEETUP_API_KEY>&page=1&status=upcoming
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*; q=0.5, application/xml"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Fri, 19 Feb 2016 17:15:08 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '419'
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=d567196f2c21ca3b86c26d25e89c7c6e71455902108; expires=Sat, 18-Feb-17
-        17:15:08 GMT; path=/; domain=.meetup.com; HttpOnly
-      X-Meetup-Server:
-      - api10
-      X-Meetup-Request-Id:
-      - 1ad01b7d-e02e-4841-a557-95a46b926d8c
-      X-Ratelimit-Limit:
-      - '30'
-      X-Ratelimit-Remaining:
-      - '23'
-      X-Ratelimit-Reset:
-      - '8'
-      X-Oauth-Scopes:
-      - basic
-      X-Accepted-Oauth-Scopes:
-      - basic
-      Etag:
-      - '"1f78a7064a2ca710aa718f9ba9ea90c6"'
-      Vary:
-      - Accept-Encoding,User-Agent
-      Content-Encoding:
-      - gzip
-      Cf-Ray:
-      - 27739cb1ac4909be-ORD
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA42SS4vcMBCE7/kVjQ4mAWOP7XEmazAhh+QWcsltvQyy1J5R
-        VpaEHkOWZf972o9hr7kJqUpdX0mvzGNIOgbWPT7lbMbIWffKDP6NrGNs3bla
-        SevvNzQky1m0keuzsMmQ5JAzrcwznV9jdKEbyqHkThUzYkyuEHYeynoo8W5+
-        t0kMwisXlTXk/iYEhgA/VxtsckhBmQtwuHibXA4zziP6HKzfBKBkAVssUAac
-        VzcecVMH4B6B37jSfNQI1ugXiBZ4ilcyKEFKud8YwE5AlOHuLeC3hYDci+s9
-        yri4nRLLcG3JTbFz0iA8/nJo9hhPH4dyIz9TCUMprQgrvyXNebvqU0E16BV6
-        KVNFjbTcwXeaW01Hyev/q/WrnaaAsT9kk/Uzj/2fYE2m1ayIcZ/a/+A6YLby
-        nZXsq6ppjg9tnTl+wb7KJoVahj57xpf+1MrTUX4eSdJUEz+1tWybZiSDyKyX
-        6PuoZsxC5DGFPjlKQ++ULQ/aT8sYCq/kxpecXJpmXXVs24dDXR2+tO2RCuDr
-        /3p7+/AP65jmjYICAAA=
-    http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:08 GMT
-- request:
-    method: get
     uri: https://api.meetup.com/2/events?group_id=11398352&key=<MEETUP_API_KEY>&page=1&status=upcoming
     body:
       encoding: US-ASCII
@@ -874,74 +340,6 @@ http_interactions:
         gR/oMiz7c+rYf+cq+JSx0+m7vwGOnp56CwcAAA==
     http_version: 
   recorded_at: Fri, 19 Feb 2016 17:15:08 GMT
-- request:
-    method: get
-    uri: https://api.meetup.com/2/events?group_id=13105392&key=<MEETUP_API_KEY>&page=1&status=upcoming
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*; q=0.5, application/xml"
-      Accept-Encoding:
-      - gzip, deflate
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - cloudflare-nginx
-      Date:
-      - Fri, 19 Feb 2016 17:15:09 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '420'
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=d5f73af15ae163c66371340f441f09b3a1455902108; expires=Sat, 18-Feb-17
-        17:15:08 GMT; path=/; domain=.meetup.com; HttpOnly
-      X-Meetup-Server:
-      - api11
-      X-Meetup-Request-Id:
-      - ccf86af0-7ebc-4d17-aad2-a27bb33c7cf1
-      X-Ratelimit-Limit:
-      - '30'
-      X-Ratelimit-Remaining:
-      - '21'
-      X-Ratelimit-Reset:
-      - '8'
-      X-Oauth-Scopes:
-      - basic
-      X-Accepted-Oauth-Scopes:
-      - basic
-      Etag:
-      - '"1bce4eb00200037f5f52577b347f50f0"'
-      Vary:
-      - Accept-Encoding,User-Agent
-      Content-Encoding:
-      - gzip
-      Cf-Ray:
-      - 27739cb4c36310a5-ORD
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA42SS2vcMBSF9/0VFy1MC8YvjTOMwYQs2l3pprs4DLJ1PaNG
-        loQkDw0h/73XjyHb7oR0ju75jvTOPIZZx8Ca55eUTRgFa96Zwb+RNYytO1cr
-        af39hoZkKYs2Cn0e7GxIUqRMK/NK59cYXWi6vMuFU9mEGGeXDXbq8qrL8W7+
-        tEkMg1cuKmvI/TQMGAL8XG2wyWEOylxAwMXb2aUw4dSjT8H6TQBKZrDFAmXA
-        eXUTETd1AOERxE0oLXqNYI1+g2hBzPFKBjWQUu43BrAjEGW4ezP4bSGg8MP1
-        HqVf3E4Ny3BtyU2xU9IgPP9yaPYYL1+7fCM/UwldLu0QVn5LmvN21beMatAr
-        9FKmihppuYPvNLeKjmav/6/WRzuOAWNbJKP1k4jtn2BNotWkiHGf2v4QOmCy
-        8p2VbEteFjU/VYkTF2zLZFSoZWiTV3xrj7U8HuRDX3LOy1Ec60rWnPecH4bE
-        eom+jWrCJEQR59DOjtLQOyXLg7bjMobCK7nxzU4uTbOmPNT1qajK4lQ8cCpA
-        rP/r4+PLP6EZzU6CAgAA
-    http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:09 GMT
 - request:
     method: get
     uri: https://api.meetup.com/2/events?group_id=14621542&key=<MEETUP_API_KEY>&page=1&status=upcoming
@@ -1035,6 +433,654 @@ http_interactions:
   recorded_at: Fri, 19 Feb 2016 17:15:09 GMT
 - request:
     method: get
+    uri: https://api.meetup.com/2/groups?key=&member_id=189827394
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 16 Mar 2016 05:14:59 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '181'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=db4d09cdad0ff635b4fc0cc4c092a3d801458105299; expires=Thu, 16-Mar-17
+        05:14:59 GMT; path=/; domain=.meetup.com; HttpOnly
+      X-Meetup-Server:
+      - api17
+      X-Meetup-Request-Id:
+      - ec185d47-3363-467a-89c5-1ae7f51880e4
+      Www-Authenticate:
+      - OAuth realm="https://api.meetup.com/"
+      Vary:
+      - Accept-Encoding,User-Agent
+      Content-Encoding:
+      - gzip
+      Cf-Ray:
+      - 2845b98ad32b0f03-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA0WPwQrCMAyG7z5FqNdp77t59OZVKEjWBldmm9qmjCm+ux0i
+        u+XP9xHyv5UjQf8oqlenyxkyPSsVKRBqERgIJloOxd8juQ4Yq4xbyoDWckgY
+        PTkYFsDV7mEUSb3RRs/zfAxEUtOxeUb/5hsmb7RjW4zerxcpirconqPqlGVH
+        7ZfIclsZZ/8i1/Yp8/Cg0NCVK2AmaApsCghDwIlARpR/DfXZfQE//1Wd4QAA
+        AA==
+    http_version: 
+  recorded_at: Wed, 16 Mar 2016 05:15:00 GMT
+- request:
+    method: get
+    uri: https://api.meetup.com/2/events?group_id=752053&key=<MEETUP_API_KEY>&page=1&status=upcoming
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 16 Mar 2016 05:15:51 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1304'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d76d1498e0d96de06077289d743a07fce1458105351; expires=Thu, 16-Mar-17
+        05:15:51 GMT; path=/; domain=.meetup.com; HttpOnly
+      X-Meetup-Server:
+      - api2
+      X-Meetup-Request-Id:
+      - c1a7d9ef-3c28-4c43-878e-a247081d7b64
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '28'
+      X-Ratelimit-Reset:
+      - '10'
+      X-Oauth-Scopes:
+      - basic
+      X-Accepted-Oauth-Scopes:
+      - basic
+      Etag:
+      - '"67deb35041ae9e3d49c9d8bad371c2a1"'
+      Vary:
+      - Accept-Encoding,User-Agent
+      Content-Encoding:
+      - gzip
+      Cf-Ray:
+      - 2845bacf80f22390-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Wed, 16 Mar 2016 05:15:52 GMT
+- request:
+    method: get
+    uri: https://api.meetup.com/2/events?group_id=1584515&key=<MEETUP_API_KEY>&page=1&status=upcoming
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 16 Mar 2016 05:15:51 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '2089'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d3b197381dee77467b5d7603e7b7e6c011458105351; expires=Thu, 16-Mar-17
+        05:15:51 GMT; path=/; domain=.meetup.com; HttpOnly
+      X-Meetup-Server:
+      - api16
+      X-Meetup-Request-Id:
+      - f9861c4e-0d78-40c0-9e21-8beaf3f53c1a
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '27'
+      X-Ratelimit-Reset:
+      - '10'
+      X-Oauth-Scopes:
+      - basic
+      X-Accepted-Oauth-Scopes:
+      - basic
+      Etag:
+      - '"b9dd645d446a23e6397f1eabc1a283bf"'
+      Vary:
+      - Accept-Encoding,User-Agent
+      Content-Encoding:
+      - gzip
+      Cf-Ray:
+      - 2845bad0c1ee02ba-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        Pxah520UPT395b/pmiPSJxAAAA==
+    http_version: 
+  recorded_at: Wed, 16 Mar 2016 05:15:52 GMT
+- request:
+    method: get
+    uri: https://api.meetup.com/2/events?group_id=1708426&key=<MEETUP_API_KEY>&page=1&status=upcoming
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 16 Mar 2016 05:15:52 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1588'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d3c39133e57bf0e9c926a64158823eca21458105352; expires=Thu, 16-Mar-17
+        05:15:52 GMT; path=/; domain=.meetup.com; HttpOnly
+      X-Meetup-Server:
+      - api5
+      X-Meetup-Request-Id:
+      - ea6f7b3a-0d50-49f2-890f-d628ba9367b3
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '26'
+      X-Ratelimit-Reset:
+      - '9'
+      X-Oauth-Scopes:
+      - basic
+      X-Accepted-Oauth-Scopes:
+      - basic
+      Etag:
+      - '"a94db28482fdeea2e288f36327312c89"'
+      Vary:
+      - Accept-Encoding,User-Agent
+      Content-Encoding:
+      - gzip
+      Cf-Ray:
+      - 2845bad257b723fc-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA81W247bNhB971ewenBawDdZtuU14g22QW5Fti3SbBsgDgxK
+        GlvclUiVpOwowf5LviVf1kNKXu8Gfchj/WDY0szwzDlz4edAk6kLa4Ll+89B
+        bdON2m4N2WA5CKfTsfv0gz3JmoLl5+CTqIJlMF0sJlHQD1JVS6sbPKkN/hYq
+        5YX4RNmme7GRvIRbcPXnhbMW1pk+48ay11waIXd4yrMMAMwmxKtoMmPPhuyF
+        5jJjb8SeNLtojz7ZTWB3kag9sV+4lmRYj/2mkoL8+RKoF9PhdBGG035Q5Uq6
+        42dhPIjCs8F8MQ9h1oG6j4O9pTSXqlC7hr2SUu25FUqypyQtabiILFiehWfR
+        2aIfGMut87985Y7kIGo6GcbRdDbGkZoqISXBfMsLQ7f9ICeeeTqCpSNSGJGI
+        omWiqpNCpIhy4MIWwtjNyTDVhGMQByLEcbgYz6deiZI3CW202Vf3jDMyqRaV
+        w4ywj6vztzkx+liRFiRTYo2qNUtrY1VJ2rCcg72DsHn7otIqq1NrmDCMMwSy
+        AjqyVJUV+JOWqS0zdZqC/SH7ixc1B90nr5RLZlSBkIBcsLwu8UASZabPtnWx
+        FUXBAFBAvT5zwooSvjC3APlPzR0Z/jeOKcSWhuxtDiQ7BW0TahQ8rgGdJbUo
+        MqdVqTSxLeipfUilWclv3Aub49uwQqkbwCNrmyF7ZZmQewfPsFpmSN8Cg7N2
+        UKisOLw+uf8nQu6Y6vB6//YAKvHXo3Up7aSjwRPzeD2qzhmof6kOLFPsQO4b
+        sc0TdoEg+bePXRzODtzlzi3bCieAtKqlAtL5EgShOm9sXhpHz8VOFO7kPRWq
+        KiHNE/YUQJmqrUeaCQPsxoUw4FdVIjX+xY6sj4uwpqLUorVcPA6u5G5gBWJc
+        vetSQtMdcoUiMRA0xSFFA8r3lLXwPIYhe0nc2QH5QekbMOV/ZxBNPmrBmJzr
+        rvQOsAWlqEbz4x1RjxO9HuH7/EVNkPcPiOnbDQbJ+ZL9ChFA0evaiWWV/Prl
+        zvPrl+6lL9grA8TPTsUORbZQpCXPi8pZxf0DtkWxGNQf6qxxgroaL+jjUUVq
+        2fIl3BaFvZsLLmVPSlXwBmSgyMEH7bSTSEEW5fUUGbE9BxQUNRjuugTZQ0/C
+        dHHxa4eYHiC+hiiuX7QqYcu1HdQVdFTsudK2lsRm47FHC2DHPuKpVhAbWBtA
+        yUCJI9jj1KgIIQnKZeg7nE9bpO4rrD3dkc11mvfxBG/Kdt65JwIpu87q4ziA
+        qyw6tKuMvs9Y87Z+gNoq22De7fosp1pjgIkUkfeCDh3E2vB22oFIp9jOo8Nk
+        bOsLHNJHSxjBiJfw9GYH4L7jGAYlDl6PSuWRdd3m0/ZlTlo6faghLypH+Jxw
+        fteJGKrouI1Vmy2o2WA9LYO/6RFGUUIu/JuSRWAUq86p5FqDCsLUR6hCJUkz
+        RAC0mbSbWhfwza2tluvRenQ4HIYlka2rIeRYjy5FNrgUoG3H5cD3xuAFkqjW
+        I+9u1qPJZI5tGZ9N1iMEbcg8mN7h4m4htd199a7bN8GdIx64FnW7YLaYL+J5
+        t5XrKjvuiNk8js/icOKfOxYrt62vlZCbUmUuOkaKDO7vlcliGkfzSdjG6jDc
+        T6cbNz6doIu6Oe3YGH7hZDKOx1E4aSGH8XgxncyBTBf/EfA+P6eAxw06wx7M
+        lXOhMsGcCm7bXeu1qyuw7S4Mtx+wA8lyl55E8XTaGC8Or8QDcSZHFZ60d5pV
+        2GuLfXVtlOwVokS1Z5vWZvXcbexei0pkqy6ZXsV35BwFFZlZ9W6oWcWzLJ5m
+        8ySMoijc8ng2yWZRlETRNO0pjSWzcnr1WvSrI/aeW9Mrfy8IfBK5cjI/86c7
+        jZXlxV1dxLhcCHnzffkd72Lw+/Y2cOEXN7v0bqw1R1/6Dch8sn1Wesb9KvUG
+        TGRD1uJyzVJpgdag1hpdi7HO91wU/h6gJKYMBhWv0UXSXR1AaRfRtM2lzNEX
+        u12xdvIcoSRNu6iYb73UD6I+bIi9/x0l28H48BNGgU9hAxLWo0ylxufvyroT
+        8Ofh8Q4Y+I6xhS/ANvEum71rplNLf2fZjP8/ZeMnQ/Cw9+N5FE6j9n7o2ykI
+        bm9/+BehL5SM2QsAAA==
+    http_version: 
+  recorded_at: Wed, 16 Mar 2016 05:15:52 GMT
+- request:
+    method: get
+    uri: https://api.meetup.com/2/events?group_id=3136712&key=<MEETUP_API_KEY>&page=1&status=upcoming
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 16 Mar 2016 05:15:52 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1445'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d096efb7c59759c27897029c8aa08b5601458105352; expires=Thu, 16-Mar-17
+        05:15:52 GMT; path=/; domain=.meetup.com; HttpOnly
+      X-Meetup-Server:
+      - api14
+      X-Meetup-Request-Id:
+      - 17135741-d9a2-41be-a387-51052d78ff08
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '25'
+      X-Ratelimit-Reset:
+      - '9'
+      X-Oauth-Scopes:
+      - basic
+      X-Accepted-Oauth-Scopes:
+      - basic
+      Etag:
+      - '"b0ad241f53c22a4e0e477cb929b3c10e"'
+      Vary:
+      - Accept-Encoding,User-Agent
+      Content-Encoding:
+      - gzip
+      Cf-Ray:
+      - 2845bad3ea2c020c-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA81W227bRhB971csiEJoAVkSL7oZUQolcNIUdhO06VMUCEty
+        Ja5N7jK7SylK4H/Jt+TLemZJSXaah/athg2Dy9mZM+fMhZ8DI2xTOhtcvvsc
+        NC5b683GChdcXoRJMqKffrATqhHB5efgk6yDyyCZzaI46AeZbpQzB5w0Fo+l
+        zngpP4l83b1YK17hWvDXn0uylo5Mr7h17JorK9UWpzzPAcCuQ7yKozG7GrCX
+        hquc/SF3wrBlG/psF8FumeqdYM+4UcKyHvtdp6Xw8RVQz5JBMgvDpB/UhVYU
+        fhxOL+JwfjGZTUKYdaAe4mBvRVYoXertgb1SSu+4k1qx50I5YXBF5sHlPJzH
+        81k/sI47un/zikJyEJVEg2mcjEcIaUQtlRIw3/DSivt+UAieezqCSyJSWpnK
+        smWibtJSZvCy59KV0rr12TAzAmHgJ0zGk3A2Gk8Sr0TFD6lYG7urHxjnwmZG
+        1oQZbp/UT98WomPxWuRbwV6U/l9jwRdntdG3InMs5VbkTJ7z5TVe8axgTrNM
+        V6lUglVcHZi9k2WJq3CYS5vJupREvdNb4QqoBPtc7ESpa6Ybw2QueGvt+J1g
+        MKnYxugKTlUmPM4uRCVMJqloPIDB1y9LR+Yd4D77TRhzgMDGSMsKOC1EWQO0
+        RTTDS5Y2lpBQXtDFIKcDa7yiVleC6Y33BpUExJaKVRrsA9FJ7gF7W8B1pZUr
+        juH2SJalsOLl3WNX2opTSJ9fofcUgYICVUfsxT+IRbJpI8ucKbE/ORg8WQ3r
+        pwxyPcoSv4T5+dVrivly+WrZZ9fXz/tsX0hIo2skjnTYttQpL0uC6wqWNdYB
+        prGUpabOGY9Y24ZStLRRKpWoUjKCEOpcAkAoPsKvk8iP0trJTCoU6YD9Ku3X
+        L+eXUmVlkxPbeuP23Iij7hVapc8+NJxqm4qGb0V7ttEaevGN+OacNwCsHbrc
+        h+TCaFvzTDAjSK/8u86E2kmjFT1AffANJdvShYtH3tUpqD1YJyqLXASRmzXG
+        wISI08br6wm8vlq+IZ2Iqa9f2vZj0cwrRuVC1VpzBTL7LJn741ud4gFFuRco
+        GPy3TV1rEAWfJOHpBmliBQLTmx/H6GP0Mh1udFnq/QXwbxqV01updihVyuGI
+        F3OEWuViAzFz6Iqi+H57AwrZdVn1SasmbeuvJTYXucw8tchTVmBvd4R6KuoH
+        BBPAG5njLyvklqOKC6ObbcuEcJI820dhvI5ZJkoq0baffY1jxKFKlFs3psSA
+        KpyrL1fD1XC/3w8qIVxTD+BzNbzRN7qbyKuhv2FXwyiaj8bxNJ6thvBzEPbR
+        9Jue5vmbrvme+ZJ+MMX9HDrNlFbthx3XzffgFAgHTpJPzN55NBqH3RZs6vw8
+        k6NkMovn/nwLWmrajrdaqnWlc4KDPlXBwzkeR9NRghjtHO9A37Tz6EarnB8e
+        bEXvcn1eaFNcCqNoNB3FYdTijcN4MqUHkHryduLv7OO4ocbYM4Umq3YGBPft
+        LsPqxv6uIQBdu3+PHSMcp3SU+Og6uazXi9fykV7RUaVf2m+GRdjbaFNxt7i1
+        WvVKWUnkvm5tFi9oI/ZaVDJfdPh7NXqWLkpR5nbRuxOHxXScT5N8koZxHIcb
+        Ph1H+TiO0zhOsp42aIIF6dNr0S+O2Hu0Bhd+7wY+iUKTrFc+OmmqMTOOdQPe
+        sMPu/l16x08dqPjtsl2i3NE2N/4aa827DcSZz7XfDd0+06Y1wH4csBYW9Vht
+        5I6GjbdGv2Oo8h2XJcdXDUYzBhXaFdOywIWuf49j/LSU2rtYZhqDhhuMqw5K
+        SrdrmVFw+j4j2H3YCPbuNSq0g/H+p9WwzXwNElbDXGfW509V3On38+D4iRX4
+        BnGlL7k28S6bXRT4evxvVTP6/1SNHwTBN62OL7sknPi29d0UBPf3P/wNPelJ
+        PzgLAAA=
+    http_version: 
+  recorded_at: Wed, 16 Mar 2016 05:15:53 GMT
+- request:
+    method: get
+    uri: https://api.meetup.com/2/events?group_id=3159142&key=<MEETUP_API_KEY>&page=1&status=upcoming
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 16 Mar 2016 05:15:52 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '420'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d54279c00a99d4b50b45d5bdc31bde70e1458105352; expires=Thu, 16-Mar-17
+        05:15:52 GMT; path=/; domain=.meetup.com; HttpOnly
+      X-Meetup-Server:
+      - api1
+      X-Meetup-Request-Id:
+      - aaeaed24-61c9-4297-b89b-305fede78fbc
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '24'
+      X-Ratelimit-Reset:
+      - '9'
+      X-Oauth-Scopes:
+      - basic
+      X-Accepted-Oauth-Scopes:
+      - basic
+      Etag:
+      - '"5b222dd5a6ae985e3db494872f4c8e3f"'
+      Vary:
+      - Accept-Encoding,User-Agent
+      Content-Encoding:
+      - gzip
+      Cf-Ray:
+      - 2845bad55af62450-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA42SS4vcMBCE7/kVjQ4mAWOP7fFOYhAhh+QWcsltvQyy1J5R
+        VraEHkOWZf972o9hr7kJqUpdX0mvzGNIJgbWPT7lbMIoWPfKZvwbWcfYunO1
+        itbfbziTLGfRRmHO0qaZJIecGT0/0/k1Rhe6vuxL4XQxIcbkCmmnvqz7Eu/m
+        d5vCIL12UduZ3N+kxBDg52qDTQ4p6PkCAi7eJpfDhNOAPgfrNwFoVcAWC/QM
+        zuubiLipAwiPIG5CGzEYBDubF4gWRIpXMmhJSrXfGMCOQJTh7i3gt4WAwsvr
+        PcqwuJ2Wy3BjyU2xc9IgPP5yOO8xnj725UZ+phL6UlkZVn5LmvN21aeCajAr
+        9FKmjgZpuYPvNLeajpI3/1frVzuOASM/ZKP1k4j8T7BzZvSkiXGfyn8IEzBb
+        +c5a8aZqv1THOnPigrzKRo1GBZ494ws/tep0VA9D1TRNNYpTW6u2aYamOcrM
+        eoWeRz1hFqKIKfDkKAw9U7a8Jx+XKZRdqw0vObUUzbrq2H6uDm3T1g+H5c+I
+        9Xu9vX34B8SymgiBAgAA
+    http_version: 
+  recorded_at: Wed, 16 Mar 2016 05:15:53 GMT
+- request:
+    method: get
+    uri: https://api.meetup.com/2/events?group_id=11334952&key=<MEETUP_API_KEY>&page=1&status=upcoming
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 16 Mar 2016 05:15:52 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1072'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d096efb7c59759c27897029c8aa08b5601458105352; expires=Thu, 16-Mar-17
+        05:15:52 GMT; path=/; domain=.meetup.com; HttpOnly
+      X-Meetup-Server:
+      - api14
+      X-Meetup-Request-Id:
+      - 84f7b893-cefb-441d-8dd2-2bb41e882a7e
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '23'
+      X-Ratelimit-Reset:
+      - '9'
+      X-Oauth-Scopes:
+      - basic
+      X-Accepted-Oauth-Scopes:
+      - basic
+      Etag:
+      - '"bb5f6cbc23d25bfdda4b72217d3a4a69"'
+      Vary:
+      - Accept-Encoding,User-Agent
+      Content-Encoding:
+      - gzip
+      Cf-Ray:
+      - 2845bad67a52020c-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA41VXW/bNhR936/g+OC1gGZbH5Zko+6Qdg1QIEEwJEMf6kKg
+        xeuItURqJGUvDfLfd0nKcQJswPLgwPK5X+eec/VINZihtYauvj7SwdaV2u0M
+        WLr6Nc6yufuL6AHkAHT1SH+Inq5oVpZ5RiNaq0Fa/YBPBoNfW1WzVvwAXo0/
+        VJJ1GEb/vL1waGEd9GYPnXJwxjmWNlWMD5NsviBflOIt2wP5XYsDIGIMv4O6
+        ue2EbchHpXulmRVK+noSuyyzaZYWy6SIqOB0ledZmiZJRI1l1kVff3ZQhgNl
+        yTQv52VRRjhzL6QExO9Ya+Apog0w7tumKzewMGIr2tBxP2xbUWOWIxO2FcZW
+        Z2CtActgnjhbFGlR5FlgrGMPW6i0OfQvwBxMrUXv21/Rd/37D5pxcsUu4aAh
+        IowcwIJmkghJbAPk8x3BKXY7Ie/JTkDLI3IUbUu4MPVgjMd0TO/Bkp3SxKid
+        PTINxILBPAbRDbOkVl3PpABD3G+tUnufDwN2WnUuidDnkLph8h6xYwtC8sHg
+        KiNi9ljaP+fQMYm94Adh/CBqIIg8qqHl5B43R6zCWGWAGABfDB/ca3UkzJwK
+        TckFRqsddjdoRGItbM5Pt8VvogPf4V8DwpEu8/O7zax/T5CzS1TJM7DX6iA4
+        8Cm5w773JpQWhnRK2uYXg0kQbXrMoPSK3Fis/YEZCOlwpYDSttWgW1xIY22/
+        2sw2s+PxOO0A7NBPkbzN7IpJg2Nc4K5vR47vwhibmU+A/5NkmcV5lpSbGaZ9
+        APNq+XGO2x9G5a4WJ1+NAv/i1uTYvg7LvMIdGT8/sj1WwpHRAEEw4AVDg+Dp
+        c2V84IjzWiyTpMzHKkPPX2h0OY+z0j/HlQy9c/V3JWTVKe56UT04b511nZZ5
+        nBT5onjZ8cgIcZSQEyfPrb65uri9e0vHCtXZp/FyuSzjvFxmizQO7cdxmmbL
+        BRoWl/A6+7/wfc45GrqYY8rlvMyyIskXyPKxUZjhj4E585KPDet6px/6FC4C
+        Hiq8Vj2uFQvQp2/oVLDMkSDhb0xJqX/SKMfsJ79bR6uyrH3eJZ4TIfejYIxX
+        DOvFK8UkJ2GcrqQPe+3/i7rG80eufRgJcDJ4WhnxU0akg24LOiIoBQ8gAqUe
+        2nLa6PFQ4poCOvibHZho2bYFomT74PzABpSWtKJ2Cx0zGme94NEQiwZSaFem
+        6+bUytZF96J2xd1pd21HztLk6w2KZGzj25vNLExeIQmbGVe18fM7IVUh1dvp
+        6VpTr1Hb+sMcBh+nOSTUS+D/0fpbeEmt5xN0Scfs+rtRctIKfEvg6ydg1pfu
+        tE+CXgRfn5Q26dk9rOOJv6hmPdnDw7pY8CLj+RYhabxjxSLhizTdYkA9UZqD
+        XjtnTYKC1if9TNxC1/4NcjIj/W+7eclS+vT00z9X6wLcdAcAAA==
+    http_version: 
+  recorded_at: Wed, 16 Mar 2016 05:15:53 GMT
+- request:
+    method: get
+    uri: https://api.meetup.com/2/events?group_id=13105392&key=<MEETUP_API_KEY>&page=1&status=upcoming
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 16 Mar 2016 05:15:52 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '420'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d3c39133e57bf0e9c926a64158823eca21458105352; expires=Thu, 16-Mar-17
+        05:15:52 GMT; path=/; domain=.meetup.com; HttpOnly
+      X-Meetup-Server:
+      - api16
+      X-Meetup-Request-Id:
+      - 919867c8-4d68-4a47-8481-6dc29d50516c
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '22'
+      X-Ratelimit-Reset:
+      - '8'
+      X-Oauth-Scopes:
+      - basic
+      X-Accepted-Oauth-Scopes:
+      - basic
+      Etag:
+      - '"332aa34183bfcd58bb18db15fc5054e7"'
+      Vary:
+      - Accept-Encoding,User-Agent
+      Content-Encoding:
+      - gzip
+      Cf-Ray:
+      - 2845bad7c47423fc-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA42SzY7cIBCE73mKFgcrkSx7bMaZrCUryiG5Rbnktl6NMLRn
+        yGJAgEdZrfbd0/4Z7TU3BFV0fQWvLGCcTYqsfXzK2YRJsPaVWfybWMvYunN1
+        itbfb2hJlrPkkjBn6WZLkkPOjLbPdH5Nyce2L/tSeF1MiGn2hXRTX9Z9iXfz
+        u01hlEH7pJ0l9zcpMUb4udpgk8Mctb2AgEtws89hwmnAkIMLmwC0KmCLBdqC
+        D/omEm7qCCIgiJvQRgwGwVnzAsmBmNOVDFqSUu03RnAjEGW8ewv47SCiCPJ6
+        jzIsbq/lMtw4clPsnDQIj7882j3G08e+3MjPVEJfKifjyu9Ic96u+lRQDWaF
+        XsrUySAtd/Cd5lbT0RzM/9X61Y1jxNQdstGFSaTuT3Q2M3rSxLhP7X4IEzFb
+        +c5adRWvDg1/qDMvLthV2ajRqNhlz/jSnRp1OqrPQ8U5r0ZxamrVcD5wfpSZ
+        CwpDl/SEWUwizbGbPaWhd8qWB+3GZQyF12rjm71ammZtdWy+LCOb+uHEqQCx
+        /q+3tw//APcQF5OCAgAA
+    http_version: 
+  recorded_at: Wed, 16 Mar 2016 05:15:53 GMT
+- request:
+    method: get
     uri: https://api.meetup.com/2/events?group_id=16552902&key=<MEETUP_API_KEY>&page=1&status=upcoming
     body:
       encoding: US-ASCII
@@ -1054,86 +1100,72 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Fri, 19 Feb 2016 17:15:09 GMT
+      - Wed, 16 Mar 2016 05:15:53 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '1914'
+      - '1276'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d451ef067525c4a2800bd5378c1d16aab1455902109; expires=Sat, 18-Feb-17
-        17:15:09 GMT; path=/; domain=.meetup.com; HttpOnly
+      - __cfduid=d53d75e2dade183dd41c7cc529d64a6931458105353; expires=Thu, 16-Mar-17
+        05:15:53 GMT; path=/; domain=.meetup.com; HttpOnly
       X-Meetup-Server:
-      - api12
+      - api11
       X-Meetup-Request-Id:
-      - 9a3f3cc9-7121-4571-9fda-f56f484f67a3
+      - a78145e1-a9fe-4203-b555-638bb314929d
       X-Ratelimit-Limit:
       - '30'
       X-Ratelimit-Remaining:
-      - '19'
+      - '21'
       X-Ratelimit-Reset:
-      - '7'
+      - '8'
       X-Oauth-Scopes:
       - basic
       X-Accepted-Oauth-Scopes:
       - basic
       Etag:
-      - '"cab5c533bbe45f56db0b170b94807ffe"'
+      - '"cbba7edca92be99da1fe11f31058883a"'
       Vary:
       - Accept-Encoding,User-Agent
       Content-Encoding:
       - gzip
       Cf-Ray:
-      - 27739cb7f9d22531-ORD
+      - 2845bad8de192390-IAD
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        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
-        vPFdI3i5L/gCC4K7u7/9C82IjRMFEAAA
+        H4sIAAAAAAAAA81V3W7bNhS+31OccYDbAp5syZL/EKdIm7YL0LTFkqIXdWFQ
+        FG2xlkiNpOwqRd6lz9In2yElx0mxDdvdcpEg1Dnf+fvOd74SzU1dWEPmH7+S
+        2rKVWq8Nt2T+axjHQ/fTJzsua07mX8mNqMicxNPpOCZ9wlQtrW7wpTb4b6EY
+        LcQNz1bdh5WkJbqR91dnzlpYZ/p2y0vlzGmWYWizCvExiocJfFAqK+iWw7kW
+        O44Wnfs1Z/lVKWwOz5WulKZWKOnjScxyGgfxaDKLJn0iMjIfj+PRKIr6xFhq
+        nfflhTOlWFAcBePpcDqZ9rHmSkjJ0X5NC8Nv+yTnNPNpk7krWBiRiqLNuKrT
+        QjBE2VNhC2Hs6mjINMcwiBPG4TCeRfE09h0raZPylTa76p5xxg3TovLpz8lJ
+        dXqSnr78BajMYF1L5t5pAZVWG03LUsjNyXKQnuKv6hTQ+lkDUu2hUfWjHXdm
+        KU2LBjBznYFaw8sjxrsjRgAX9pGBDbcW/wMKqbDOOq1vbkBIMGpt91RzyPiO
+        F6oqubTAhGYFN8H3b/CstrDPqQVhAD35F8ps0TzFL2eY9z5vwOSqLjKXFzAH
+        9JgaU7vQ/qn9+sQ5vJVKCwV7URTfv2W8bIwV6wZszkFknBqX1l83AvDjnheF
+        +4uOShrraHC/Hmzk40vBtHIFYcH3uvGayk1NNxzWSvtowRtu4R2SAh/KJ8BU
+        xoO7Np+kejk4vao4UlHPv3+79+G0q+A5zlxSxkQ7oNaBS4HwV4d2nrft5LoP
+        v19cXPXhQrJjkA4Ie0rBtJ4/DoJrn+/R2U3rWqumD5cXwbGdOfYk5VzCXgvf
+        kjsg50410i+DaAgN8gRb7AI579844IpoJC8USm2do5BW/e0AWpxpB0M3yvPW
+        CMm466lEHmLXJeauPSDippRtAzgzW8hFCTRVSKUcS06FzhDCOn5oUHsJWpjt
+        z12rcdEQRNpVrQtck9zaar4cLAf7/T4oObd1FTBVLgevXr9/JbldDry1WQ6i
+        aDydJfF4thwgRsPNg/0LE1zAuhOP+STqpK3TmH9cQ9JKC/ljW26qbbNbp/sU
+        36xwrmGcTKOkhUO8usoOgpCMZuEsmc38+wb7VzkJ/ayEXJXIOATEITshuyci
+        KE/jcBhO7+fWFQrvDbb2lcPxkw3evLjuwweeIh8UihXvwzm1NKXGaaePtzpK
+        ZDibzaYhNgjTCtt6wnGSRLMhaiV2+mGsI0AnnJMh+s+G0zieRONkjFqYKzS/
+        I7kht63k4iXAc1DhhFzjbj+hFHJLXeGSf7HdPI0fKK3Eg4FGh1E+bU/QIuy5
+        /aR28dko2SsE3gA8Lq3N4qUT7l6bpcgWh2J6FS668xS8yMyit+XNYpJkkzgb
+        p+FoNArXdJJEWTIapaNRzHpKZ1wv3Ch7bfqLQ/I9J9cLfx+IryJXjgQvfHg3
+        fmVpcceuER4ZIbf/rsDD7US/H6/CGWN4FOHSu0FrDrVppc5X24eSl6nTFSSB
+        N0D1DKDNy2lEhecT+dRa456hEtAdFQVeCw5K4snANae1W1ormGNeh+gFGMs0
+        B98ArhXKE9UsP6SSOu9KMBfcHXyXdh9tOHx8i2zu0vj0eDloK19hE5aDTDHj
+        63eM7yb4JDjccOKXyRb+XLeFd9XsIuLZ+d94M/wf8cYLB3moC+PhOJmEkd9x
+        v2CE3N7+9Cfa4eX2igkAAA==
     http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:09 GMT
+  recorded_at: Wed, 16 Mar 2016 05:15:53 GMT
 - request:
     method: get
     uri: https://api.meetup.com/2/events?group_id=18384747&key=<MEETUP_API_KEY>&page=1&status=upcoming
@@ -1155,53 +1187,53 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Fri, 19 Feb 2016 17:15:09 GMT
+      - Wed, 16 Mar 2016 05:15:53 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '421'
+      - '420'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d0a439cee51a905c2fabb614456ffa8ac1455902109; expires=Sat, 18-Feb-17
-        17:15:09 GMT; path=/; domain=.meetup.com; HttpOnly
+      - __cfduid=dd6e7668c7a09dbf9508591945bd5ed041458105353; expires=Thu, 16-Mar-17
+        05:15:53 GMT; path=/; domain=.meetup.com; HttpOnly
       X-Meetup-Server:
-      - api0
+      - api2
       X-Meetup-Request-Id:
-      - 31ab09f5-e6a3-4a05-a9bc-e4762c596526
+      - 787e6300-eb31-49ac-bdce-2f327dd05f15
       X-Ratelimit-Limit:
       - '30'
       X-Ratelimit-Remaining:
-      - '18'
+      - '20'
       X-Ratelimit-Reset:
-      - '7'
+      - '8'
       X-Oauth-Scopes:
       - basic
       X-Accepted-Oauth-Scopes:
       - basic
       Etag:
-      - '"d5d56c191fbea7a25b3ef8e6687e6201"'
+      - '"b523a2c63c2a21cde19fd1d80208731f"'
       Vary:
       - Accept-Encoding,User-Agent
       Content-Encoding:
       - gzip
       Cf-Ray:
-      - 27739cb9740b257f-ORD
+      - 2845bada3ba902ba-IAD
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA42SS2vcMBSF9/0VFy1MC8Yej+16YhAhi3ZXuukuDoMsXc+o
-        kSWhx9AQ8t8rP4ZuuxPSObrnO9I7ceijCp70zy85mTEw0r8TjX8C6QlZd65G
-        pPW3G+oky0kwgakzN1EnySEnSurXdH4Nwfp+KIeSWVnMiCHagpt5KI9DiXfz
-        P5tAz520QRqd3E+co/fwY7XBJofopb4Ag4sz0eYw4zyiy8G4TQBSFLDFAqnB
-        OnljATe1B+YQ2I1JxUaFYLR6g2CAxXBNBsmTUuw3ejATJEp/9xbwy4BH5vj1
-        HmVc3FbyZbgyyZ1i50mD8PzTot5jvHweyo38nEoYSmG4X/lN0py3q74UqQa1
-        Qi9lyqAwLXfwneZ2TEfRqf+r9dFMk8dAD9lk3MwC/e2NzpScZWLcp9LvTHnM
-        Vr6zFLQ61aema7rMsgvSKpskKuFp9opvtGtF14ivY1XXdTWxrj2Ktq7Hum54
-        ZpxAR4OcMfOBhehptClNeqdseVA6LWNSeCk2vmjF0jTpq6ZtHw7H6vBwOi2f
-        hq3/6+Pj01/vZDp5ggIAAA==
+        H4sIAAAAAAAAA42ST4vbMBDF7/0Ugw6mBWPHsVMHgyg9tLfSS2/rJcjSOFFX
+        loQkhy7LfveO/4ReexPWezPv9+Q3FjDOJkXWPT3nbMIkWPfGLP5JrGNs/XJz
+        is7f7mhJlrPkkjAX6WZLkkPOjLYvdH9LyceuL/tSeF1MiGn2hXRTXx77Eh/m
+        fzaFUQbtk3aW3F+lxBjhx2qDTQ5z1PYKAq7BzT6HCacBQw4ubALQqoAtFmgL
+        Pui7SLipI4iAIO5CGzEYBGfNKyQHYk43MmhJSrVPjOBGIMr48Bbwy0FEEeTt
+        EWVY3F7LZblx5KbYOWkQnn56tHuM5499uZFfqIS+VE7Gld+R5rKN+lRQDWaF
+        XsrUySAdd/Cd5n6kqzmY/6v1ixvHiIkfstGFSST+OzqbGT1pYty38u/CRMxW
+        votWvDrX56Zt2syLK/IqGzUaFXn2gq+8Pam2UZ+Hqq7rahTt6ahOdT3UdSMz
+        FxQGnvSEWUwizZHPntLQO2XLg/JxWUPhtdr4Zq+WpllXNadzdTjVNKk9UwFi
+        /b/e3z/8BVTLljOCAgAA
     http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:09 GMT
+  recorded_at: Wed, 16 Mar 2016 05:15:54 GMT
 - request:
     method: get
     uri: https://api.meetup.com/2/events?group_id=18392696&key=<MEETUP_API_KEY>&page=1&status=upcoming
@@ -1223,73 +1255,74 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Fri, 19 Feb 2016 17:15:10 GMT
+      - Wed, 16 Mar 2016 05:15:53 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '1361'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=db6ca7c2f62ca4be108958c3f3ab3ab1b1455902109; expires=Sat, 18-Feb-17
-        17:15:09 GMT; path=/; domain=.meetup.com; HttpOnly
+      - __cfduid=d56c6d99f29b4f8a67a6a11be8aed64731458105353; expires=Thu, 16-Mar-17
+        05:15:53 GMT; path=/; domain=.meetup.com; HttpOnly
       X-Meetup-Server:
-      - api3
+      - api5
       X-Meetup-Request-Id:
-      - e3b0255b-3997-4381-a255-9f261e722032
+      - fa8064b0-6113-488d-bce7-090d861626dd
       X-Ratelimit-Limit:
       - '30'
       X-Ratelimit-Remaining:
-      - '17'
+      - '19'
       X-Ratelimit-Reset:
-      - '7'
+      - '8'
       X-Oauth-Scopes:
       - basic
       X-Accepted-Oauth-Scopes:
       - basic
       Etag:
-      - '"033f89a3be5aa8d21db9f6aa430119ad"'
+      - '"6ce25620b54adb472ad3783655f3c8af"'
       Vary:
       - Accept-Encoding,User-Agent
       Content-Encoding:
       - gzip
       Cf-Ray:
-      - 27739cbb50340436-ORD
+      - 2845badb5bba02b7-IAD
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        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
+        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
+        fPYH4RtQhaAKAAA=
     http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:10 GMT
+  recorded_at: Wed, 16 Mar 2016 05:15:54 GMT
 - request:
     method: get
     uri: https://api.meetup.com/2/events?group_id=18495411&key=<MEETUP_API_KEY>&page=1&status=upcoming
@@ -1311,78 +1344,53 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Fri, 19 Feb 2016 17:15:10 GMT
+      - Wed, 16 Mar 2016 05:15:53 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '1531'
+      - '422'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d1269607979464ada0cc39d606868ca3d1455902110; expires=Sat, 18-Feb-17
-        17:15:10 GMT; path=/; domain=.meetup.com; HttpOnly
+      - __cfduid=dd5a9bbaf689eeca46ae8d02b39f5df491458105353; expires=Thu, 16-Mar-17
+        05:15:53 GMT; path=/; domain=.meetup.com; HttpOnly
       X-Meetup-Server:
-      - api12
+      - api2
       X-Meetup-Request-Id:
-      - 8be73fe8-d516-4e00-b3e8-8fa9c8855469
+      - 52aeeca0-c729-468b-b39b-f37f2aa4a508
       X-Ratelimit-Limit:
       - '30'
       X-Ratelimit-Remaining:
-      - '16'
+      - '18'
       X-Ratelimit-Reset:
-      - '7'
+      - '8'
       X-Oauth-Scopes:
       - basic
       X-Accepted-Oauth-Scopes:
       - basic
       Etag:
-      - '"5ba3e5db25e2ae075a1dbc093d747aa7"'
+      - '"6630c919fdcf0af161d8ce7d5e698f97"'
       Vary:
       - Accept-Encoding,User-Agent
       Content-Encoding:
       - gzip
       Cf-Ray:
-      - 27739cbce20925b5-ORD
+      - 2845badca9572450-IAD
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        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
-        AA==
+        H4sIAAAAAAAAA42SzWrcMBSF932KixamBWOPx3YmMYiQRbsr3XQXh0GWrmfU
+        yJbQz9AQ8u69tmfItjshnaN7viO9M48hmRhY9/ySswmjYN07m/FvZB1j687Z
+        Klp/v+BMspxFG4U5SptmkuxyZvT8SufnGF3o+rIvhdPFhBiTK6Sd+nLfl3gz
+        f9oUBum1i9rO5H6SEkOAn6sNNjmkoOcTCDh5m1wOE04D+hys3wSgVQFbLNAz
+        OK8vIuKmDiA8grgIbcRgEOxs3iBaECmeyaAlKdX1xgB2BKIMN28Bvy0EFF6e
+        b1GGxe20XIYbS26KnZMG4fmXw/ka4+VrX27kRyqhL5WVYeW3pDluV30rqAaz
+        Qi9l6miQllfwK81lT0fJm/+r9dGOY8DId9lo/SQi/xPsnBk9aWK8TuU/hAmY
+        rXxHrXh13zy0TVVlTpyQV9mo0ajAs1d844dWHRp1N1R1XVejOLR71db1UNeN
+        zKxX6HnUE2YhipgCT47S0Dtly4PycRlD4bXa+JJTS9Osq5r2vtq1dVsf7h6o
+        ALH+r4+PL/8AQtd9q4ICAAA=
     http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:10 GMT
+  recorded_at: Wed, 16 Mar 2016 05:15:54 GMT
 - request:
     method: get
     uri: https://api.meetup.com/2/events?group_id=18662999&key=<MEETUP_API_KEY>&page=1&status=upcoming
@@ -1404,53 +1412,62 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Fri, 19 Feb 2016 17:15:10 GMT
+      - Wed, 16 Mar 2016 05:15:53 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '422'
+      - '829'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=da4488d025b70860ec574dfed60007a181455902110; expires=Sat, 18-Feb-17
-        17:15:10 GMT; path=/; domain=.meetup.com; HttpOnly
+      - __cfduid=d5286d9ee7850a81532221c4b13f6c7b71458105353; expires=Thu, 16-Mar-17
+        05:15:53 GMT; path=/; domain=.meetup.com; HttpOnly
       X-Meetup-Server:
-      - api0
+      - api1
       X-Meetup-Request-Id:
-      - 1e8cd329-303e-4c65-86bb-b2b542bb240d
+      - 0388e5fe-43cb-4d70-934a-4fa1c09ce0d1
       X-Ratelimit-Limit:
       - '30'
       X-Ratelimit-Remaining:
-      - '15'
+      - '17'
       X-Ratelimit-Reset:
-      - '6'
+      - '7'
       X-Oauth-Scopes:
       - basic
       X-Accepted-Oauth-Scopes:
       - basic
       Etag:
-      - '"cdd28b4d1f97e3501ce4e0ff6fdb8d91"'
+      - '"b79fb5bfe88bb0ff18be3be0975e3bcf"'
       Vary:
       - Accept-Encoding,User-Agent
       Content-Encoding:
       - gzip
       Cf-Ray:
-      - 27739cbe90c52513-ORD
+      - 2845baddc9cc086e-IAD
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA42SzW7bMBCE732KBQ9CCwiSJVl2LIAIcmhvRS+9RYFBiSub
-        DUUSJGU0CPLuXf0YufZGkDPc+YZ8Zx7DpGNgzfNLykaMgjXvzODfyBrGlp2r
-        lbT+fkNDspRFG4U+93YyJNmlTCvzSufXGF1o2rzNhVPZiBgnl/V2bPOyzfFu
-        /rRJDL1XLipryP3U9xgC/FxssMphCspcQMDF28mlMOLYoU/B+lUASmawxgJl
-        wHl1ExFXdQDhEcRNKC06jWCNfoNoQUzxSgbVk1JuNwawAxBluHsz+G0hoPD9
-        9R6lm91O9fNwbclNsVPSIDz/cmi2GC9f23wlP1MJbS5tHxZ+S5rzetW3jGrQ
-        C/RcpooaabmBbzS3ko4mr/+v1kc7DAEj3yWD9aOI/E+wJtFqVMS4TeU/hA6Y
-        LHxnJXnxcDiUp9MpceKCvEgGhVoGnrziGz/W8riXh66oqqoYxLEuZV1VXVXt
-        +8R6iZ5HNWISoohT4JOjNPROyfygfJjHUHglV77Jyblp1hT7uj7tyqLYHR72
-        VIBY/tfHx5d/qYAbvIICAAA=
+        H4sIAAAAAAAAA41UXYvcNhR9769Q9eBtYTxj+WPsGTAllBRaNrT04ykTjGxp
+        1trIkpHk2UyW+e+9ku1sFlqI3yyd+3HOPVfP2HA7SWfx8f0znlzX6PPZcoeP
+        McnzxH8bfOFq4vj4jD+LER9xXlVphje405Ny5gonk4VfqTsqxWfOmuWiUXSA
+        MPzPX288WjgPfUutQ/dUWaEe4JQyBg3YhsAV2VdJjn7uqWKSG/QnC0kVtFLl
+        27zKyqTa4LHXyictSBlnaR6XJEkAt5T6TQzD9c6iP6YWDgXDR0LyIiHlBltH
+        nYe8+9WnpcAwT7dlmZR7uDR8FEpxwJ+ptPy2wT2nLPDAR6+AsKIVcqYwTq0U
+        HWR5osJJYV3zAuwMhzK+bl6Uh3R/KEiQcKDXljfGXsavwByEdc1kJCTtnRuP
+        p91p9/T0tB04d9O47fRw2t3TVptYn+N7feExjR3veqWlfrjGVjAej0Y/8s7F
+        c8xpF5La0y5NDwWIk5WnHbR65fZV9fSLZPfcgWA++vtFMvwlFA6c8ChgU5H9
+        IV0MMY3sP1k+GD2N3iiPWqhm0MwX0CNX+JUyWXbIc5JUIWZtw9NE+ow8TRQj
+        il6IojvPFC1M79BMFS/1mhePlJCRpGlSJhlJl/lX+316OBygaSO/rvXNkr7U
+        WU1TwOh77c2sXD9ZAZa2+DZbDFYB9mGE0XmD3z7A6LmjXhPFP0E8xuGk117o
+        t2FWXmXtqFxnQ8CfQn1cTGGDK+goXrkiXQe97mEIY9x2RoxOeEXwm66D1ULv
+        Qhia4WjyiwfqBkobkHJoudkg0D4AkGBbNLeFhALJxQWmNqMtooYjeqFC0lZy
+        pJW8IqcRnVwPAaLz810yWj9KYGnX2C36WyPLqen6tZXWR4+i88X94+Hb3gCG
+        o/e/g2eWNj78cNrNzBsQ4bRjurOBv/dVM6f6cbs+FThY1smw6TPxhc0lxcED
+        3ybrT/MzWCfRWZuBuvrRahVJMQjguFStf/FvRTSbQ7B6tVo00gdek+gsuGS2
+        jj7ya10WrMzZviVZlpEzLYuUFVnWZlneRdowbmq/aNHsoHr1T+QHWocnad1N
+        /P/bF/yJ8e323b+Q6PVk1gUAAA==
     http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:10 GMT
+  recorded_at: Wed, 16 Mar 2016 05:15:54 GMT
 - request:
     method: get
     uri: https://api.meetup.com/2/events?group_id=19065868&key=<MEETUP_API_KEY>&page=1&status=upcoming
@@ -1472,51 +1489,51 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Fri, 19 Feb 2016 17:15:11 GMT
+      - Wed, 16 Mar 2016 05:15:54 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '422'
+      - '421'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d07b33fbbdcf1c86271ac74dd839f97a41455902110; expires=Sat, 18-Feb-17
-        17:15:10 GMT; path=/; domain=.meetup.com; HttpOnly
+      - __cfduid=d2bcd6cfdfb3a7c3475c8d5647659bd891458105354; expires=Thu, 16-Mar-17
+        05:15:54 GMT; path=/; domain=.meetup.com; HttpOnly
       X-Meetup-Server:
-      - api10
+      - api11
       X-Meetup-Request-Id:
-      - 5d4e3771-852d-46ee-a27a-b2a9013c039a
+      - 48e8f264-c151-4067-af7b-0c4a3ce8bf61
       X-Ratelimit-Limit:
       - '30'
       X-Ratelimit-Remaining:
-      - '14'
+      - '16'
       X-Ratelimit-Reset:
-      - '6'
+      - '7'
       X-Oauth-Scopes:
       - basic
       X-Accepted-Oauth-Scopes:
       - basic
       Etag:
-      - '"8becd5074696b7b37ffb25e8541454d9"'
+      - '"d0be6baf07c9f430a70266fd82da5cde"'
       Vary:
       - Accept-Encoding,User-Agent
       Content-Encoding:
       - gzip
       Cf-Ray:
-      - 27739cc0d0f609be-ORD
+      - 2845badf1d682432-IAD
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA42SS2/bMBCE7/0VCx6EFhD0sCw7FkAEObS3opfeosCgyJXN
-        hhIJkjIaBPnvXT2MXHsjyBnufEO+M49hMjGw5vklZQNGwZp3NuLfyBrGlp2r
-        VbT+fsORZCmLNgpzlnYaSVKkzOjxlc6vMbrQtHmbC6ezATFOLpN2aPNdm+Pd
-        /GlTGKTXLmo7kvtJSgwBfi42WOUwBT1eQMDF28mlMODQoU/B+lUAWmWwxgI9
-        gvP6JiKu6gDCI4ib0EZ0BsGO5g2iBTHFKxm0JKXabgxgeyDKcPdm8NtCQOHl
-        9R6lm91Oy3m4seSm2ClpEJ5/ORy3GC9f23wlP1MJba6sDAu/Jc15vepbRjWY
-        BXouU0eDtNzAN5rbjo4mb/6v1kfb9wEjL5Le+kFE/ifYMTF60MS4TeU/hAmY
-        LHxnrXh5Kg71w+EhceKCvEx6jUYFnrziGz/W6rhXh66sqqrsxbHeqbqquqra
-        y8R6hZ5HPWASoohT4JOjNPROyfygvJ/HUHitVr7Jqblp1pT7uj4Vu7Isi9OB
-        ChDL//r4+PIP4h7w/oICAAA=
+        H4sIAAAAAAAAA42SzYrbMBSF932KixamBWPHsZ2kBlO6aHelm+7GQ5Cl60Qd
+        WRL6CR2Gefde2wnddiekc3TPd6Q35jEkHQPrnp5zNmPkrHtjBv9E1jG27lyt
+        pPW3GxqS5SzayPVZ2GRIssuZVuaFzq8xutAN5VByp4oZMSZXCDsP5X4o8WH+
+        Z5MYhFcuKmvI/VUIDAF+rDbY5JCCMhfgcPE2uRxmnEf0OVi/CUDJArZYoAw4
+        r2484qYOwD0Cv3Gl+agRrNGvEC3wFK9kUIKU8n5jADsBUYaHt4BfFgJyL66P
+        KOPidkosw7UlN8XOSYPw9NOhucd4/jiUG/mZShhKaUVY+S1pzttVnwqqQa/Q
+        S5kqaqTlHfxOc9vTUfL6/2r9YqcpYOx32WT9zGP/O1iTaTUrYrxP7b9zHTBb
+        +c5K9tXn3aE9HU6Z4xfsq2xSqGXosxd87Y+tPDbyMFZ1XVcTP7Z72db1WNeN
+        yKyX6PuoZsxC5DGFPjlKQ++ULQ/aT8sYCq/kxpecXJpmXdW0p2rX1m1TtQ0V
+        wNf/9f7+4S/LIyGcggIAAA==
     http_version: 
-  recorded_at: Fri, 19 Feb 2016 17:15:11 GMT
-recorded_with: VCR 3.0.0
+  recorded_at: Wed, 16 Mar 2016 05:15:54 GMT
+recorded_with: VCR 3.0.1
