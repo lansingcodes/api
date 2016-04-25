@@ -118,7 +118,8 @@ private
       'MoMoLansing'                                    => 'Mobile',
       'GLASS-Greater-Lansing-Area-for-SQL-Server'      => 'SQL Server',
       'LansingAreaSoftwareTesters'                     => 'QA',
-      'Labor-of-Love-a-technology-side-project-meetup' => 'Side Projects'
+      'Labor-of-Love-a-technology-side-project-meetup' => 'Side Projects',
+      'Greater-Lansing-Infrastructure-Meetup'          => 'Infrastructure'
     }[slug] || 'Tech'
   end
 
