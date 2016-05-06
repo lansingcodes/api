@@ -120,7 +120,8 @@ private
       'LansingAreaSoftwareTesters'                     => 'QA',
       'Labor-of-Love-a-technology-side-project-meetup' => 'Side Projects',
       'Greater-Lansing-Infrastructure-Meetup'          => 'Infrastructure',
-      'Lansing-Area-R-Users-Group'                     => 'R'
+      'Lansing-Area-R-Users-Group'                     => 'R',
+      'Lansing-Atlassian-User-Group'                   => 'Atlassian'
     }[slug] || 'General'
   end
 
