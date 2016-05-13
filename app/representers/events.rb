@@ -122,7 +122,7 @@ private
       'Greater-Lansing-Infrastructure-Meetup'          => 'Infrastructure',
       'Lansing-Area-R-Users-Group'                     => 'R',
       'Lansing-Atlassian-User-Group'                   => 'Atlassian',
-      'Coders-Club-at-Coders-Farm'                     => 'Learning'
+      'Coders-Club-at-Coders-Farm'                     => 'Coders Club'
     }[slug] || 'General'
   end
 
