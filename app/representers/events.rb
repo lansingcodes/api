@@ -122,7 +122,8 @@ private
       'Greater-Lansing-Infrastructure-Meetup'          => 'Infrastructure',
       'Lansing-Area-R-Users-Group'                     => 'R',
       'Lansing-Atlassian-User-Group'                   => 'Atlassian',
-      'Coders-Club-at-Coders-Farm'                     => 'Coders Club'
+      'Coders-Club-at-Coders-Farm'                     => 'Coders Club',
+      'Mid-Michigan-Code-Retreat'                      => 'Code Retreat'
     }[slug] || 'General'
   end
 
