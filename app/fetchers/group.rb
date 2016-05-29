@@ -15,7 +15,7 @@ class LansingCodes::Fetchers::Group
     def search query
       all.find do |group|
         %w( name description ).any? do |field|
-          group[field].scan(/#{synonyms_of query}/i).any?
+          group[field].scan(/\b#{synonyms_of query}\b/i).any?
         end
       end
     end
