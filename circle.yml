@@ -1,5 +1,16 @@
+machine:
+  services:
+    - docker
+dependencies:
+  pre:
+    - pip install awscli
+
 deployment:
   production:
     branch: master
-    heroku:
-      appname: damp-sands-7926
+    commands:
+      - $(aws ecr get-login --region us-east-1)
+      - docker build -t lcapi .
+      - docker tag lcapi:latest $DOCKER_REPOSITORY:latest
+      - docker push $DOCKER_REPOSITORY:latest
+      - ssh lcapi@aws-docker-1.atomaka.com "bash /home/lcapi/deploy.sh"
