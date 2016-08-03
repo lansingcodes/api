@@ -1,0 +1,17 @@
+version: '2'
+services:
+  lcapi:
+    image: 904999972394.dkr.ecr.us-east-1.amazonaws.com/lcapi
+    env_file: lcapirc
+    restart: always
+    networks:
+      - proxy-tier
+    environment:
+      LETSENCRYPT_HOST: lcapi.atomaka.com,api.lansing.codes
+      LETSENCRYPT_EMAIL: me@atomaka.com
+      VIRTUAL_HOST: lcapi.atomaka.com,api.lansing.codes
+
+networks:
+  proxy-tier:
+    external:
+      name: nginx-proxy
