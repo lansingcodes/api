@@ -23,12 +23,15 @@ class LansingCodes::Fetchers::Group
   private
 
     def synonyms_of query
-      case query
-      when 'js' then 'javascript'
-      when 'rb' then 'ruby'
-      when 'qa' then 'testers'
-      else query
-      end
+      synonym_map[query] || query
+    end
+
+    def synonym_map
+      {
+        "js" => 'javascript',
+        "rb" => 'ruby',
+        "qa" => 'testers',
+      }
     end
 
   end
