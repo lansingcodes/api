@@ -110,7 +110,7 @@ private
     {
       'Mid-Michigan-Agile-Group'                       => 'Agile',
       'Lansing-DevOps-Meetup'                          => 'DevOps',
-      'Lansing-Ruby-Meetup-Group'                      => 'Ruby',
+      'lansing-tech-demos'                             => 'Demo Night',
       'Lansing-Javascript-Meetup'                      => 'JavaScript',
       'lansingweb'                                     => 'Web',
       'GLUGnet'                                        => '.NET',
