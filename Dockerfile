@@ -1,4 +1,4 @@
-FROM ruby:alpine
+FROM ruby:2.3-alpine
 
 ARG BUNDLE_WITHOUT=test:development
 ENV BUNDLE_WITHOUT ${BUNDLE_WITHOUT}
