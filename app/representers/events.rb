@@ -111,6 +111,7 @@ private
       'Mid-Michigan-Agile-Group'                       => 'Agile',
       'Lansing-DevOps-Meetup'                          => 'DevOps',
       'lansing-tech-demos'                             => 'Demo Night',
+      'Lansing-CocoaHeads'                             => 'CocoaHeads',
       'Lansing-Javascript-Meetup'                      => 'JavaScript',
       'lansingweb'                                     => 'Web',
       'GLUGnet'                                        => '.NET',
