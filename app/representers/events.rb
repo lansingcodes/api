@@ -114,7 +114,7 @@ private
       'Lansing-Marketing-Hackers'                      => 'Marketing Hackers',
       'Lansing-CocoaHeads'                             => 'CocoaHeads',
       'Lansing-Javascript-Meetup'                      => 'JavaScript',
-      'Lansing-Experience-Design-Meetup'               => 'Experience Design',
+      'Lansing-Experience-Design-Meetup'               => 'UX Design',
       'lansingweb'                                     => 'Web',
       'GLUGnet'                                        => '.NET',
       'PMI-Capital-Area-Chapter-Lunch-and-Learn'       => 'Project Management',
