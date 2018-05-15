@@ -2,6 +2,8 @@
 
 cd $HOME
 
+. lcapirc
+
 sudo $(aws ecr get-login --region us-east-1)
 sudo docker-compose pull lcapi
 sudo docker-compose stop lcapi
