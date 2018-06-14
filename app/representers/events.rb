@@ -118,15 +118,11 @@ private
       'lansingweb'                                     => 'Web',
       'GLUGnet'                                        => '.NET',
       'PMI-Capital-Area-Chapter-Lunch-and-Learn'       => 'Project Management',
-      'MoMoLansing'                                    => 'Mobile',
       'GLASS-Greater-Lansing-Area-for-SQL-Server'      => 'SQL Server',
       'LansingAreaSoftwareTesters'                     => 'QA',
-      'Labor-of-Love-a-technology-side-project-meetup' => 'Side Projects',
-      'Greater-Lansing-Infrastructure-Meetup'          => 'Infrastructure',
       'Lansing-Area-R-Users-Group'                     => 'R',
-      'Lansing-Atlassian-User-Group'                   => 'Atlassian',
-      'Coders-Club-at-Coders-Farm'                     => 'Coders Club',
-      'Mid-Michigan-Code-Retreat'                      => 'Code Retreat'
+      'Mid-Michigan-Code-Retreat'                      => 'Code Retreat',
+      'Lansing-WordPress-Meetup'                       => 'WordPress'
     }[slug] || 'General'
   end
 
