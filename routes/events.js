@@ -18,7 +18,7 @@ router.get('/upcoming/search/:query', function (req, res) {
   res.send([
     {
       "name": "Search Result Event 1",
-      "description": "This description contains the keyword '" + req.query + "'!"
+      "description": "This description contains the keyword '" + req.params.query + "'!"
     }
   ]);
 });
