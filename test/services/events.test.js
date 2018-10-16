@@ -10,14 +10,12 @@ describe('\'events\' service', () => {
 
   describe('find', () => {
     describe('given no query string', () => {
-      it('returns OK', () => {
-        // TODO
-        assert.fail('Not implemented');
-      });
-
       it('returns an object with a "data" key pointing to a non-empty array', () => {
-        // TODO
-        assert.fail('Not implemented');
+        return service.find().then(data => {
+          assert.ok(data);
+          assert.equal('object', typeof data);
+          assert.ok(data.length);
+        });
       });
     });
 
