@@ -1,24 +1,29 @@
 /* eslint-disable no-unused-vars */
+const lansingJavascriptMeetupGroupId = 14621542;
+const midMichiganAgileGroupId = 1708426;
+const groupIds = [lansingJavascriptMeetupGroupId, midMichiganAgileGroupId];
+
 class Service {
-  constructor(options) {
+  constructor(options, meetupProvider) {
     this.options = options || {};
+    this.meetupProvider = meetupProvider;
   }
 
   async find(params) {
-    // TODO
-    return [];
+    const meetupGroupPromises = groupIds.map(groupId => this.meetupProvider.getEvents({group_id: groupId}));
+    return Promise.all(meetupGroupPromises); // TODO: flatten
   }
 
   async get(id, params) {
-    // TODO
-    return {
-      id, text: `A new message with ID: ${id}!`
-    };
+    // return await this.meetupProvider.getEvent({
+    //   urlname: midMichiganAgileGroupId,
+    //   id: id
+    // });
   }
 }
 
-module.exports = function (options) {
-  return new Service(options);
+module.exports = function (options, meetupProvider) {
+  return new Service(options, meetupProvider);
 };
 
 module.exports.Service = Service;
