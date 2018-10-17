@@ -10,8 +10,15 @@ class Service {
   }
 
   async find(params) {
-    const meetupGroupPromises = groupIds.map(groupId => this.meetupProvider.getEvents({group_id: groupId}));
-    return Promise.all(meetupGroupPromises); // TODO: flatten
+    const meetupGroupPromises = groupIds.map(groupId =>
+      this.meetupProvider.getEvents({ group_id: groupId })
+    );
+    const results = await Promise.all(meetupGroupPromises);
+    const flattened = results.reduce(
+      (acc, curr) => [...acc, ...curr.results],
+      []
+    );
+    return flattened;
   }
 
   async get(id, params) {
@@ -22,7 +29,7 @@ class Service {
   }
 }
 
-module.exports = function (options, meetupProvider) {
+module.exports = function(options, meetupProvider) {
   return new Service(options, meetupProvider);
 };
 
