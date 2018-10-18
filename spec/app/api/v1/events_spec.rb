@@ -32,11 +32,11 @@ describe LansingCodes::API::V1::Events do
 
   context 'GET /v1/events/upcoming/search/:query' do
 
-    context 'query is "javascript"' do
+    context 'query is "devops"' do
 
       before do
-        VCR.use_cassette('v1_events_upcoming_search_javascript', re_record_interval: RE_RECORD_INTERVAL, record: :new_episodes) do
-          get '/v1/events/upcoming/search/javascript'
+        VCR.use_cassette('v1_events_upcoming_search_devops', re_record_interval: RE_RECORD_INTERVAL, record: :new_episodes) do
+          get '/v1/events/upcoming/search/devops'
         end
       end
 
