@@ -83,16 +83,28 @@ This API *sort of* conforms to the [JSON API spec](http://jsonapi.org/). Where i
 
 ## Contributing
 
-To run the API and its specs locally, you'll need to [register for a meetup.com API key](https://secure.meetup.com/meetup_api/key/), which actually only takes a few seconds.
+To run the API and its specs locally, you'll need to [register for a meetup.com API key](https://secure.meetup.com/meetup_api/key/), which actually only takes a few seconds. You will then need to set an environment variable named `MEETUP_API_KEY` with that value:
+
+Bash:
+
+```bash
+echo 'export MEETUP_API_KEY="<API_KEY_HERE>"' >> ~/.bash_profile && source ~/.bash_profile
+```
+
+PowerShell:
+
+```powershell
+$env:MEETUP_API_KEY = "<API_KEY_HERE>"; [Environment]::SetEnvironmentVariable("MEETUP_API_KEY", $env:MEETUP_API_KEY, "User")
+```
 
 Then to run the API server:
 
 ```
-MEETUP_API_KEY=<MY_API_KEY> bundle exec rackup
+npm run dev
 ```
 
 And to run the tests:
 
 ```
-MEETUP_API_KEY=<MY_API_KEY> bundle exec rspec
+npm test
 ```
