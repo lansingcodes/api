@@ -5,7 +5,7 @@ describe('Meetup provider', () => {
 
   const provider = meetupProvider({}); // TODO: insert a mock meetup API
 
-  describe('getEvents', () => {
+  describe.skip('getEvents', () => {
 
     it('resolves on success', () => {
       provider.getEvents({}); // TODO: actual call
@@ -19,7 +19,7 @@ describe('Meetup provider', () => {
     });
   });
 
-  describe('getEvent', () => {
+  describe.skip('getEvent', () => {
 
     it('resolves on success', () => {
       // TODO
