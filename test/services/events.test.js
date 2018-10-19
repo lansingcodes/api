@@ -4,6 +4,10 @@ const app = require('../../src/app');
 describe('\'events\' service', () => {
   const service = app.service('events');
 
+  it('should have MEETUP_API_KEY environment variable set (see the README)', () => {
+    assert.ok(process.env.MEETUP_API_KEY && process.env.MEETUP_API_KEY.length > 0, 'MEETUP_API_KEY is set');
+  });
+
   it('registered the service', () => {
     assert.ok(service, 'Registered the service');
   });

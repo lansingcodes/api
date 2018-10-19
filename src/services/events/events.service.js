@@ -1,11 +1,10 @@
 // Initializes the `events` service on path `/events`
-const createService = require('./events.class.js');
+const createService = require('./events.class');
 const meetupProvider = require('./../../providers/meetup.provider');
 const meetupApi = require('meetup-api');
 const hooks = require('./events.hooks');
 
 module.exports = function (app) {
-
   const paginate = app.get('paginate');
 
   const options = {
@@ -17,7 +16,7 @@ module.exports = function (app) {
     options,
     meetupProvider(
       meetupApi({
-        key: process.env.MEETUP_KEY // Set MEETUP_KEY in your environment
+        key: process.env.MEETUP_API_KEY // Set MEETUP_API_KEY in your environment
       })
     )
   ));
