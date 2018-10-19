@@ -1,23 +1,16 @@
-FROM ruby:2.3-alpine
+FROM  node:8.12.0-alpine
 
-ARG BUNDLE_WITHOUT=test:development
-ENV BUNDLE_WITHOUT ${BUNDLE_WITHOUT}
+WORKDIR /usr/src/app
 
-ADD Gemfile* /app/
+COPY package*.json ./
 
-RUN apk --update add --virtual .deps build-base \
-    && apk add --virtual .run-deps tzdata musl-dev \
-    && cd /app; bundle install \
-    && rm -rf /var/cache/apk*
+RUN npm install --only=production
 
-ADD . /app
-RUN chown -R nobody:nogroup /app
-USER nobody
+COPY . .
 
-ARG RACK_ENV=production
-ENV RACK_ENV ${RACK_ENV}
+ARG NODE_ENV=production
+ENV NODE_ENV ${NODE_ENV}
 
 EXPOSE 9292
 
-WORKDIR /app
-CMD ["rackup", "--host", "0.0.0.0"]
+CMD [ "npm", "start" ]
