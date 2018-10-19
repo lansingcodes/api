@@ -1,0 +1,52 @@
+{
+  "name": "lansingcodes-api",
+  "version": "1.1.0",
+  "description": "A public API to retrieve information about code-related events in Lansing, MI.",
+  "homepage": "",
+  "main": "src",
+  "keywords": [
+    "events",
+    "meetup",
+    "api"
+  ],
+  "bugs": "https://github.com/lansingcodes/api/issues",
+  "license": "MIT",
+  "contributors": [
+    "Eric Slenk <lucidmachine@gmail.com>"
+  ],
+  "repository": "https://github.com/lansingcodes/api",
+  "private": true,
+  "directories": {
+    "lib": "src",
+    "test": "test/"
+  },
+  "engines": {
+    "node": "^8.0.0"
+  },
+  "scripts": {
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "eslint src/. test/. --config .eslintrc.json",
+    "dev": "nodemon src/",
+    "start": "node src/",
+    "mocha": "mocha test/ --recursive --exit"
+  },
+  "dependencies": {
+    "@feathersjs/configuration": "^2.0.4",
+    "@feathersjs/errors": "^3.3.4",
+    "@feathersjs/express": "^1.2.7",
+    "@feathersjs/feathers": "^3.2.3",
+    "compression": "^1.7.3",
+    "cors": "^2.8.4",
+    "helmet": "^3.13.0",
+    "meetup-api": "^1.4.33",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
