@@ -19,7 +19,7 @@ describe('\'events\' service', () => {
       });
     });
 
-    describe('given a query string', () => {
+    describe.skip('given a query string', () => {
       describe('when there are multiple events matching the query', () => {
         it('returns OK', () => {
           // TODO
@@ -32,7 +32,7 @@ describe('\'events\' service', () => {
         });
       });
 
-      describe('when there is one event matching the query', () => {
+      describe.skip('when there is one event matching the query', () => {
         it('returns OK', () => {
           // TODO
           assert.fail('Not implemented');
@@ -44,7 +44,7 @@ describe('\'events\' service', () => {
         });
       });
 
-      describe('when there are no events matching the query', () => {
+      describe.skip('when there are no events matching the query', () => {
         it('returns OK', () => {
           // TODO
           assert.fail('Not implemented');
