@@ -1,36 +1,112 @@
 const assert = require('assert');
 const meetupProvider = require('../../src/providers/meetup.provider');
+const sinon = require('sinon');
+const testData = require('../testData');
 
-describe('Meetup provider', () => {
+describe('Meetup API Provider', () => {
+  const midMichiganAgileEventsResponse = testData.meetupApi.getMidMichiganAgileEvents();
+  const midMichiganAgileEventResponse = testData.meetupApi.getMidMichiganAgileEvent();
+  let mockMeetupApi, provider;
 
-  const provider = meetupProvider({}); // TODO: insert a mock meetup API
+  beforeEach('Instantiate with mock API', () => {
+    mockMeetupApi = {
+      getEvents: sinon.mock(),
+      getEvent: sinon.mock()
+    };
+    provider = meetupProvider(mockMeetupApi);
+  });
 
-  describe.skip('getEvents', () => {
+  describe('getEvents', () => {
+    it('returns a Promise', () => {
+      mockMeetupApi.getEvents.returns({});
 
-    it('resolves on success', () => {
-      provider.getEvents({}); // TODO: actual call
-      // TODO
-      assert.fail('Not implemented');
+      const result = provider.getEvents();
+
+      assert.ok(result.then);
     });
 
-    it('rejects on error', () => {
-      // TODO
-      assert.fail('Not implemented');
+    it('passes parameters through to the API', () => {
+      const params = {foo: 'bar'};
+      mockMeetupApi.getEvents.withArgs(params);
+
+      provider.getEvents(params);
+
+      mockMeetupApi.getEvents.verify();
+    });
+
+    describe('when API successfully returns events', () => {
+      it('resolves to a list of events', async () => {
+        mockMeetupApi.getEvents = (parameters, callback) => {
+          callback(undefined, midMichiganAgileEventsResponse);
+        };
+
+        const result = await provider.getEvents({foo: 'bar'});
+
+        assert.equal(midMichiganAgileEventsResponse, result);
+      });
+    });
+
+    describe('when API throws error', () => {
+      it('rejects', async () => {
+        const expectedError = new Error('oof');
+        mockMeetupApi.getEvents = (parameters, callback) => {
+          callback(expectedError, undefined);
+        };
+
+        try {
+          await provider.getEvents({foo: 'bar'});
+          assert.fail('System under test should have thrown. Fix your test setup.');
+        } catch (error) {
+          assert.equal(expectedError, error);
+        }
+      });
     });
   });
 
-  describe.skip('getEvent', () => {
+  describe('getEvent', () => {
+    it('returns a Promise', () => {
+      mockMeetupApi.getEvent.returns({});
 
-    it('resolves on success', () => {
-      // TODO
-      assert.fail('Not implemented');
+      const result = provider.getEvent();
+
+      assert.ok(result.then);
     });
 
-    it('rejects on error', () => {
-      // TODO
-      assert.fail('Not implemented');
+    it('passes parameters through to the API', () => {
+      const params = {foo: 'bar'};
+      mockMeetupApi.getEvent.withArgs(params);
+
+      provider.getEvent(params);
+
+      mockMeetupApi.getEvent.verify();
     });
 
+    describe('when API successfully returns event', () => {
+      it('resolves to a single event object', async () => {
+        mockMeetupApi.getEvent = (parameters, callback) => {
+          callback(undefined, midMichiganAgileEventResponse);
+        };
+
+        const result = await provider.getEvent({foo: 'bar'});
+
+        assert.equal(midMichiganAgileEventResponse, result);
+      });
+    });
+
+    describe('when API throws error', () => {
+      it('rejects', async () => {
+        const expectedError = new Error('oof');
+        mockMeetupApi.getEvent = (parameters, callback) => {
+          callback(expectedError, undefined);
+        };
+
+        try {
+          await provider.getEvent({foo: 'bar'});
+          assert.fail('System under test should have thrown. Fix your test setup.');
+        } catch (error) {
+          assert.equal(expectedError, error);
+        }
+      });
+    });
   });
-
 });
