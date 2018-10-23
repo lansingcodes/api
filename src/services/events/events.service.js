@@ -5,6 +5,10 @@ const meetupApi = require('meetup-api');
 const hooks = require('./events.hooks');
 
 module.exports = function(app) {
+  if (!process.env.MEETUP_API_KEY) {
+    throw new Error('Please set the environment variable "MEETUP_API_KEY"');
+  }
+
   const paginate = app.get('paginate');
 
   const options = {
