@@ -15,13 +15,21 @@ describe('\'events\' service', () => {
   let service;
 
 
-  it('registered the service', () => {
-    process.env.MEETUP_API_KEY = 'defined';
-    const app = require('../../src/app');
+  describe('registry', () => {
+    it('throws if the MEETUP_API_KEY environment variable is not set', () => {
+      delete process.env.MEETUP_API_KEY;
 
-    service = app.service('events');
+      assert.throws(() => require('../../src/app'));
+    });
 
-    assert.ok(service, 'Registered the service');
+    it('registered the service', () => {
+      process.env.MEETUP_API_KEY = 'defined';
+      const app = require('../../src/app');
+
+      service = app.service('events');
+
+      assert.ok(service, 'Registered the service');
+    });
   });
 
   describe('find', () => {
