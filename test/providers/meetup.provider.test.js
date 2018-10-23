@@ -42,7 +42,7 @@ describe('Meetup API Provider', () => {
 
         const result = await provider.getEvents({foo: 'bar'});
 
-        assert.equal(midMichiganAgileEventsResponse, result);
+        assert.equal(result, midMichiganAgileEventsResponse);
       });
     });
 
@@ -57,7 +57,7 @@ describe('Meetup API Provider', () => {
           await provider.getEvents({foo: 'bar'});
           assert.fail('System under test should have thrown. Fix your test setup.');
         } catch (error) {
-          assert.equal(expectedError, error);
+          assert.equal(error, expectedError);
         }
       });
     });
@@ -89,7 +89,7 @@ describe('Meetup API Provider', () => {
 
         const result = await provider.getEvent({foo: 'bar'});
 
-        assert.equal(midMichiganAgileEventResponse, result);
+        assert.equal(result, midMichiganAgileEventResponse);
       });
     });
 
@@ -104,7 +104,7 @@ describe('Meetup API Provider', () => {
           await provider.getEvent({foo: 'bar'});
           assert.fail('System under test should have thrown. Fix your test setup.');
         } catch (error) {
-          assert.equal(expectedError, error);
+          assert.equal(error, expectedError);
         }
       });
     });
