@@ -1,10 +1,12 @@
 function mergeGroupEvents(mergedEvents, eventsByGroup) {
-  return [...mergedEvents, ...eventsByGroup.results];
+  return eventsByGroup && eventsByGroup.results ?
+    [...mergedEvents, ...eventsByGroup.results] :
+    mergedEvents;
 }
 
 /**
  * Note: See app/representers/events.rb for original ruby logic
- * @param {*} event
+ * @param {*} events
  */
 function translateEventsForV1Format(events = []) {
   const data = events.map(translateEvent);

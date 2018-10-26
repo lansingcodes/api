@@ -1,6 +1,8 @@
 const assert = require('assert');
 const rp = require('request-promise');
 const url = require('url');
+
+process.env.MEETUP_API_KEY = 'defined';
 const app = require('../src/app');
 
 const port = app.get('port') || 3030;

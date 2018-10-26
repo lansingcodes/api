@@ -1,25 +1,54 @@
 const assert = require('assert');
-const app = require('../../src/app');
+const createService = require('../../src/services/events/events.class');
+const sinon = require('sinon');
+const testData = require('../testData');
 
 describe('\'events\' service', () => {
-  const service = app.service('events');
+  const midMichiganAgileGroupId = 1708426;
+  const mmagRawEvents = testData.meetupApi.getMidMichiganAgileEvents();
+  const mmagTransformedEvents = testData.eventService.getMidMichiganAgileEvents();
 
-  it('should have MEETUP_API_KEY environment variable set (see the README)', () => {
-    assert.ok(process.env.MEETUP_API_KEY && process.env.MEETUP_API_KEY.length > 0, 'MEETUP_API_KEY is set');
-  });
+  let mockMeetupProvider = {
+    getEvents: sinon.stub(),
+    getEvent: sinon.stub()
+  };
+  let service;
 
-  it('registered the service', () => {
-    assert.ok(service, 'Registered the service');
+
+  describe('registry', () => {
+    it('throws if the MEETUP_API_KEY environment variable is not set', () => {
+      delete process.env.MEETUP_API_KEY;
+
+      assert.throws(() => require('../../src/app'));
+    });
+
+    it('registered the service', () => {
+      process.env.MEETUP_API_KEY = 'defined';
+      const app = require('../../src/app');
+
+      service = app.service('events');
+
+      assert.ok(service, 'Registered the service');
+    });
   });
 
   describe('find', () => {
+    beforeEach('Instantiate the service with a mockable Meetup API provider', () => {
+      service = createService({}, mockMeetupProvider);
+    });
+
     describe('given no query string', () => {
-      it('returns an object with a "data" key pointing to a non-empty array', () => {
-        return service.find().then(data => {
-          assert.ok(data);
-          assert.equal('object', typeof data);
-          assert.ok(data.length);
-        });
+      it('returns an object with a "data" key pointing to a non-empty array', async () => {
+        mockMeetupProvider.getEvents
+          .withArgs({group_id: midMichiganAgileGroupId})
+          .resolves(mmagRawEvents);
+
+        const result = await service.find();
+
+        assert.ok(result.data);
+        assert.equal(typeof result.data, 'object');
+        assert.ok(result.data.length);
+        assert.equal(result, mmagTransformedEvents);
       });
     });
 
@@ -60,9 +89,13 @@ describe('\'events\' service', () => {
         });
       });
     });
+
+    describe.skip('per group limit', () => {
+      // TODO
+    });
   });
 
-  describe('get', () => {
+  describe.skip('get', () => {
     // TODO
   });
 });
