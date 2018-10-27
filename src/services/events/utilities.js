@@ -1,7 +1,7 @@
-function mergeGroupEvents(mergedEvents, eventsByGroup) {
-  return eventsByGroup && eventsByGroup.results ?
-    [...mergedEvents, ...eventsByGroup.results] :
-    mergedEvents;
+function mergeGroupEvents(mergedEvents = [], eventsByGroup = {}) {
+  return eventsByGroup.results
+    ? [...mergedEvents, ...eventsByGroup.results]
+    : mergedEvents;
 }
 
 /**
@@ -17,7 +17,7 @@ function translateEventsForV1Format(events = []) {
   return { data, included };
 }
 
-function translateEvent(event) {
+function translateEvent(event = {}) {
   return {
     links: {
       self: event.event_url
@@ -28,7 +28,7 @@ function translateEvent(event) {
       description: event.description,
       time: {
         absolute: event.time,
-        relative: 'TODO'
+        relative: getRelativeTime(event.time)
       },
       capacity: event.rsvp_limit,
       rsvps: {
@@ -79,6 +79,53 @@ function makeGroupsObject(events = []) {
     }
     return object;
   }, {});
+}
+
+function getRelativeTime(eventUnixTime) {
+  if (!eventUnixTime || typeof eventUnixTime !== 'number') return 'Unknown';
+
+  const now = new Date();
+
+  return getTimeDifference(now.getTime(), eventUnixTime);
+}
+
+// Lifted from SO and modified for future/past times:
+// https://stackoverflow.com/questions/6108819/javascript-timestamp-to-relative-time-eg-2-seconds-ago-one-week-ago-etc-best
+// Used in lieu of the Action View - Date Helpers - distance_of_time_in_words
+// from Ruby on Rails
+function getTimeDifference(currentUnixTime, eventUnixTime) {
+  const msPerMinute = 60 * 1000;
+  const msPerHour = msPerMinute * 60;
+  const msPerDay = msPerHour * 24;
+  const msPerMonth = msPerDay * 30;
+  const msPerYear = msPerDay * 365;
+
+  const msDiff = eventUnixTime - currentUnixTime;
+  const isPassed = msDiff < 0;
+  const absDiff = Math.abs(msDiff);
+  const partialGetDiffTimeText = getDiffTimeText.bind(null, absDiff, isPassed);
+
+  if (absDiff < msPerMinute) {
+    return partialGetDiffTimeText(1000, 'second');
+  } else if (absDiff < msPerHour) {
+    return partialGetDiffTimeText(msPerMinute, 'minute');
+  } else if (absDiff < msPerDay) {
+    return partialGetDiffTimeText(msPerHour, 'hour');
+  } else if (absDiff < msPerMonth) {
+    return 'about ' + partialGetDiffTimeText(msPerDay, 'day');
+  } else if (absDiff < msPerYear) {
+    return 'about ' + partialGetDiffTimeText(msPerMonth, 'month');
+  } else {
+    return 'about ' + partialGetDiffTimeText(msPerYear, 'year');
+  }
+}
+
+function getDiffTimeText(absDiff, isPassed, divisor, unit) {
+  const value = Math.round(absDiff / divisor);
+  const unitText = value === 1 ? unit : unit + 's';
+  const optionalAgo = isPassed ? ' ago' : '';
+
+  return `${value} ${unitText}${optionalAgo}`;
 }
 
 module.exports = { mergeGroupEvents, translateEventsForV1Format };
