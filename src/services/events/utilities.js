@@ -38,10 +38,18 @@ function translateEvent(event = {}) {
       status: event.status
     },
     relationships: {
-      group: {
-        type: 'groups',
-        id: event.group.id
-      }
+      group: event.group
+        ? {
+          type: 'groups',
+          id: event.group.id
+        }
+        : {},
+      venue: event.venue
+        ? {
+          type: 'venues',
+          id: event.venue.id
+        }
+        : {}
     }
   };
 }
@@ -53,7 +61,8 @@ function makeVenuesObject(events = []) {
       object[venue.id] = {
         attributes: {
           name: venue.name,
-          address: `${venue.address_1}, ${venue.city}, ${venue.state}`,
+          address: `${venue.address_1 || ''}, ${venue.city ||
+            ''}, ${venue.state || ''}`,
           latitude: venue.lat,
           longitude: venue.lon,
           directions: venue.how_to_find_us
@@ -71,15 +80,35 @@ function makeGroupsObject(events = []) {
       object[group.id] = {
         attributes: {
           name: group.name,
-          focus: 'TODO',
-          slug: 'TODO',
-          members: group.who
+          focus: slugLookup[group.urlname] || 'General',
+          slug: group.urlname,
+          members: group.who,
+          logo: group.group_photo ? group.group_photo.photo_link : ''
         }
       };
     }
     return object;
   }, {});
 }
+
+const slugLookup = {
+  'Mid-Michigan-Agile-Group': 'Agile',
+  'Lansing-Area-Maker-Meetup': 'Lansing Makers',
+  'Lansing-DevOps-Meetup': 'DevOps',
+  'lansing-tech-demos': 'Demo Night',
+  'Lansing-Marketing-Hackers': 'Marketing Hackers',
+  'Lansing-CocoaHeads': 'CocoaHeads',
+  'Lansing-Javascript-Meetup': 'JavaScript',
+  'Lansing-Experience-Design-Meetup': 'UX Design',
+  lansingweb: 'Web',
+  GLUGnet: '.NET',
+  'PMI-Capital-Area-Chapter-Lunch-and-Learn': 'Project Management',
+  'GLASS-Greater-Lansing-Area-for-SQL-Server': 'SQL Server',
+  LansingAreaSoftwareTesters: 'QA',
+  'Lansing-Area-R-Users-Group': 'R',
+  'Mid-Michigan-Code-Retreat': 'Code Retreat',
+  'Lansing-WordPress-Meetup': 'WordPress'
+};
 
 function getRelativeTime(eventUnixTime) {
   if (!eventUnixTime || typeof eventUnixTime !== 'number') return 'Unknown';
