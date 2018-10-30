@@ -140,4 +140,4 @@ function getDiffTimeText(absDiff, isPassed, divisor, unit) {
   return `${value} ${unitText}${optionalAgo}`;
 }
 
-module.exports = { mergeGroupEvents, translateEventsForV1Format };
+module.exports = { getTimeDifference, mergeGroupEvents, translateEventsForV1Format };
