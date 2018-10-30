@@ -1,3 +1,5 @@
+const { slugMap } = require('./config');
+
 function mergeGroupEvents(mergedEvents = [], eventsByGroup = {}) {
   return eventsByGroup.results
     ? [...mergedEvents, ...eventsByGroup.results]
@@ -20,36 +22,36 @@ function translateEventsForV1Format(events = []) {
 function translateEvent(event = {}) {
   return {
     links: {
-      self: event.event_url
+      self: event.event_url || null
     },
     attributes: {
-      id: event.id,
-      name: event.name,
-      description: event.description,
+      id: event.id || null,
+      name: event.name || null,
+      description: event.description || null,
       time: {
-        absolute: event.time,
+        absolute: event.time || null,
         relative: getRelativeTime(event.time)
       },
-      capacity: event.rsvp_limit,
+      capacity: event.rsvp_limit || null,
       rsvps: {
         yes: event.yes_rsvp_count,
         maybe: event.maybe_rsvp_count
       },
-      status: event.status
+      status: event.status || null
     },
     relationships: {
       group: event.group
         ? {
           type: 'groups',
-          id: event.group.id
+          id: event.group.id || null
         }
-        : {},
+        : null,
       venue: event.venue
         ? {
           type: 'venues',
-          id: event.venue.id
+          id: event.venue.id || null
         }
-        : {}
+        : null
     }
   };
 }
@@ -60,12 +62,12 @@ function makeVenuesObject(events = []) {
     if (venue.id && !object[venue.id]) {
       object[venue.id] = {
         attributes: {
-          name: venue.name,
+          name: venue.name || null,
           address: `${venue.address_1 || ''}, ${venue.city ||
             ''}, ${venue.state || ''}`,
-          latitude: venue.lat,
-          longitude: venue.lon,
-          directions: venue.how_to_find_us
+          latitude: venue.lat || null,
+          longitude: venue.lon || null,
+          directions: venue.how_to_find_us || null
         }
       };
     }
@@ -79,36 +81,17 @@ function makeGroupsObject(events = []) {
     if (group.id && !object[group.id]) {
       object[group.id] = {
         attributes: {
-          name: group.name,
-          focus: slugLookup[group.urlname] || 'General',
-          slug: group.urlname,
-          members: group.who,
-          logo: group.group_photo ? group.group_photo.photo_link : ''
+          name: group.name || null,
+          focus: slugMap[group.urlname] || 'General',
+          slug: group.urlname || null,
+          members: group.who || null,
+          logo: group.group_photo ? group.group_photo.photo_link : null
         }
       };
     }
     return object;
   }, {});
 }
-
-const slugLookup = {
-  'Mid-Michigan-Agile-Group': 'Agile',
-  'Lansing-Area-Maker-Meetup': 'Lansing Makers',
-  'Lansing-DevOps-Meetup': 'DevOps',
-  'lansing-tech-demos': 'Demo Night',
-  'Lansing-Marketing-Hackers': 'Marketing Hackers',
-  'Lansing-CocoaHeads': 'CocoaHeads',
-  'Lansing-Javascript-Meetup': 'JavaScript',
-  'Lansing-Experience-Design-Meetup': 'UX Design',
-  lansingweb: 'Web',
-  GLUGnet: '.NET',
-  'PMI-Capital-Area-Chapter-Lunch-and-Learn': 'Project Management',
-  'GLASS-Greater-Lansing-Area-for-SQL-Server': 'SQL Server',
-  LansingAreaSoftwareTesters: 'QA',
-  'Lansing-Area-R-Users-Group': 'R',
-  'Mid-Michigan-Code-Retreat': 'Code Retreat',
-  'Lansing-WordPress-Meetup': 'WordPress'
-};
 
 function getRelativeTime(eventUnixTime) {
   if (!eventUnixTime || typeof eventUnixTime !== 'number') return 'Unknown';
@@ -141,9 +124,9 @@ function getTimeDifference(currentUnixTime, eventUnixTime) {
   } else if (absDiff < msPerDay) {
     return partialGetDiffTimeText(msPerHour, 'hour');
   } else if (absDiff < msPerMonth) {
-    return 'about ' + partialGetDiffTimeText(msPerDay, 'day');
+    return partialGetDiffTimeText(msPerDay, 'day');
   } else if (absDiff < msPerYear) {
-    return 'about ' + partialGetDiffTimeText(msPerMonth, 'month');
+    return partialGetDiffTimeText(msPerMonth, 'month');
   } else {
     return 'about ' + partialGetDiffTimeText(msPerYear, 'year');
   }
