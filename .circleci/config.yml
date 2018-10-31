@@ -38,11 +38,10 @@ jobs:
       - checkout
       - run:
           command: |
-            pip install --upgrade awscli
-            $(aws ecr get-login --region us-east-1 --no-include-email)
             docker build -t lcapi .
-            docker tag lcapi:latest $DOCKER_REPOSITORY:latest
-            docker push $DOCKER_REPOSITORY:latest
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
+            docker tag lcapi:latest lansingcodes/lcapi:latest
+            docker push lansingcodes/lcapi:latest
             ssh lcapi@aws-docker-1.atomaka.com "bash /home/lcapi/deploy.sh"
 workflows:
   version: 2

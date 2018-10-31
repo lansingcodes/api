@@ -1,7 +1,7 @@
 version: '2'
 services:
   lcapi:
-    image: 904999972394.dkr.ecr.us-east-1.amazonaws.com/lcapi
+    image: lansingcodes/lcapi
     env_file: lcapirc
     restart: always
     networks:
