@@ -39,6 +39,7 @@ describe('\'events\' service', () => {
 
     describe('given no query string', () => {
       it('returns an object with a "data" key pointing to a non-empty array', async () => {
+        sinon.useFakeTimers(mmagRawEvents.results[0].time - 7200000 - 1000);
         mockMeetupProvider.getEvents
           .withArgs({group_id: midMichiganAgileGroupId})
           .resolves(mmagRawEvents);
