@@ -1,7 +1,7 @@
 const assert = require('assert');
-const createService = require('../../src/services/events/events.class');
+const createService = require('../../../src/services/events/events.class');
 const sinon = require('sinon');
-const testData = require('../testData');
+const testData = require('../../testData');
 
 describe('\'events\' service', () => {
   const midMichiganAgileGroupId = 1708426;
@@ -19,12 +19,12 @@ describe('\'events\' service', () => {
     it('throws if the MEETUP_API_KEY environment variable is not set', () => {
       delete process.env.MEETUP_API_KEY;
 
-      assert.throws(() => require('../../src/app'));
+      assert.throws(() => require('../../../src/app'));
     });
 
     it('registered the service', () => {
       process.env.MEETUP_API_KEY = 'defined';
-      const app = require('../../src/app');
+      const app = require('../../../src/app');
 
       service = app.service('events');
 
@@ -39,6 +39,7 @@ describe('\'events\' service', () => {
 
     describe('given no query string', () => {
       it('returns an object with a "data" key pointing to a non-empty array', async () => {
+        sinon.useFakeTimers(mmagRawEvents.results[0].time - 7200000 - 1000);
         mockMeetupProvider.getEvents
           .withArgs({group_id: midMichiganAgileGroupId})
           .resolves(mmagRawEvents);
