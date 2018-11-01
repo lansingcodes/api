@@ -1,4 +1,4 @@
-const { slugMap } = require('./config');
+const { slugMap } = require("./config");
 
 function mergeGroupEvents(mergedEvents = [], eventsByGroup = {}) {
   return eventsByGroup.results
@@ -42,15 +42,15 @@ function translateEvent(event = {}) {
     relationships: {
       group: event.group
         ? {
-          type: 'groups',
-          id: event.group.id || null
-        }
+            type: "groups",
+            id: event.group.id || null
+          }
         : null,
       venue: event.venue
         ? {
-          type: 'venues',
-          id: event.venue.id || null
-        }
+            type: "venues",
+            id: event.venue.id || null
+          }
         : null
     }
   };
@@ -63,8 +63,8 @@ function makeVenuesObject(events = []) {
       object[venue.id] = {
         attributes: {
           name: venue.name || null,
-          address: `${venue.address_1 || ''}, ${venue.city ||
-            ''}, ${venue.state || ''}`,
+          address: `${venue.address_1 || ""}, ${venue.city ||
+            ""}, ${venue.state || ""}`,
           latitude: venue.lat || null,
           longitude: venue.lon || null,
           directions: venue.how_to_find_us || null
@@ -82,7 +82,7 @@ function makeGroupsObject(events = []) {
       object[group.id] = {
         attributes: {
           name: group.name || null,
-          focus: slugMap[group.urlname] || 'General',
+          focus: slugMap[group.urlname] || "General",
           slug: group.urlname || null,
           members: group.who || null,
           logo: group.group_photo ? group.group_photo.photo_link : null
@@ -94,7 +94,7 @@ function makeGroupsObject(events = []) {
 }
 
 function getRelativeTime(eventUnixTime) {
-  if (!eventUnixTime || typeof eventUnixTime !== 'number') return 'Unknown';
+  if (!eventUnixTime || typeof eventUnixTime !== "number") return "Unknown";
 
   const now = new Date();
 
@@ -118,26 +118,30 @@ function getTimeDifference(currentUnixTime, eventUnixTime) {
   const partialGetDiffTimeText = getDiffTimeText.bind(null, absDiff, isPassed);
 
   if (absDiff < msPerMinute) {
-    return partialGetDiffTimeText(1000, 'second');
+    return partialGetDiffTimeText(1000, "second");
   } else if (absDiff < msPerHour) {
-    return partialGetDiffTimeText(msPerMinute, 'minute');
+    return partialGetDiffTimeText(msPerMinute, "minute");
   } else if (absDiff < msPerDay) {
-    return partialGetDiffTimeText(msPerHour, 'hour');
+    return partialGetDiffTimeText(msPerHour, "hour");
   } else if (absDiff < msPerMonth) {
-    return partialGetDiffTimeText(msPerDay, 'day');
+    return partialGetDiffTimeText(msPerDay, "day");
   } else if (absDiff < msPerYear) {
-    return partialGetDiffTimeText(msPerMonth, 'month');
+    return partialGetDiffTimeText(msPerMonth, "month");
   } else {
-    return 'about ' + partialGetDiffTimeText(msPerYear, 'year');
+    return "about " + partialGetDiffTimeText(msPerYear, "year");
   }
 }
 
 function getDiffTimeText(absDiff, isPassed, divisor, unit) {
   const value = Math.round(absDiff / divisor);
-  const unitText = value === 1 ? unit : unit + 's';
-  const optionalAgo = isPassed ? ' ago' : '';
+  const unitText = value === 1 ? unit : unit + "s";
+  const optionalAgo = isPassed ? " ago" : "";
 
   return `${value} ${unitText}${optionalAgo}`;
 }
 
-module.exports = { getTimeDifference, mergeGroupEvents, translateEventsForV1Format };
+module.exports = {
+  getTimeDifference,
+  mergeGroupEvents,
+  translateEventsForV1Format
+};
