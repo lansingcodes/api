@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "precommit": "npm run lint",
-    "build": "run-s compile db:select db:deploy",
+    "build": "run-s reinstall compile db:select db:deploy",
+    "reinstall": "nvm exec 8.10 npm install",
     "compile": "netlify-lambda build src --config ./webpack.functions.js",
     "db:select": "firebase use $FIREBASE_PROJECT",
     "db:deploy": "firebase deploy",
