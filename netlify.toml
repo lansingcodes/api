@@ -3,7 +3,7 @@
   functions = "dist"
 
 [build.environment]
-  AWS_LAMBDA_JS_RUNTIME = "nodejs10.x"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs10.15"
   FIREBASE_PROJECT = "staging"
 
 [context.firebase.environment]
