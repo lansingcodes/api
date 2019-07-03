@@ -1,4 +1,4 @@
-import setDefaultSponsors from '../firebase/sponsors-set-default'
+import setDefaultSponsors from './firebase/sponsors-set-default'
 
 export function handler(event, context, callback) {
   Promise.all([setDefaultSponsors()])

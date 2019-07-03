@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  functions = "dist/functions"
+  functions = "dist"
 
 [build.environment]
   FIREBASE_PROJECT = "staging"

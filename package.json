@@ -8,25 +8,24 @@
   "scripts": {
     "precommit": "npm run lint",
     "build": "run-s compile db:select db:deploy",
+    "compile": "netlify-lambda build src --config ./webpack.functions.js",
     "db:select": "firebase use $FIREBASE_PROJECT",
     "db:deploy": "firebase deploy",
-    "compile": "babel src --out-dir dist --ignore node_modules",
     "lint": "eslint --ext .js --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js --ignore-path .gitignore .",
-    "f:deploy-succeeded": "node ./dist/run deploy-succeeded",
-    "f:load-sponsors": "node ./dist/run load-sponsors"
+    "dev": "netlify-lambda serve src --config ./webpack.functions.js"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "babel-eslint": "^10.0.2",
     "eslint": "^5.0.1",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "2.6.2",
     "firebase-tools": "^7.0.1",
+    "netlify-lambda": "^1.4.13",
     "npm-run-all": "^4.1.5",
-    "prettier": "1.14.3"
+    "prettier": "1.14.3",
+    "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
     "firebase-admin": "^8.2.0"
