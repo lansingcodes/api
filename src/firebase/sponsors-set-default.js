@@ -1,4 +1,4 @@
-import admin from '.'
+import admin from './index'
 
 const sponsors = require('../../data/sponsors.json')
 
