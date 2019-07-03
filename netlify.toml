@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  functions = "dist/functions"
+
+[build.environment]
+  FIREBASE_PROJECT = "staging"
+
+[context.production.environment]
+  FIREBASE_PROJECT = "production"

@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "lansingcodes-dev",
+    "staging": "lansing-codes-staging"
+  }
+}
