@@ -1,11 +1,13 @@
-import admin from './index'
+const initializeAxios = require('./http/initialize-axios')
+const sponsorToDocument = require('../firebase/translators/sponsor-to-document')
 
 const sponsors = require('../../data/sponsors.json')
 
-export default () => {
-  const db = admin().firestore()
-  const sponsorsRef = db.collection('sponsors')
-  return Promise.all(
-    Object.keys(sponsors).map(key => sponsorsRef.doc(key).set(sponsors[key]))
-  )
-}
+module.exports = () =>
+  initializeAxios().then(axios => {
+    const promises = Object.keys(sponsors).map(key => {
+      const document = sponsorToDocument(key, sponsors[key])
+      return axios.patch(document.name, document)
+    })
+    return Promise.all(promises)
+  })

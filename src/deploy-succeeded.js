@@ -5,7 +5,7 @@ export function handler(event, context, callback) {
     .then(() => {
       callback(null, {
         statusCode: 200,
-        body: 'Successfully executed post-deployment tasks'
+        body: 'Successfully set default sponsors'
       })
     })
     .catch(callback)

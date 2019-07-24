@@ -12,13 +12,15 @@ The dependencies for this module will automatically install when the
 
 ### `FIREBASE_PROJECT`
 
-If set, this Firebase project ID (or alias from `.firebaserc`) will be used to
-select the current project to use with the Firebase tools automatically after
-edependencies are installed. This happens in the `postinstall` script.
+Set this environment variable to the Firebase project ID (_not_ the alias) that
+will be used by both the Firebase tools to deploy rules and by the functions to
+access data in the Firestore database.
 
-This environment variable is primarily used in CI environments in combination
-with `$FIREBASE_TOKEN` to associate a CI environment with its corresponding
-Firebase project.
+This environment variable is required in all environments:
+
+* Dev: `lansingcodes-dev`
+* Staging: `lansing-codes-staging`
+* Production: `lansing-codes`
 
 ### `FIREBASE_SERVICE_ACCOUNT`
 
