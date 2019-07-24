@@ -1,11 +1,12 @@
 import setDefaultSponsors from './firebase/sponsors-set-default'
+import setDefaultGroups from './firebase/groups-set-default'
 
 export function handler(event, context, callback) {
-  Promise.all([setDefaultSponsors()])
+  Promise.all([setDefaultSponsors(), setDefaultGroups()])
     .then(() => {
       callback(null, {
         statusCode: 200,
-        body: 'Successfully set default sponsors'
+        body: 'Successfully executed deployment tasks'
       })
     })
     .catch(callback)
