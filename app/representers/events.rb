@@ -122,7 +122,8 @@ private
       'LansingAreaSoftwareTesters'                     => 'QA',
       'Lansing-Area-R-Users-Group'                     => 'R',
       'Mid-Michigan-Code-Retreat'                      => 'Code Retreat',
-      'Lansing-WordPress-Meetup'                       => 'WordPress'
+      'Lansing-WordPress-Meetup'                       => 'WordPress',
+      'Lansing-JVM-User-Group'                         => 'Java'
     }[slug] || 'General'
   end
 
