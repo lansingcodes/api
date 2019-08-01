@@ -109,6 +109,7 @@ private
   def focus_of slug
     {
       'Mid-Michigan-Agile-Group'                       => 'Agile',
+      'Lansing-Area-Maker-Meetup'                      => 'Lansing Makers',
       'Lansing-DevOps-Meetup'                          => 'DevOps',
       'lansing-tech-demos'                             => 'Demo Night',
       'Lansing-Marketing-Hackers'                      => 'Marketing Hackers',

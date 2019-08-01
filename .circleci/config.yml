@@ -1,0 +1,61 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.3-node-browsers
+    working_directory: ~/lansingcodes/api
+    environment:
+      TZ: America/Detroit
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dep-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - v1-dep-master-
+            - v1-dep-
+      - run:
+          environment:
+            RAILS_ENV: test
+            RACK_ENV: test
+          command: |
+            bundle check || bundle install
+            bundle exec rspec
+      - save_cache:
+          key: v1-dep-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+            - ~/.bundle
+  dockerbuild:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          command: |
+            docker build -t lcapi .
+  deploy:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          command: |
+            pip install --upgrade awscli
+            $(aws ecr get-login --region us-east-1 --no-include-email)
+            docker build -t lcapi .
+            docker tag lcapi:latest $DOCKER_REPOSITORY:latest
+            docker push $DOCKER_REPOSITORY:latest
+            ssh lcapi@aws-docker-1.atomaka.com "bash /home/lcapi/deploy.sh"
+workflows:
+  version: 2
+  test-and-deploy:
+    jobs:
+      - build
+      - dockerbuild:
+          filters:
+            branches:
+              ignore: master
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
