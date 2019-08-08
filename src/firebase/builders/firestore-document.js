@@ -10,6 +10,11 @@ class FirestoreDocument {
     this.fields[name] = { stringValue }
     return this
   }
+
+  integerValue(name, integerValue) {
+    this.fields[name] = { integerValue }
+    return this
+  }
 }
 
 module.exports = FirestoreDocument
