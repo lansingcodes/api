@@ -3,9 +3,12 @@
   functions = "dist"
 
 [build.environment]
-  FIREBASE_PROJECT = "lansing-codes-staging"
+  FIREBASE_PROJECT = "lansingcodes-dev"
 
 [context.firebase.environment]
+  FIREBASE_PROJECT = "lansing-codes-staging"
+
+[context.master.environment]
   FIREBASE_PROJECT = "lansing-codes-staging"
 
 [context.production.environment]
