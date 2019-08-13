@@ -3,6 +3,38 @@
 This repository consists of tooling to manage Firebase rules, indexes, etc. and
 lambda functions deployed to Netlify to manage the data withing Firebase.
 
+## Data access
+
+The Lansing Codes data is publicly available! Here's the data mode:
+
+![Lansing Codes Data Model](https://i.imgur.com/L2Xl8zt.jpg)
+
+To access the data, you must use a
+[Firebase client](https://firebase.google.com/docs/firestore/quickstart#set_up_your_development_environment) to connect to the Firebase
+Firestore of the appropriate environment.
+
+### Firebase config
+
+To access the data, you must configure your Firebase client to connect to the
+right data store. The following list of publicly available data stores are
+available.
+
+All configurations are shown in JavaScript.
+
+#### Staging
+
+``` js
+const firebaseConfig = {
+  apiKey: "AIzaSyBukJRUN9wfHFnZc_fjBRRHNsLSCTxqhGQ",
+  authDomain: "lansing-codes-staging.firebaseapp.com",
+  databaseURL: "https://lansing-codes-staging.firebaseio.com",
+  projectId: "lansing-codes-staging",
+  storageBucket: "lansing-codes-staging.appspot.com",
+  messagingSenderId: "36794992743",
+  appId: "1:36794992743:web:2350879a650f171e"
+}
+```
+
 ## Dependencies
 
 The dependencies for this module will automatically install when the
@@ -128,15 +160,55 @@ npx firebase deploy
 There is also an `npm` script that can be used to deploy the files:
 
 ``` sh
-npm run deploy
+npm run db:deploy
 ```
 
 ### Running a function
 
-There are NPM scripts for running each function from the terminal. Each script
-is prefixed with `f:`. For example, to run the `deploy-succeeded` function,
-use the following command:
+Functions are invoked by accessing specific URLs on the target server.
+
+In development, use the following command to build and start a local server:
 
 ``` sh
-npm run f:deploy-succeeded
+npm run dev
 ```
+
+Then, choose a base URL to prefix the function route:
+
+* Dev: `http://localhost:9000`
+* Staging: `https://lansingcodes-api-staging.netlify.com`
+
+The following routes can be added to the base URL to invoke functions. Add the
+route to the end of the base URL and paste the full URL in a browser to invoke
+the function.
+
+#### `/.netlify/functions/deploy-succeeded`
+
+This function will automatically invoke the `load-events`, `load-group`, and
+`load-sponsors` functions simultaneously.
+
+It is automatically invoked when a deployment to Netlify successfully completes.
+It can also be invoked manually.
+
+#### `/.netlify/functions/load-events`
+
+This function will gather all events for all known groups on Meetup and load
+them into the database, overwriting if necessary.
+
+It only loads Meetup events from groups in `data/groups.json`.
+
+#### `/.netlify/functions/load-groups`
+
+This function will put all of the data in `data/groups.json` into the database,
+overwriting existing groups that match on the unique key.
+
+Any groups in the database that are not in `data/groups.json` will be left
+alone.
+
+#### `/.netlify/functions/load-sponsors`
+
+This function will put all of the data in `data/sponsors.json` into the
+database, overwriting existing sponsors that match on the unique key.
+
+Any sponsors in the database that are not in `data/sponsors.json` will be left
+alone.
