@@ -21,15 +21,12 @@ module.exports = vevent => {
   if (!dtstart || dtstart.length < 15) return
 
   // 012345678901234 Indexes
-  // 20190813T190000 => 2019-08-13T19:00:00Z
+  // 20190813T190000 => 2019-08-13T19:00:00
   let timeString = dtstart
   timeString = insertString(timeString, 13, ':')
   timeString = insertString(timeString, 11, ':')
   timeString = insertString(timeString, 6, '-')
   timeString = insertString(timeString, 4, '-')
-  if (timeString.lastIndexOf('Z') === -1) {
-    timeString += 'Z'
-  }
 
   const startTime = Date.parse(timeString)
   return startTime || undefined
