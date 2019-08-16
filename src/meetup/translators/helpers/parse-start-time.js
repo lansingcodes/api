@@ -17,7 +17,8 @@ module.exports = vevent => {
   const dtstartKey = Object.keys(vevent).find(veventKey =>
     veventKey.startsWith('DTSTART')
   )
-  const dtstart = vevent[dtstartKey] || ''
+  const dtstart = vevent[dtstartKey]
+  console.error('dtstart:', dtstart)
   if (!dtstart || dtstart.length < 15) return
 
   // 012345678901234 Indexes
