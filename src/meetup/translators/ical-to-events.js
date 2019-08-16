@@ -90,6 +90,7 @@ module.exports = (groupKey, ical) => {
         address: parseAddress(vevent.LOCATION),
         startTime: parseStartTime(vevent)
       }
+      console.error('parsed event:', JSON.stringify(event))
       events.push(event)
     })
   })
