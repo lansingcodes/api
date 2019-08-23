@@ -229,3 +229,32 @@ database, overwriting existing sponsors that match on the unique key.
 
 Any sponsors in the database that are not in `data/sponsors.json` will be left
 alone.
+
+## Deployments
+
+After a pull request is reviewed and merged to the `master` branch, a Netlify
+deployment will automatically build and publish the staging environment at
+[lansingcodes-api-staging.netlify.com](https://lansingcodes-api-staging.netlify.com/).
+
+Once the staging environment has been reviewed, the `master` branch can be
+promoted to the `production` branch with the following command:
+
+``` sh
+git fetch origin && git push --force origin origin/master:production
+```
+
+This will trigger another build and deployment by Netlify. The site will be
+published to [lansingcodes-api.netlify.com](https://lansingcodes-api.netlify.com/).
+
+For both the staging and production sites, Netlify runs the command
+`npm run deploy` to build the site and deploys the contents of the `/dist`
+directory.
+
+Staging is also configured to create previews for all pull requests, to make
+testing easier before merging to the `master` branch. Click on the _Details_
+link next to the site check labeled
+"netlify/lansingcodes-api-staging/deploy-preview" to see a live preview of your
+changes.
+
+The primary Humanity Codes account has administrator access to both Netlify
+sites. Additional administrators can be added by invitation only.
