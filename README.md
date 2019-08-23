@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b772609a-aedb-45c7-8298-f4623db20ecc/deploy-status)](https://app.netlify.com/sites/lansingcodes-api-staging/deploys)
+
 # Firebase-backed API for Lansing Codes
 
 This repository consists of tooling to manage Firebase rules, indexes, etc. and
@@ -5,7 +7,7 @@ lambda functions deployed to Netlify to manage the data withing Firebase.
 
 ## Data access
 
-The Lansing Codes data is publicly available! Here's the data mode:
+The Lansing Codes data is publicly available! Here's the data model:
 
 ![Lansing Codes Data Model](https://i.imgur.com/L2Xl8zt.jpg)
 
