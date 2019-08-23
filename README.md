@@ -35,6 +35,20 @@ const firebaseConfig = {
 }
 ```
 
+#### Production
+
+``` js
+var firebaseConfig = {
+  apiKey: "AIzaSyCMw8mZ1D1GAYpeotAqVCaYAMtn3URVOok",
+  authDomain: "lansing-codes.firebaseapp.com",
+  databaseURL: "https://lansing-codes.firebaseio.com",
+  projectId: "lansing-codes",
+  storageBucket: "lansing-codes.appspot.com",
+  messagingSenderId: "647280182517",
+  appId: "1:647280182517:web:779f72d0b90c0dd4"
+}
+```
+
 ## Dependencies
 
 The dependencies for this module will automatically install when the
@@ -177,6 +191,7 @@ Then, choose a base URL to prefix the function route:
 
 * Dev: `http://localhost:9000`
 * Staging: `https://lansingcodes-api-staging.netlify.com`
+* Production: `https://lansingcodes-api.netlify.com`
 
 The following routes can be added to the base URL to invoke functions. Add the
 route to the end of the base URL and paste the full URL in a browser to invoke
