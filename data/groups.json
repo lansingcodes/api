@@ -172,5 +172,14 @@
       "url": "https://www.meetup.com/LansingAreaSoftwareTesters/",
       "schedule": "4th Thursday",
       "slug": "LansingAreaSoftwareTesters"
+    },
+    "code-for-lansing": {
+      "name": "Code for Lansing",
+      "description": "Our local brigade of Code for America puts technology to work in service of our local communities.",
+      "iconSet": "lansing-codes",
+      "iconName": "icon-code-for-lansing",
+      "url": "https://www.meetup.com/Code-for-Lansing/",
+      "schedule": "Weekly",
+      "slug": "Code-for-Lansing"
     }
 }
