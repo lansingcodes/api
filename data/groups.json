@@ -1,185 +1,186 @@
 {
-    "devops": {
-      "name": "DevOps",
-      "description":
-        "If you want to actually <em>ship</em>, scale, or collaborate with a team, here's where you learn how.",
-      "iconSet": "fas",
-      "iconName": "server",
-      "url": "https://www.meetup.com/Lansing-DevOps-Meetup/",
-      "schedule": "1st Tuesday",
-      "slug": "Lansing-DevOps-Meetup"
-    },
-    "wordpress": {
-      "name": "WordPress",
-      "description":
-        "The most popular website management software on the web. This group caters to developers, designers, publishers, and DIYers.",
-      "iconSet": "fab",
-      "iconName": "wordpress-simple",
-      "url": "https://www.meetup.com/Lansing-WordPress-Meetup/",
-      "schedule": "1st Thursday",
-      "slug": "Lansing-WordPress-Meetup"
-    },
-    "r": {
-      "name": "R",
-      "description": "Have data, need stats? Use R.",
-      "iconSet": "fas",
-      "iconName": "chart-line",
-      "url": "https://www.meetup.com/Lansing-Area-R-Users-Group/",
-      "schedule": "2nd Monday",
-      "slug": "Lansing-Area-R-Users-Group"
-    },
-    "experience-design": {
-      "name": "UX Design",
-      "description":
-        "This is a group for UX design practitioners and those interested in learning about design.",
-      "iconSet": "fas",
-      "iconName": "user-circle",
-      "url": "https://www.meetup.com/Lansing-Experience-Design-Meetup/",
-      "schedule": "2nd Monday",
-      "slug": "Lansing-Experience-Design-Meetup"
-    },
-    "demo-night": {
-      "name": "Demo Night",
-      "description":
-        "Bring your favorite new project or product, give a quick demo, and finish with some light convo. Anyone can present, even kids!",
-      "iconSet": "fas",
-      "iconName": "moon",
-      "url": "https://www.meetup.com/lansing-tech-demos/",
-      "schedule": "2nd Tuesday",
-      "slug": "lansing-tech-demos"
-    },
-    "glass": {
-      "name": "SQL Server",
-      "description":
-        "If you're living in Microsoft's world, you'll want to keep up with SQL Server and related technologies.",
-      "iconSet": "mfizz",
-      "iconName": "icon-mssql",
-      "url": "https://www.meetup.com/GLASS-Greater-Lansing-Area-for-SQL-Server/",
-      "schedule": "2nd Tuesday",
-      "slug": "GLASS-Greater-Lansing-Area-for-SQL-Server"
-    },
-    "coldfusion": {
-      "name": "ColdFusion",
-      "description":
-        "This webdev platform features its own IDE, markup language, scripting language, and tight integration with the Adobe ecosystem.",
-      "iconText": "Cf",
-      "url": "http://www.mmcfug.org/",
-      "schedule": "2nd Tuesday"
-    },
-    "marketing-hackers": {
-      "name": "Marketing Hackers",
-      "description":
-        "A community dedicated to marketers and techies who want to become power users in marketing apps and services.",
-      "iconSet": "fas",
-      "iconName": "bullseye",
-      "url": "https://www.meetup.com/Lansing-Marketing-Hackers/",
-      "schedule": "2nd Wednesday",
-      "slug": "Lansing-Marketing-Hackers"
-    },
-    "misec": {
-      "name": "#misec",
-      "description":
-        "Learn why security is so important, how to protect the applications you work on, and break them before a hacker can.",
-      "iconSet": "fas",
-      "iconName": "unlock-alt",
-      "url": "https://www.misec.us/events/",
-      "schedule": "2nd Wednesday"
-    },
-    "web": {
-      "name": "Web",
-      "description":
-        "Share your latest project, talk about tools you're using, network, trade advice, or just chat about the web.",
-      "iconSet": "fab",
-      "iconName": "html5",
-      "url": "https://www.meetup.com/lansingweb/",
-      "schedule": "2nd Wednesday",
-      "slug": "lansingweb"
-    },
-    "jvm": {
-      "name": "Java",
-      "description":
-        "One of the most popular languages in the world with an incredibly rich ecosystem.",
-      "iconSet": "fab",
-      "iconName": "java",
-      "url": "https://www.meetup.com/Lansing-JVM-User-Group/",
-      "schedule": "2nd Thursday",
-      "slug": "Lansing-JVM-User-Group"
-    },
-    "freecodecamp": {
-      "name": "freeCodeCamp",
-      "description":
-        "Want to get started on learning development? Join us for the Lansing freeCodeCamp meeting to start your development journey or just ask questions.",
-      "iconSet": "fab",
-      "iconName": "free-code-camp",
-      "url": "https://www.facebook.com/groups/free.code.camp.lansing/",
-      "schedule": "3rd Tuesday"
-    },
-    "javascript": {
-      "name": "JavaScript",
-      "description":
-        "When coding for the browser, there's usually only one choice; fortunately, it has one of the most thriving and innovative communities around.",
-      "iconSet": "fab",
-      "iconName": "js-square",
-      "url": "https://www.meetup.com/Lansing-Javascript-Meetup/",
-      "schedule": "3rd Tuesday",
-      "slug": "Lansing-Javascript-Meetup"
-    },
-    "makers": {
-      "name": "Lansing Makers",
-      "description":
-        "Diverse people and experiences coming together in a safe environment to meld technology, art, and culture in new and exciting ways.",
-      "iconSet": "fas",
-      "iconName": "cogs",
-      "url": "https://www.meetup.com/Lansing-Area-Maker-Meetup/",
-      "schedule": "3rd Tuesday",
-      "slug": "Lansing-Area-Maker-Meetup"
-    },
-    "dotnet": {
-      "name": ".NET",
-      "description":
-        "One of the most popular ecosystems for enterprise web development, with tooling built and supported by Microsoft.",
-      "iconSet": "mfizz",
-      "iconName": "icon-csharp",
-      "url": "https://www.meetup.com/GLUGnet/",
-      "schedule": "3rd Thursday",
-      "slug": "GLUGnet"
-    },
-    "code-retreat": {
-      "name": "Code Retreat",
-      "description":
-        "Try, practice, learn. Enjoy a Saturday pairing on exercises to expand your collaborative coding skills.",
-      "iconSet": "fas",
-      "iconName": "users",
-      "url": "https://www.meetup.com/Mid-Michigan-Code-Retreat/",
-      "schedule": "3rd Saturday",
-      "slug": "Mid-Michigan-Code-Retreat"
-    },
-    "agile": {
-      "name": "Agile",
-      "description":
-        "It's easy to spin your wheels pounding at the keyboard, but a focus on <em>process</em> will make you orders of magnitude more effective.",
-      "iconSet": "fas",
-      "iconName": "table",
-      "url": "https://www.meetup.com/Mid-Michigan-Agile-Group/",
-      "schedule": "4th Tuesday",
-      "slug": "Mid-Michigan-Agile-Group"
-    },
-    "software-testing": {
-      "name": "Software Testing",
-      "description": "The last line of defense against bugs and poor design.",
-      "iconSet": "mfizz",
-      "iconName": "icon-script",
-      "url": "https://www.meetup.com/LansingAreaSoftwareTesters/",
-      "schedule": "4th Thursday",
-      "slug": "LansingAreaSoftwareTesters"
-    },
-    "code-for-lansing": {
-      "name": "Code for Lansing",
-      "description": "Our local brigade of Code for America puts technology to work in service of our local communities.",
-      "iconSet": "lansing-codes",
-      "iconName": "icon-code-for-lansing",
-      "url": "https://www.meetup.com/Code-for-Lansing/",
-      "schedule": "Weekly",
-      "slug": "Code-for-Lansing"
-    }
+  "devops": {
+    "name": "DevOps",
+    "description":
+      "If you want to actually <em>ship</em>, scale, or collaborate with a team, here's where you learn how.",
+    "iconSet": "fas",
+    "iconName": "server",
+    "url": "https://www.meetup.com/Lansing-DevOps-Meetup/",
+    "schedule": "1st Tuesday",
+    "slug": "Lansing-DevOps-Meetup"
+  },
+  "wordpress": {
+    "name": "WordPress",
+    "description":
+      "The most popular website management software on the web. This group caters to developers, designers, publishers, and DIYers.",
+    "iconSet": "fab",
+    "iconName": "wordpress-simple",
+    "url": "https://www.meetup.com/Lansing-WordPress-Meetup/",
+    "schedule": "1st Thursday",
+    "slug": "Lansing-WordPress-Meetup"
+  },
+  "r": {
+    "name": "R",
+    "description": "Have data, need stats? Use R.",
+    "iconSet": "fas",
+    "iconName": "chart-line",
+    "url": "https://www.meetup.com/Lansing-Area-R-Users-Group/",
+    "schedule": "2nd Monday",
+    "slug": "Lansing-Area-R-Users-Group"
+  },
+  "experience-design": {
+    "name": "UX Design",
+    "description":
+      "This is a group for UX design practitioners and those interested in learning about design.",
+    "iconSet": "fas",
+    "iconName": "user-circle",
+    "url": "https://www.meetup.com/Lansing-Experience-Design-Meetup/",
+    "schedule": "2nd Monday",
+    "slug": "Lansing-Experience-Design-Meetup"
+  },
+  "demo-night": {
+    "name": "Demo Night",
+    "description":
+      "Bring your favorite new project or product, give a quick demo, and finish with some light convo. Anyone can present, even kids!",
+    "iconSet": "fas",
+    "iconName": "moon",
+    "url": "https://www.meetup.com/lansing-tech-demos/",
+    "schedule": "2nd Tuesday",
+    "slug": "lansing-tech-demos"
+  },
+  "glass": {
+    "name": "SQL Server",
+    "description":
+      "If you're living in Microsoft's world, you'll want to keep up with SQL Server and related technologies.",
+    "iconSet": "mfizz",
+    "iconName": "icon-mssql",
+    "url": "https://www.meetup.com/GLASS-Greater-Lansing-Area-for-SQL-Server/",
+    "schedule": "2nd Tuesday",
+    "slug": "GLASS-Greater-Lansing-Area-for-SQL-Server"
+  },
+  "coldfusion": {
+    "name": "ColdFusion",
+    "description":
+      "This webdev platform features its own IDE, markup language, scripting language, and tight integration with the Adobe ecosystem.",
+    "iconText": "Cf",
+    "url": "http://www.mmcfug.org/",
+    "schedule": "2nd Tuesday"
+  },
+  "marketing-hackers": {
+    "name": "Marketing Hackers",
+    "description":
+      "A community dedicated to marketers and techies who want to become power users in marketing apps and services.",
+    "iconSet": "fas",
+    "iconName": "bullseye",
+    "url": "https://www.meetup.com/Lansing-Marketing-Hackers/",
+    "schedule": "2nd Wednesday",
+    "slug": "Lansing-Marketing-Hackers"
+  },
+  "misec": {
+    "name": "#misec",
+    "description":
+      "Learn why security is so important, how to protect the applications you work on, and break them before a hacker can.",
+    "iconSet": "fas",
+    "iconName": "unlock-alt",
+    "url": "https://www.misec.us/events/",
+    "schedule": "2nd Wednesday"
+  },
+  "web": {
+    "name": "Web",
+    "description":
+      "Share your latest project, talk about tools you're using, network, trade advice, or just chat about the web.",
+    "iconSet": "fab",
+    "iconName": "html5",
+    "url": "https://www.meetup.com/lansingweb/",
+    "schedule": "2nd Wednesday",
+    "slug": "lansingweb"
+  },
+  "jvm": {
+    "name": "Java",
+    "description":
+      "One of the most popular languages in the world with an incredibly rich ecosystem.",
+    "iconSet": "fab",
+    "iconName": "java",
+    "url": "https://www.meetup.com/Lansing-JVM-User-Group/",
+    "schedule": "2nd Thursday",
+    "slug": "Lansing-JVM-User-Group"
+  },
+  "freecodecamp": {
+    "name": "freeCodeCamp",
+    "description":
+      "Want to get started on learning development? Join us for the Lansing freeCodeCamp meeting to start your development journey or just ask questions.",
+    "iconSet": "fab",
+    "iconName": "free-code-camp",
+    "url": "https://www.facebook.com/groups/free.code.camp.lansing/",
+    "schedule": "3rd Tuesday"
+  },
+  "javascript": {
+    "name": "JavaScript",
+    "description":
+      "When coding for the browser, there's usually only one choice; fortunately, it has one of the most thriving and innovative communities around.",
+    "iconSet": "fab",
+    "iconName": "js-square",
+    "url": "https://www.meetup.com/Lansing-Javascript-Meetup/",
+    "schedule": "3rd Tuesday",
+    "slug": "Lansing-Javascript-Meetup"
+  },
+  "makers": {
+    "name": "Lansing Makers",
+    "description":
+      "Diverse people and experiences coming together in a safe environment to meld technology, art, and culture in new and exciting ways.",
+    "iconSet": "fas",
+    "iconName": "cogs",
+    "url": "https://www.meetup.com/Lansing-Area-Maker-Meetup/",
+    "schedule": "3rd Tuesday",
+    "slug": "Lansing-Area-Maker-Meetup"
+  },
+  "dotnet": {
+    "name": ".NET",
+    "description":
+      "One of the most popular ecosystems for enterprise web development, with tooling built and supported by Microsoft.",
+    "iconSet": "mfizz",
+    "iconName": "icon-csharp",
+    "url": "https://www.meetup.com/GLUGnet/",
+    "schedule": "3rd Thursday",
+    "slug": "GLUGnet"
+  },
+  "code-retreat": {
+    "name": "Code Retreat",
+    "description":
+      "Try, practice, learn. Enjoy a Saturday pairing on exercises to expand your collaborative coding skills.",
+    "iconSet": "fas",
+    "iconName": "users",
+    "url": "https://www.meetup.com/Mid-Michigan-Code-Retreat/",
+    "schedule": "3rd Saturday",
+    "slug": "Mid-Michigan-Code-Retreat"
+  },
+  "agile": {
+    "name": "Agile",
+    "description":
+      "It's easy to spin your wheels pounding at the keyboard, but a focus on <em>process</em> will make you orders of magnitude more effective.",
+    "iconSet": "fas",
+    "iconName": "table",
+    "url": "https://www.meetup.com/Mid-Michigan-Agile-Group/",
+    "schedule": "4th Tuesday",
+    "slug": "Mid-Michigan-Agile-Group"
+  },
+  "software-testing": {
+    "name": "Software Testing",
+    "description": "The last line of defense against bugs and poor design.",
+    "iconSet": "mfizz",
+    "iconName": "icon-script",
+    "url": "https://www.meetup.com/LansingAreaSoftwareTesters/",
+    "schedule": "4th Thursday",
+    "slug": "LansingAreaSoftwareTesters"
+  },
+  "code-for-lansing": {
+    "name": "Code for Lansing",
+    "description":
+      "Our local brigade of Code for America puts technology to work in service of our local communities.",
+    "iconSet": "lansing-codes",
+    "iconName": "icon-code-for-lansing",
+    "url": "https://www.meetup.com/Code-for-Lansing/",
+    "schedule": "Weekly",
+    "slug": "Code-for-Lansing"
+  }
 }
