@@ -1,4 +1,5 @@
 const ical2json = require('ical2json')
+const parseName = require('./helpers/parse-name')
 const parseDescription = require('./helpers/parse-description')
 const parseVenue = require('./helpers/parse-venue')
 const parseAddress = require('./helpers/parse-address')
@@ -83,7 +84,7 @@ module.exports = (groupKey, ical) => {
       const event = {
         id: vevent.UID,
         group: groupKey,
-        name: vevent.SUMMARY,
+        name: parseName(vevent.SUMMARY),
         description: parseDescription(vevent.DESCRIPTION),
         url: vevent.URL,
         venue: parseVenue(vevent.LOCATION),
