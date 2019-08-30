@@ -9,6 +9,6 @@
 module.exports = location => {
   if (!location) return ''
   const to = location.lastIndexOf('(')
-  const venue = to >= 0 ? location.substr(0, to).trim() : location
-  return venue.replace(/\\/g, '')
+  const venue = to >= 0 ? location.substr(0, to) : location
+  return venue.replace(/\\/g, '').trim()
 }
