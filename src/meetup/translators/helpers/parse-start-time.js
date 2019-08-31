@@ -18,13 +18,14 @@ module.exports = vevent => {
   const dtstartKey = Object.keys(vevent).find(veventKey =>
     veventKey.startsWith('DTSTART')
   )
+  if (!dtstartKey) return
   const timezoneIndex = dtstartKey.indexOf(tzDelim)
   const timezoneName =
     timezoneIndex >= 0
       ? dtstartKey.slice(timezoneIndex + tzDelim.length)
       : undefined
   const dtstart = vevent[dtstartKey]
-  if (!dtstart || dtstart.length < 15) return
+  if (dtstart.length < 15) return
 
   const startTime = timezoneName
     ? moment.tz(dtstart, timezoneName)
