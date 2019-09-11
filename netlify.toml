@@ -5,6 +5,9 @@
 [build.environment]
   FIREBASE_PROJECT = "lansingcodes-dev"
 
+[context.deploy-preview.environment]
+  FIREBASE_PROJECT = "lansing-codes-staging"
+
 [context.master.environment]
   FIREBASE_PROJECT = "lansing-codes-staging"
 
