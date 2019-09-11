@@ -71,7 +71,7 @@ You are welcome and encouraged to make changes to this repository by submitting
 pull requests or forking our code to support your city of coders!
 
 Before you get ahead of yourself, though, please read our
-[Contributing Guide](https://github.com/lansingcodes/www/blob/master/.github/CONTRIBUTING.md).
+[Contributing Guide](https://github.com/lansingcodes/api/blob/master/.github/CONTRIBUTING.md).
 
 ## License
 
