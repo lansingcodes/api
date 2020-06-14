@@ -6,7 +6,7 @@ This repository consists of tooling to manage Firebase rules, indexes, etc. and
 lambda functions deployed to Netlify to manage the data collected in Firebase.
 
 ## Code of Conduct
-All participants are expected to treat others with respect and follow our [Code of Conduct](https://github.com/lansingcodes/www/blob/master/.github/CODE_OF_CONDUCT.md).
+All participants are expected to treat others with respect and follow our [Code of Conduct](https://www.lansing.codes/code-of-conduct/).
 
 ## Using the data
 
