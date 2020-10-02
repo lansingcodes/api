@@ -8,7 +8,7 @@
 [context.deploy-preview.environment]
   FIREBASE_PROJECT = "lansing-codes-staging"
 
-[context.master.environment]
+[context.main.environment]
   FIREBASE_PROJECT = "lansing-codes-staging"
 
 [context.production.environment]
