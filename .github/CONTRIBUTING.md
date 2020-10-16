@@ -259,7 +259,7 @@ To see a list of available Firebase projects and which project is currently
 being used by the Firebase tools, run the following command:
 
 ``` sh
-npx firebase list
+npx firebase projects:list
 ```
 
 After running the command, if the `lansingcodes-dev` project is not shown as

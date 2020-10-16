@@ -1,13 +1,20 @@
-const initializeHttpClient = require('./http/initialize-http-client')
-const sponsorToDocument = require('./translators/sponsor-to-document')
-
 const sponsors = require('../../data/sponsors.json')
 
-module.exports = () =>
-  initializeHttpClient().then(firebaseHttpClient => {
-    const promises = Object.keys(sponsors).map(key => {
-      const document = sponsorToDocument(key, sponsors[key])
-      return firebaseHttpClient.patch(document.name, document)
+module.exports = firebaseAdmin => {
+  const sponsorsRef = firebaseAdmin.firestore().collection('sponsors')
+
+  return sponsorsRef
+    .listDocuments()
+    .then(docs => {
+      // Delete the existing sponsors
+      const deletions = docs.map(doc => doc.delete())
+      return Promise.all(deletions)
     })
-    return Promise.all(promises)
-  })
+    .then(() => {
+      // Then set the latest sponsors from the saved data
+      const promises = Object.keys(sponsors).map(key => {
+        return sponsorsRef.doc(key).set(sponsors[key])
+      })
+      return Promise.all(promises)
+    })
+}
