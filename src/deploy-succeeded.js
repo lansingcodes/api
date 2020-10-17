@@ -1,14 +1,23 @@
-import setDefaultSponsors from './firebase/sponsors-set-default'
+import initializeFirebaseAdmin from './firebase/admin/initialize'
+import closeFirebaseAdmin from './firebase/admin/close'
+import reloadAllSponsors from './firebase/sponsors/reload-all'
+
 import setDefaultGroups from './firebase/groups-set-default'
 import setFutureEvents from './firebase/events-set-future'
 
 export function handler(event, context, callback) {
-  Promise.all([setDefaultSponsors(), setDefaultGroups(), setFutureEvents()])
+  const firebaseAdmin = initializeFirebaseAdmin()
+
+  Promise.all([
+    reloadAllSponsors(firebaseAdmin),
+    setDefaultGroups(),
+    setFutureEvents()
+  ])
+    .then(() => closeFirebaseAdmin(firebaseAdmin))
     .then(() => {
-      callback(null, {
-        statusCode: 200,
-        body: 'Successfully executed deployment tasks'
-      })
+      callback(null, { statusCode: 200, body: 'deployment successful' })
     })
-    .catch(callback)
+    .catch(error => {
+      closeFirebaseAdmin(firebaseAdmin).then(() => callback(error))
+    })
 }
