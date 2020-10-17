@@ -1,12 +1,16 @@
-const setDefaultGroups = require('./firebase/groups-set-default')
+const initializeFirebaseAdmin = require('./firebase/admin/initialize')
+const closeFirebaseAdmin = require('./firebase/admin/close')
+const reloadAllGroups = require('./firebase/groups/reload-all')
 
 export function handler(event, context, callback) {
-  setDefaultGroups()
+  const firebaseAdmin = initializeFirebaseAdmin()
+
+  reloadAllGroups(firebaseAdmin)
+    .then(() => closeFirebaseAdmin(firebaseAdmin))
     .then(() => {
-      callback(null, {
-        statusCode: 200,
-        body: 'Successfully loaded groups'
-      })
+      callback(null, { statusCode: 200, body: 'successfully loaded groups' })
     })
-    .catch(callback)
+    .catch(error => {
+      closeFirebaseAdmin(firebaseAdmin).then(() => callback(error))
+    })
 }

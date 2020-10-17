@@ -1,8 +1,8 @@
 import initializeFirebaseAdmin from './firebase/admin/initialize'
 import closeFirebaseAdmin from './firebase/admin/close'
 import reloadAllSponsors from './firebase/sponsors/reload-all'
+import reloadAllGroups from './firebase/groups/reload-all'
 
-import setDefaultGroups from './firebase/groups-set-default'
 import setFutureEvents from './firebase/events-set-future'
 
 export function handler(event, context, callback) {
@@ -10,7 +10,7 @@ export function handler(event, context, callback) {
 
   Promise.all([
     reloadAllSponsors(firebaseAdmin),
-    setDefaultGroups(),
+    reloadAllGroups(firebaseAdmin),
     setFutureEvents()
   ])
     .then(() => closeFirebaseAdmin(firebaseAdmin))
