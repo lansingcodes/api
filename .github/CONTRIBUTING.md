@@ -308,7 +308,7 @@ the function.
 
 #### `/.netlify/functions/deploy-succeeded`
 
-This function will automatically invoke the `load-events`, `load-group`, and
+This function will automatically invoke the `load-events`, `load-groups`, and
 `load-sponsors` functions simultaneously.
 
 It is automatically invoked when a deployment to Netlify successfully completes.
