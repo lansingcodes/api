@@ -1,9 +1,5 @@
+const setCollectionToObject = require('../helpers/set-collection-to-object')
 const sponsors = require('../../../data/sponsors.json')
 
-module.exports = firebaseAdmin => {
-  const sponsorsRef = firebaseAdmin.firestore().collection('sponsors')
-  const promises = Object.keys(sponsors).map(key =>
-    sponsorsRef.doc(key).set(sponsors[key])
-  )
-  return Promise.all(promises)
-}
+module.exports = firebaseAdmin =>
+  setCollectionToObject(firebaseAdmin, 'sponsors', sponsors)
