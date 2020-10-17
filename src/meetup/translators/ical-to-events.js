@@ -77,7 +77,7 @@ module.exports = (groupKey, ical) => {
   const icalJson = ical2json.convert(ical)
   if (!icalJson.VCALENDAR) return []
 
-  const events = []
+  const events = {}
   icalJson.VCALENDAR.forEach(calendar => {
     if (!calendar.VEVENT) return
     calendar.VEVENT.forEach(vevent => {
@@ -91,8 +91,7 @@ module.exports = (groupKey, ical) => {
         address: parseAddress(vevent.LOCATION),
         startTime: parseStartTime(vevent)
       }
-      console.log('parsed event:', JSON.stringify(event))
-      events.push(event)
+      events[event.id] = event
     })
   })
   return events

@@ -1,20 +1,16 @@
-const getAllEventPaths = require('./firebase/event-paths-get-all')
-const deleteEvents = require('./firebase/events-delete')
-const setFutureEvents = require('./firebase/events-set-future')
+const initializeFirebaseAdmin = require('./firebase/admin/initialize')
+const closeFirebaseAdmin = require('./firebase/admin/close')
+const reloadAllFutureEvents = require('./firebase/events/reload-all-future')
 
-// Get and delete all events first to:
-//  1. Remove past events
-//  2. Remove canceled events
-//  3. Remove events with new keys (happens in Meetup after certain edits)
 export function handler(event, context, callback) {
-  getAllEventPaths()
-    .then(eventPaths => deleteEvents(eventPaths))
-    .then(() => setFutureEvents())
+  const firebaseAdmin = initializeFirebaseAdmin()
+
+  reloadAllFutureEvents(firebaseAdmin)
+    .then(() => closeFirebaseAdmin(firebaseAdmin))
     .then(() => {
-      callback(null, {
-        statusCode: 200,
-        body: 'Successfully loaded events'
-      })
+      callback(null, { statusCode: 200, body: 'successfully loaded events' })
     })
-    .catch(callback)
+    .catch(error => {
+      closeFirebaseAdmin(firebaseAdmin).then(() => callback(error))
+    })
 }
