@@ -101,9 +101,8 @@
       "One of the most popular languages in the world with an incredibly rich ecosystem.",
     "iconSet": "fab",
     "iconName": "java",
-    "url": "https://www.meetup.com/Lansing-JVM-User-Group/",
-    "schedule": "2nd Thursday",
-    "slug": "Lansing-JVM-User-Group"
+    "url": "https://sites.google.com/site/greaterlansingjug/",
+    "schedule": "2nd Thursday"
   },
   "freecodecamp": {
     "name": "freeCodeCamp",
