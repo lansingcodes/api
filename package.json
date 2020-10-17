@@ -43,7 +43,6 @@
     "@firebase/app": "^0.6.11",
     "axios": "^0.19.2",
     "firebase-admin": "^9.2.0",
-    "googleapis": "^40.0.1",
     "ical2json": "^2.0.0",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.31"

@@ -7,13 +7,8 @@ module.exports = () =>
       getEventsForGroup(groupKey, groups[groupKey])
     )
   ).then(allGroupEvents =>
-    // Flatten the array of arrays and undefineds into one array of events
+    // Combine all of the group events into one big events object
     allGroupEvents.reduce((accumulatedEvents, currentEvents) => {
-      if (currentEvents) {
-        currentEvents.forEach(currentEvent => {
-          if (currentEvent) accumulatedEvents.push(currentEvent)
-        })
-      }
-      return accumulatedEvents
-    }, [])
+      return Object.assign(accumulatedEvents, currentEvents)
+    }, {})
   )
