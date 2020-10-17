@@ -1,21 +1,16 @@
-const initializeFirebaseAdmin = require('./firebase/admin/initialize-firebase-admin')
-const closeFirebaseAdmin = require('./firebase/admin/close-firebase-admin')
-const setDefaultSponsors = require('./firebase/sponsors-set-default')
+const initializeFirebaseAdmin = require('./firebase/admin/initialize')
+const closeFirebaseAdmin = require('./firebase/admin/close')
+const reloadAllSponsors = require('./firebase/sponsors/reload-all')
 
 export function handler(event, context, callback) {
   const firebaseAdmin = initializeFirebaseAdmin()
 
-  setDefaultSponsors(firebaseAdmin)
+  reloadAllSponsors(firebaseAdmin)
     .then(() => closeFirebaseAdmin(firebaseAdmin))
     .then(() => {
-      callback(null, {
-        statusCode: 200,
-        body: 'Successfully loaded sponsors'
-      })
+      callback(null, { statusCode: 200, body: 'successfully loaded sponsors' })
     })
     .catch(error => {
-      closeFirebaseAdmin(firebaseAdmin).then(() => {
-        callback(error)
-      })
+      closeFirebaseAdmin(firebaseAdmin).then(() => callback(error))
     })
 }
