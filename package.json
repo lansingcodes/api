@@ -9,7 +9,7 @@
     "Erik Gillespie <erik.gillespie@gmail.com>",
     "Meg Blaha"
   ],
-  "license": "MIT - Hippocratic",
+  "license": "Hippocratic-2.1",
   "private": true,
   "scripts": {
     "precommit": "run-s lint test",
