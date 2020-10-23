@@ -1,4 +1,4 @@
-[SOFTWARE NAME] Copyright (YEAR) (COPYRIGHT HOLDER(S)/AUTHOR(S))(“Licensor”)
+@lansingcodes/api Copyright 2015-present Humanity Codes LLC
 
 Hippocratic License Version Number: 2.1.
 
