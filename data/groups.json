@@ -7,7 +7,8 @@
     "iconName": "server",
     "url": "https://www.meetup.com/Lansing-DevOps-Meetup/",
     "schedule": "1st Tuesday",
-    "slug": "Lansing-DevOps-Meetup"
+    "slug": "Lansing-DevOps-Meetup",
+    "youtube": "https://www.youtube.com/channel/UCpdz6qk8gc_U2Idp0FYZkZg"
   },
   "wordpress": {
     "name": "WordPress",
@@ -64,7 +65,8 @@
       "This webdev platform features its own IDE, markup language, scripting language, and tight integration with the Adobe ecosystem.",
     "iconText": "Cf",
     "url": "http://www.mmcfug.org/",
-    "schedule": "2nd Tuesday"
+    "schedule": "2nd Tuesday",
+    "youtube": "https://www.youtube.com/channel/UCJXPRKk0etPzsFCXkz_vJ0g"
   },
   "marketing-hackers": {
     "name": "Marketing Hackers",
@@ -74,7 +76,8 @@
     "iconName": "bullseye",
     "url": "https://www.meetup.com/Lansing-Marketing-Hackers/",
     "schedule": "2nd Wednesday",
-    "slug": "Lansing-Marketing-Hackers"
+    "slug": "Lansing-Marketing-Hackers",
+    "youtube": "https://www.youtube.com/channel/UCZs7U0Q-Y6vkbdzrIk0tT1A"
   },
   "misec": {
     "name": "#misec",
@@ -121,7 +124,8 @@
     "iconName": "js-square",
     "url": "https://www.meetup.com/Lansing-Javascript-Meetup/",
     "schedule": "3rd Tuesday",
-    "slug": "Lansing-Javascript-Meetup"
+    "slug": "Lansing-Javascript-Meetup",
+    "youtube": "https://www.youtube.com/channel/UCVa_2AaitR7dq2lsbqxJe3w"
   },
   "makers": {
     "name": "Lansing Makers",
@@ -131,7 +135,8 @@
     "iconName": "cogs",
     "url": "https://www.meetup.com/Lansing-Area-Maker-Meetup/",
     "schedule": "3rd Tuesday",
-    "slug": "Lansing-Area-Maker-Meetup"
+    "slug": "Lansing-Area-Maker-Meetup",
+    "youtube": "https://www.youtube.com/c/LansingmakersnetworkOrg"
   },
   "dotnet": {
     "name": ".NET",
