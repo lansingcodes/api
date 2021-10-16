@@ -2,70 +2,70 @@
   "a2-hosting": {
     "name": "A2 Hosting",
     "description": "Whether you have a low traffic blog or a popular business site, A2 Hosting has the fast, reliable web hosting for your needs.",
-    "logoUrl": "https://i.imgur.com/pI2XjZb.png",
+    "logoUrl": "/sponsors/a2-hosting.png",
     "url": "https://www.a2hosting.com"
   },
   "bright-digit": {
     "name": "BrightDigit",
     "description":
       "BrightDigit builds mobile, web, and Apple apps for all businesses and they have a passiong for public speaking and education.",
-    "logoUrl": "https://i.imgur.com/jQfu0U7.png",
+    "logoUrl": "/sponsors/brightdigit.png",
     "url": "https://brightdigit.com"
   },
   "humanity-codes": {
     "name": "Humanity Codes",
     "description":
       "Humanity Codes uses education and code to unite and empower Lansing's talented and diverse tech community.",
-    "logoUrl": "https://i.imgur.com/b6syCpb.png",
+    "logoUrl": "/sponsors/humanity-codes.png",
     "url": "https://www.lansing.codes"
   },
   "hyperverses": {
     "name": "Hyperverses",
     "description":
       "Hyperverses helps businesses find the best buyers for their products and services with persuasive technology.",
-    "logoUrl": "https://i.imgur.com/wIpXwIo.png",
+    "logoUrl": "/sponsors/hyperverses.png",
     "url": "https://hyperverses.com/lansing-codes/"
   },
   "kla": {
     "name": "Kunz, Leigh, and Associates",
     "description":
       "Kunz, Leigh and Associates is a software development company serving the private and public sectors in Michigan and Ohio.",
-    "logoUrl": "https://i.imgur.com/ffBmQqR.png",
+    "logoUrl": "/sponsors/kla.png",
     "url": "https://kunzleigh.com"
   },
   "lmn": {
     "name": "Lansing Makers Network",
     "description":
       "LMN is a nonprofit makerspace that shares tools and skills and melds technology, art, and culture in new and exciting ways",
-    "logoUrl": "https://i.imgur.com/aPrgAsw.png",
+    "logoUrl": "/sponsors/lmn.png",
     "url": "https://lansingmakersnetwork.org"
   },
   "leap": {
     "name": "LEAP",
     "description":
       "LEAP is a coalition of area leaders committed to building a prosperous and vibrant region where businesses can thrive.",
-    "logoUrl": "https://i.imgur.com/LtcYVMR.png",
+    "logoUrl": "/sponsors/leap.png",
     "url": "http://www.purelansing.com"
   },
   "rmc": {
     "name": "RMC Agency",
     "description":
       "RMC is a Michigan-based, full-service information technology consulting and placement agency.",
-    "logoUrl": "https://i.imgur.com/r2rYqE1.png",
+    "logoUrl": "/sponsors/rmc.png",
     "url": "http://www.rmcagency.com"
   },
   "techsmith": {
     "name": "TechSmith",
     "description":
       "TechSmith is the go-to company for visual communication. They help anyone capture professional-looking videos and images.",
-    "logoUrl": "https://i.imgur.com/2gjdzL9.png",
+    "logoUrl": "/sponsors/techsmith.png",
     "url": "https://www.techsmith.com"
   },
   "teksystems": {
     "name": "TEKsystems",
     "description":
       "TEKsystems helps take your professional ambitions to the next level and connects you with the right people to get you there.",
-    "logoUrl": "https://i.imgur.com/AhyVFpG.png",
+    "logoUrl": "/sponsors/teksystems.png",
     "url": "https://www.teksystems.com"
   }
 }
