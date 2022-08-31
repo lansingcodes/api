@@ -46,6 +46,6 @@
     "firebase-admin": "^9.2.0",
     "ical2json": "^2.0.0",
     "moment": "^2.29.4",
-    "moment-timezone": "^0.5.31"
+    "moment-timezone": "^0.5.35"
   }
 }
