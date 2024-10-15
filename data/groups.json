@@ -1,15 +1,4 @@
 {
-  "devops": {
-    "name": "DevOps",
-    "description":
-      "If you want to actually <em>ship</em>, scale, or collaborate with a team, here's where you learn how.",
-    "iconSet": "fas",
-    "iconName": "server",
-    "url": "https://www.meetup.com/Lansing-DevOps-Meetup/",
-    "schedule": "1st Tuesday",
-    "slug": "Lansing-DevOps-Meetup",
-    "youtube": "https://www.youtube.com/channel/UCpdz6qk8gc_U2Idp0FYZkZg"
-  },
   "wordpress": {
     "name": "WordPress",
     "description":
@@ -49,16 +38,15 @@
     "schedule": "1st Thursday",
     "slug": "misec-lansing"
   },
-  "javascript": {
-    "name": "JavaScript",
+  "lansing_codes": {
+    "name": "Lansing Codes",
     "description":
-      "When coding for the browser, there's usually only one choice; fortunately, it has one of the most thriving and innovative communities around.",
-    "iconSet": "fab",
-    "iconName": "js-square",
-    "url": "https://www.meetup.com/Lansing-Javascript-Meetup/",
+      "We aim to foster a thriving tech community, inspiring members to learn to code and helping experienced coders acquire new skills.",
+    "iconSet": "lansing-code",
+    "iconName": "icon-lansing-codes-logo",
+    "url": "https://www.meetup.com/lansing-codes-meetup/",
     "schedule": "3rd Tuesday",
-    "slug": "Lansing-Javascript-Meetup",
-    "youtube": "https://www.youtube.com/channel/UCVa_2AaitR7dq2lsbqxJe3w"
+    "slug": "lansing-codes-meetup"
   },
   "dotnet": {
     "name": ".NET",
@@ -88,8 +76,7 @@
   "catech": {
     "name": "Capital Area Tech Hub",
     "description": "Dedicated to creating opportunities to connect and grow with other area IT professionals.",
-    "iconSet": "fas",
-    "iconName": "landmark-flag",
+    "iconText": "CATECH",
     "url": "https://www.meetup.com/catech/",
     "slug": "catech"
   },
