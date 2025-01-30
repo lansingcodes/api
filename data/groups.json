@@ -44,9 +44,8 @@
       "Learn why security is so important, how to protect the applications you work on, and break them before a hacker can.",
     "iconSet": "fas",
     "iconName": "unlock-alt",
-    "url": "https://www.meetup.com/misec-lansing/",
-    "schedule": "1st Thursday",
-    "slug": "misec-lansing"
+    "url": "https://misec.us/",
+    "schedule": "1st Thursday"
   },
   "lansing_codes": {
     "name": "Lansing Codes",
