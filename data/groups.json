@@ -1,4 +1,14 @@
 {
+  "devops": {
+    "name": "DevOps",
+    "description":
+      "If you want to actually <em>ship</em>, scale, or collaborate with a team, here's where you learn how.",
+    "iconSet": "fas",
+    "iconName": "server",
+    "url": "https://www.meetup.com/Lansing-DevOps-Meetup/",
+    "schedule": "1st Tuesday",
+    "slug": "Lansing-DevOps-Meetup"
+  },
   "wordpress": {
     "name": "WordPress",
     "description":
