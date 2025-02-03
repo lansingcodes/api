@@ -67,15 +67,6 @@
     "schedule": "3rd Thursday",
     "slug": "GLUGnet"
   },
-  "software-testing": {
-    "name": "Software Testing",
-    "description": "The last line of defense against bugs and poor design.",
-    "iconSet": "mfizz",
-    "iconName": "icon-script",
-    "url": "https://www.meetup.com/LansingAreaSoftwareTesters/",
-    "schedule": "3rd Thursday",
-    "slug": "LansingAreaSoftwareTesters"
-  },
   "startupgrind": {
     "name": "Startup Grind",
     "description": "Serves as a vital hub in Michigan's entrepreneurial ecosystem, providing a local connection to the world’s largest community of startups, founders, innovators, and creators.",
