@@ -49,11 +49,12 @@ END:VCALENDAR`
         id: 'event_305626180@meetup.com',
         group: 'catech',
         name: 'Network Design with Security in Mind',
-        description: 'Capital Area Tech Hub CATECH\n**Overview:**\nPlease join our speaker Andrew Lecrone for a discussion on protecting your internet circuit from attacks.',
+        description:
+          'Capital Area Tech Hub CATECH\n**Overview:**\nPlease join our speaker Andrew Lecrone for a discussion on protecting your internet circuit from attacks.',
         url: 'https://www.meetup.com/catech/events/305626180/',
         startTime: 1739982600000, // Feb 19, 2025, 11:30 AM EST
-        venue: "",
-        address: ""
+        venue: '',
+        address: ''
       }
     }
 
@@ -71,7 +72,7 @@ END:VCALENDAR`
 VERSION:2.0
 PRODID:-//Meetup//Meetup Calendar 1.0//EN
 END:VCALENDAR`
-    
+
     const result = icalToEvents('catech', noEventsCalendar)
     expect(result).toEqual({})
   })
