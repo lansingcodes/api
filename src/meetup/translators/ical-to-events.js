@@ -86,7 +86,7 @@ module.exports = (groupKey, ical) => {
         group: groupKey,
         name: parseName(vevent.SUMMARY),
         description: parseDescription(vevent.DESCRIPTION),
-        url: vevent.URL,
+        url: vevent['URL;VALUE=URI'] || vevent.URL,
         venue: parseVenue(vevent.LOCATION),
         address: parseAddress(vevent.LOCATION),
         startTime: parseStartTime(vevent)
