@@ -43,7 +43,7 @@
   "dependencies": {
     "@firebase/app": "^0.6.11",
     "axios": "^0.21.2",
-    "firebase-admin": "^9.2.0",
+    "firebase-admin": "^13.4.0",
     "ical2json": "^2.0.0",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.35"

@@ -16,6 +16,7 @@ module.exports = (groupKey, group) => {
           `Failed to get events for group ${groupKey}. Reason:\n`,
           error.response
         )
+        return {} // Return empty object instead of undefined
       })
   )
 }
