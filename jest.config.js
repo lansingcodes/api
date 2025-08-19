@@ -11,5 +11,5 @@ module.exports = {
   // Coverage configuration
   collectCoverage: false,
   // Clear mocks between tests
-  clearMocks: true
+  clearMocks: true,
 }
