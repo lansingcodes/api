@@ -13,13 +13,13 @@
 
 const breakPoint = '\\n\\n'
 
-module.exports = originalDescription => {
+module.exports = (originalDescription) => {
   if (!originalDescription) return ''
   const from = originalDescription.indexOf(breakPoint)
   const to = originalDescription.lastIndexOf(breakPoint)
   const description = originalDescription.substring(
     from === -1 ? 0 : from + breakPoint.length,
-    to === -1 ? originalDescription.length : to
+    to === -1 ? originalDescription.length : to,
   )
   return description.replace(/\\n/g, '\n').replace(/\\/g, '')
 }

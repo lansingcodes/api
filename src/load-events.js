@@ -2,7 +2,7 @@ const initializeFirebaseAdmin = require('./firebase/admin/initialize')
 const closeFirebaseAdmin = require('./firebase/admin/close')
 const reloadAllFutureEvents = require('./firebase/events/reload-all-future')
 
-export function handler(event, context, callback) {
+module.exports.handler = function (event, context, callback) {
   const firebaseAdmin = initializeFirebaseAdmin()
 
   reloadAllFutureEvents(firebaseAdmin)
@@ -10,7 +10,7 @@ export function handler(event, context, callback) {
     .then(() => {
       callback(null, { statusCode: 200, body: 'successfully loaded events' })
     })
-    .catch(error => {
+    .catch((error) => {
       closeFirebaseAdmin(firebaseAdmin).then(() => callback(error))
     })
 }

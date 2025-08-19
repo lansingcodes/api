@@ -2,19 +2,15 @@
   "root": true,
   "env": {
     "browser": false,
-    "node": true
+    "node": true,
   },
   "parserOptions": {
-    "parser": "babel-eslint",
-    "sourceType": "module"
+    "ecmaVersion": 2022,
+    "sourceType": "script",
   },
-  "extends": [
-    "plugin:prettier/recommended"
-  ],
-  "plugins": [
-    "prettier"
-  ],
+  "extends": ["plugin:prettier/recommended"],
+  "plugins": ["prettier"],
   "rules": {
-    "no-console": "off"
-  }
+    "no-console": "off",
+  },
 }

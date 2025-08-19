@@ -54,8 +54,8 @@ END:VCALENDAR`
         url: 'https://www.meetup.com/catech/events/305626180/',
         startTime: 1739982600000, // Feb 19, 2025, 11:30 AM EST
         venue: '',
-        address: ''
-      }
+        address: '',
+      },
     }
 
     const result = icalToEvents('catech', mockIcal)

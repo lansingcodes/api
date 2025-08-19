@@ -6,13 +6,13 @@ test('returns empty string when description is undefined', () => {
 
 test('returns whole description if heading and link are missing', () => {
   expect(parseDescription('plain event description')).toEqual(
-    'plain event description'
+    'plain event description',
   )
 })
 
 test('double-escaped newlines are single-escaped', () => {
   expect(parseDescription('line 1\\nline 2\\nline 3')).toEqual(
-    'line 1\nline 2\nline 3'
+    'line 1\nline 2\nline 3',
   )
 })
 

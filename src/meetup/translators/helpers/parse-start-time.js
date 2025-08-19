@@ -14,9 +14,9 @@ const tzDelim = ';TZID='
 // And returns the Unix timestamp value:
 //
 //   1566133500000
-module.exports = vevent => {
-  const dtstartKey = Object.keys(vevent).find(veventKey =>
-    veventKey.startsWith('DTSTART')
+module.exports = (vevent) => {
+  const dtstartKey = Object.keys(vevent).find((veventKey) =>
+    veventKey.startsWith('DTSTART'),
   )
   if (!dtstartKey) return
   const timezoneIndex = dtstartKey.indexOf(tzDelim)
