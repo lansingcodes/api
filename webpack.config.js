@@ -1,5 +1,10 @@
 const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
-  externals: [nodeExternals()]
+  target: 'node',
+  mode: 'production',
+  externals: [nodeExternals()],
+  resolve: {
+    extensions: ['.js', '.json'],
+  },
 }

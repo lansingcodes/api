@@ -6,7 +6,7 @@
 //
 //   The Fledge
 
-module.exports = location => {
+module.exports = (location) => {
   if (!location) return ''
   const to = location.lastIndexOf('(')
   const venue = to >= 0 ? location.substr(0, to) : location

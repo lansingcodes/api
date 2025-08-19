@@ -6,4 +6,4 @@
 //
 //   Selling DevOps, with Garrin Ball
 
-module.exports = name => name.replace(/\\/g, '')
+module.exports = (name) => name.replace(/\\/g, '')

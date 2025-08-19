@@ -1,3 +1,3 @@
 const deleteCollection = require('../helpers/delete-collection')
 
-module.exports = firebaseAdmin => deleteCollection(firebaseAdmin, 'events')
+module.exports = (firebaseAdmin) => deleteCollection(firebaseAdmin, 'events')

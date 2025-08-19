@@ -1,1 +1,1 @@
-module.exports = firebaseAdmin => firebaseAdmin.delete()
+module.exports = (firebaseAdmin) => firebaseAdmin.delete()

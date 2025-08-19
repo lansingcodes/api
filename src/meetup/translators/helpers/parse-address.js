@@ -6,7 +6,7 @@
 //
 //   1300 Eureka St, Lansing, MI 48912
 
-module.exports = location => {
+module.exports = (location) => {
   if (!location) return ''
   const from = location.lastIndexOf('(')
   const to = location.lastIndexOf(')')

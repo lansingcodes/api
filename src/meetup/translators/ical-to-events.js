@@ -78,9 +78,9 @@ module.exports = (groupKey, ical) => {
   if (!icalJson.VCALENDAR) return []
 
   const events = {}
-  icalJson.VCALENDAR.forEach(calendar => {
+  icalJson.VCALENDAR.forEach((calendar) => {
     if (!calendar.VEVENT) return
-    calendar.VEVENT.forEach(vevent => {
+    calendar.VEVENT.forEach((vevent) => {
       const event = {
         id: vevent.UID,
         group: groupKey,
@@ -89,7 +89,7 @@ module.exports = (groupKey, ical) => {
         url: vevent['URL;VALUE=URI'] || vevent.URL,
         venue: parseVenue(vevent.LOCATION),
         address: parseAddress(vevent.LOCATION),
-        startTime: parseStartTime(vevent)
+        startTime: parseStartTime(vevent),
       }
       events[event.id] = event
     })

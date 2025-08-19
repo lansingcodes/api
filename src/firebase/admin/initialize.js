@@ -5,6 +5,6 @@ const serviceAccount = require('../constants/service-account')
 module.exports = () => {
   return admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: `https://${projectId}.firebaseio.com`
+    databaseURL: `https://${projectId}.firebaseio.com`,
   })
 }

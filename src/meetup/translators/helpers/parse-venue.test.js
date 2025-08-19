@@ -11,8 +11,8 @@ test('returns trimmed string', () => {
 test('returns everything before last ( character', () => {
   expect(
     parseVenue(
-      'MSU (Comm Arts Room 233) (404 Wilson Rd, East Lansing, MI 48824)'
-    )
+      'MSU (Comm Arts Room 233) (404 Wilson Rd, East Lansing, MI 48824)',
+    ),
   ).toEqual('MSU (Comm Arts Room 233)')
 })
 
