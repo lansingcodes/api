@@ -12,12 +12,12 @@
     "logoUrl": "/sponsors/brightdigit.png",
     "url": "https://brightdigit.com"
   },
-  "michigan-technology-network": {
+  "mitn": {
     "name": "Michigan Technology Network",
     "description":
-      "Michigan Technology Network uses education and code to unite and empower Lansing's talented and diverse tech community.",
-    "logoUrl": "/sponsors/humanity-codes.png",
-    "url": "https://www.lansing.codes"
+      "MITN is a statewide organization driven to enhance the development of tech professionals through educational and networking events with a focus on community.",
+    "logoUrl": "/sponsors/mitn.png",
+    "url": "https://www.mitn.org"
   },
   "hyperverses": {
     "name": "Hyperverses",
