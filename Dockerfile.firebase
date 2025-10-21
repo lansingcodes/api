@@ -1,0 +1,8 @@
+FROM node:22-bullseye
+
+RUN apt-get update && apt-get install -y default-jre
+RUN npm install -g firebase-tools
+
+WORKDIR /firebase
+
+CMD ["firebase", "emulators:start", "--only", "firestore,auth"]

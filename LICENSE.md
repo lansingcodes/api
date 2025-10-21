@@ -1,4 +1,4 @@
-@lansingcodes/api Copyright 2015-present Humanity Codes LLC
+@lansingcodes/api Copyright 2015-present Michigan Technology Network LLC
 
 Hippocratic License Version Number: 2.1.
 
