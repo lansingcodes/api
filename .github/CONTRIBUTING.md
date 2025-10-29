@@ -237,14 +237,18 @@ npx firebase login
 This will open a browser tab asking you to login using a Google account. Enter
 your Google credentials to complete the login.
 
+If you encounter an `Unexpected token .` error. You can create the database by going to [console.firebase.google.com](https://console.firebase.google.com) and following the instructions provided in the next [section](#create-a-firebase-project-with-a-firestore-database). Fixing the `Unexpected token .` error will be addressed later, in the section: [Addressing the `Unexpected token .` Error](#addressing-unexpected-token--error).
+
 ### Create a Firebase project with a Firestore database
 
 Go to [console.firebase.google.com](https://console.firebase.google.com), then
 click _New Project_ and provide the following values:
 
 * Project name: `lansingcodes-dev`
-* Project ID: `lansingcodes-dev`
+* Project ID: `lansingcodes-dev-xxxxx`
 * Select default settings for everything else
+
+**NOTE**: Google generates a unique Project_ID by adding extra characters,`xxxxx`, to the Project Name. You can change the Project ID. However, Google requires the new the name be unique.
 
 Once the project is created, click on the project, then click on the _Database_
 link in the navigation on the side of the page. Then press the button to create
@@ -253,7 +257,7 @@ a new Cloud Firestore database and provide the following values:
 * Locked mode
 * Select default settings for everything else
 
-### Use the `lansingcodes-dev` Firebase project
+### Using the `lansingcodes-dev` Firebase project
 
 To see a list of available Firebase projects and which project is currently
 being used by the Firebase tools, run the following command:
@@ -261,6 +265,29 @@ being used by the Firebase tools, run the following command:
 ``` sh
 npx firebase projects:list
 ```
+The command produces a table listing all your firebase projects like the shown in the figure below. You can skip to the next section, [Select `lansingcodes-dev` Project](#select-lansingcodes-dev-project), if running `npx firebase projects:list` generates a table.
+
+![alt text](/images/image-1.png)
+
+### Addressing `Unexpected token .` Error
+
+In some cases, running `npx firebase projects:list` may cause an `Unexpected token .`error like the one shown in the image below.
+
+![alt text](/images/image.png)
+
+To fix this error, we first need to make sure that firebase is installed by running the following command, which outputs the Firebase version if installed similar to image shown:
+
+```sh
+firebase -V
+```
+
+![alt text](/images/image-2.png)
+
+If your output states `firebase: command not found` you need to install Firebase. You can find detailed instructions at [https://firebase.google.com/docs/cli/](https://firebase.google.com/docs/cli/).
+
+**IMPORTANT**: Also ensure you are using the latest stable version of `node`. For more information about the latest version of `node` visit [https://nodejs.org/en/download/current](https://nodejs.org/en/download/current).
+
+### Select `lansingcodes-dev` Project
 
 After running the command, if the `lansingcodes-dev` project is not shown as
 the current project, run the following command to select it:
@@ -268,6 +295,8 @@ the current project, run the following command to select it:
 ``` sh
 npx firebase use lansingcodes-dev
 ```
+
+**NOTE**: It is advisable to set up your environment variables now. Instructions to do this are found in the [Customizing your environment](#customizing-your-environment) section.
 
 ## Development database management
 
@@ -336,6 +365,10 @@ database, overwriting existing sponsors that match on the unique key.
 
 Any sponsors in the database that are not in `data/sponsors.json` will be left
 alone.
+
+Below, is a resulting image of the browser showing a successful run of `/.netlify/functions/load-events`
+
+![alt text](/images/image-3.png)
 
 ## Customizing your environment
 
