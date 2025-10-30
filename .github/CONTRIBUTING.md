@@ -484,3 +484,28 @@ changes.
 
 The primary Michigan Technology Network account has administrator access to both Netlify
 sites. Additional administrators can be added by invitation only.
+
+
+## 🚀 Running the Project with Docker
+
+To run this project locally using Docker:
+
+### 1. Install Docker
+- Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop) for your operating system.
+- Make sure Docker is running before proceeding.
+
+### 2. Start the Project
+In the root directory of the project, run:
+
+```bash
+docker-compose up
+
+### 3. Access the App
+The app will be running on
+http://localhost:9000
+
+The firebase will be running on
+http://localhost:4000
+
+💡 Tip: To stop the containers, press Ctrl+C in the terminal or run
+docker-compose down
