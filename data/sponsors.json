@@ -1,38 +1,4 @@
 {
-  "a2-hosting": {
-    "name": "A2 Hosting",
-    "description": "Whether you have a low traffic blog or a popular business site, A2 Hosting has the fast, reliable web hosting for your needs.",
-    "logoUrl": "/sponsors/a2-hosting.png",
-    "url": "https://www.a2hosting.com"
-  },
-  "bright-digit": {
-    "name": "BrightDigit",
-    "description":
-      "BrightDigit builds mobile, web, and Apple apps for all businesses and they have a passiong for public speaking and education.",
-    "logoUrl": "/sponsors/brightdigit.png",
-    "url": "https://brightdigit.com"
-  },
-  "mitn": {
-    "name": "Michigan Technology Network",
-    "description":
-      "MITN is a statewide organization driven to enhance the development of tech professionals through educational and networking events with a focus on community.",
-    "logoUrl": "/sponsors/mitn.png",
-    "url": "https://www.mitn.org"
-  },
-  "hyperverses": {
-    "name": "Hyperverses",
-    "description":
-      "Hyperverses helps businesses find the best buyers for their products and services with persuasive technology.",
-    "logoUrl": "/sponsors/hyperverses.png",
-    "url": "https://hyperverses.com/lansing-codes/"
-  },
-  "kla": {
-    "name": "Kunz, Leigh, and Associates",
-    "description":
-      "Kunz, Leigh and Associates is a software development company serving the private and public sectors in Michigan and Ohio.",
-    "logoUrl": "/sponsors/kla.png",
-    "url": "https://kunzleigh.com"
-  },
   "lmn": {
     "name": "Lansing Makers Network",
     "description":
@@ -47,25 +13,41 @@
     "logoUrl": "/sponsors/leap.png",
     "url": "http://www.purelansing.com"
   },
+  "madelabs": {
+    "name": "MadeLabs",
+    "description":
+      "Made Labs is a creative technology company that specializes in building innovative solutions for businesses.",
+    "logoUrl": "/sponsors/madelabs.png",
+    "url": "https://www.madelabs.io/"
+  },
+  "mitn": {
+    "name": "Michigan Technology Network",
+    "description":
+      "dedicated to enhancing the development of tech professionals through educational and networking events with a strong focus on community building.",
+    "logoUrl": "/sponsors/mitn.png",
+    "url": "https://www.mitn.org/"
+  },
+  "msufcu": {
+    "name": "MSU Federal Credit Union",
+    "description":
+      "is the world's largest university-based credit union, providing comprehensive financial services, including banking and loans, to over 350,000 members with a focus on community engagement, superior service, and digital convenience.",
+    "logoUrl": "/sponsors/msufcu.png",
+    "url": "https://www.msufcu.org/"
+  },
+   "msurf": {
+    "name": "MSU Research Foundation",
+    "description":
+      "is the world's largest university-based credit union, providing comprehensive financial services, including banking and loans, to over 350,000 members with a focus on community engagement, superior service, and digital convenience.",
+    "logoUrl": "/sponsors/msurf.png",
+    "url": "https://www.msu.edu/research-foundation"
+  },
   "rmc": {
     "name": "RMC Agency",
     "description":
-      "RMC is a Michigan-based, full-service information technology consulting and placement agency.",
+      "an independent non-profit organization that supports Michigan State University by funding research, managing intellectual property, and accelerating high-tech startups to create real-world impact.",
     "logoUrl": "/sponsors/rmc.png",
     "url": "http://www.rmcagency.com"
-  },
-  "techsmith": {
-    "name": "TechSmith",
-    "description":
-      "TechSmith is the go-to company for visual communication. They help anyone capture professional-looking videos and images.",
-    "logoUrl": "/sponsors/techsmith.png",
-    "url": "https://www.techsmith.com"
-  },
-  "teksystems": {
-    "name": "TEKsystems",
-    "description":
-      "TEKsystems helps take your professional ambitions to the next level and connects you with the right people to get you there.",
-    "logoUrl": "/sponsors/teksystems.png",
-    "url": "https://www.teksystems.com"
   }
 }
+
+
