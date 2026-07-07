@@ -83,12 +83,12 @@
   },
   "ai": {
     "name": "AI",
-    "description": "Dedicated to creating opportunities to connect and grow with other area IT professionals.",
+    "description": "A hands-on community for people exploring how to actually use and build with AI.",
     "iconSet": "fas",
     "iconName": "robot",
-    "url": "https://www.meetup.com/lansing-ai-user-group/",
-    "schedule": "4th Tuesday",
-    "slug": "lansing-ai-user-group"
+    "url": "https://www.meetup.com/ai-lab-workshop-greater-lansing/",
+    "schedule": "Friday Afternoons",
+    "slug": "ai-lab-workshop-greater-lansing"
   },
   "lit": {
     "name": "Lansing Innovative Technology",
