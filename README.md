@@ -1,6 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b772609a-aedb-45c7-8298-f4623db20ecc/deploy-status)](https://app.netlify.com/sites/lansingcodes-api-staging/deploys)
 
-# Firebase-backed API for Lansing Codes
+# ARCHIVED ---- Firebase-backed API for Lansing Codes ---- ARCHIVED
+see https://github.com/lansingcodes/website for current website code
 
 This repository consists of tooling to manage Firebase rules, indexes, etc. and
 lambda functions deployed to Netlify to manage the data collected in Firebase.
